@@ -33,3 +33,5 @@ npm run lint
 - https://docs.python.org/3/library/logging.html#logrecord-attributes
 - https://github.com/python/cpython/blob/3.11/Lib/logging/__init__.py#L531
 - https://github.com/tholman/github-corners
+- https://icons.getbootstrap.com/
+- https://picocss.com/docs/
