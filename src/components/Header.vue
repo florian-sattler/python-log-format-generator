@@ -1,12 +1,10 @@
 <script setup lang="ts">
-import LightBulb from '@/icons/LightBulb.vue'
-import CardText from '@/icons/CardText.vue'
-import Github from '@/icons/Github.vue'
+import Github from '@/icons/Github.vue';
+import LightBulb from '@/icons/LightBulb.vue';
+import LightBulbFill from '@/icons/LightBulbFill.vue';
+import useConfig from '@/stores/config';
 
-const toggleTheme = () => {
-  document.documentElement.dataset['theme'] =
-    document.documentElement.dataset['theme'] == 'light' ? 'dark' : 'light'
-}
+const configStore = useConfig();
 </script>
 
 <template>
@@ -17,13 +15,13 @@ const toggleTheme = () => {
       </ul>
       <ul>
         <li>
-          <a href="#">Reference <CardText /></a>
-        </li>
-        <li>
           <a href="#">Github <Github /></a>
         </li>
         <li>
-          <a href="#" role="button" @click="toggleTheme"><LightBulb /></a>
+          <a href="#" role="button" @click="configStore.toggleTheme()">
+            <LightBulbFill v-if="configStore.darkTheme" />
+            <LightBulb v-else />
+          </a>
         </li>
       </ul>
     </nav>
