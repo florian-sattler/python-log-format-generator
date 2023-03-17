@@ -4,11 +4,20 @@ import { ref } from 'vue';
 import TrashFill from '@/icons/TrashFill.vue';
 
 const open = ref<boolean>(false);
+const textinput = ref<HTMLElement | null>(null);
+const btnsubmit = ref<HTMLElement | null>(null);
 const itemExists = ref<boolean>(false);
 const item = ref<FormatItem>({ description: '', value: '', type: 'string' });
 const resolvePromise = ref<undefined | ((value: EditResult) => void)>(undefined);
 
+const keyHandler = (e: KeyboardEvent) => {
+  if (e.key === 'Escape' && open.value) {
+    closeModal(EditType.Cancle);
+  }
+};
+
 const closeModal = (result: EditType) => {
+  document.removeEventListener('keydown', keyHandler);
   open.value = false;
 
   if (result !== EditType.Submit) {
@@ -19,9 +28,14 @@ const closeModal = (result: EditType) => {
 };
 
 const show = (exists: boolean, inputItem: FormatItem): Promise<EditResult> => {
+  document.addEventListener('keydown', keyHandler);
+
   itemExists.value = exists;
   open.value = true;
   item.value = { ...inputItem };
+
+  window.setTimeout(() => (inputItem.type === 'usertext' ? textinput : btnsubmit).value?.focus(), 50);
+
   return new Promise((resolve) => {
     resolvePromise.value = resolve;
   });
@@ -36,7 +50,7 @@ defineExpose({ show });
       <a href="#" aria-label="Close" class="close" @click="closeModal(EditType.Cancle)"></a>
       <template v-if="item.type === 'usertext'">
         <h3>Textfield <TrashFill v-if="itemExists" @click="closeModal(EditType.Delete)" /></h3>
-        <input type="text" v-model="item.value" />
+        <input type="text" v-model="item.value" ref="textinput" @keydown.enter="closeModal(EditType.Submit)" />
       </template>
       <template v-else>
         <h3>{{ item.value }} <TrashFill v-if="itemExists" @click="closeModal(EditType.Delete)" /></h3>
@@ -46,8 +60,8 @@ defineExpose({ show });
         <p>{{ item.description }}</p>
       </template>
       <footer>
-        <a href="#" role="button" class="secondary" @click="closeModal(EditType.Cancle)">Cancel</a>
-        <a href="#" role="button" @click="closeModal(EditType.Submit)">{{ itemExists ? 'Update' : 'Add' }}</a>
+        <button class="secondary" @click="closeModal(EditType.Cancle)">Cancel</button>
+        <button @click="closeModal(EditType.Submit)" ref="btnsubmit">{{ itemExists ? 'Update' : 'Add' }}</button>
       </footer>
     </article>
   </dialog>
@@ -66,8 +80,15 @@ defineExpose({ show });
     cursor: pointer;
 
     & > svg {
-      color: rgb(220, 0, 0);
+      color: var(--del-color);
     }
+  }
+
+  footer {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: min-content min-content;
+    justify-content: end;
   }
 }
 </style>

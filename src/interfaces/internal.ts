@@ -3,7 +3,7 @@ export type ItemType = 'string' | 'float' | 'integer' | 'usertext';
 export interface FormatItem {
   value: string;
   description: string;
-  type: ItemType;
+  type: string;
 }
 
 export interface FormatInfo {
