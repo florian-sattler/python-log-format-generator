@@ -3,7 +3,9 @@ import { ref, computed } from 'vue';
 import Header from '@/components/Header.vue';
 import ItemDialog from '@/components/ItemDialog.vue';
 import { EditType, type FormatItem, type FormatItemFormatted } from '@/interfaces/internal';
+
 import attributes_raw from '@/assets/attributes.json';
+import logs from '@/assets/logs.json';
 
 const attributes: FormatItem[] = [
   ...attributes_raw,
@@ -107,6 +109,13 @@ const resultText = computed<string>(() => {
   </div>
   <div class="example-area">
     <h2>Examples</h2>
+    <code v-if="items.length">
+      <pre><template v-for="(line, i) in logs" :key="i"
+      ><template v-for="item in items">{{
+          item.type === 'usertext' ? item.value : (line as any)[item.value]
+        }}</template><br></template
+      ></pre>
+    </code>
   </div>
   <ItemDialog ref="itemDialogComponent" />
 </template>
@@ -149,6 +158,17 @@ const resultText = computed<string>(() => {
 
   pre {
     margin-bottom: 0;
+  }
+}
+
+.example-area {
+  code {
+    display: block;
+  }
+
+  pre {
+    line-height: 1.5;
+    margin: unset;
   }
 }
 </style>

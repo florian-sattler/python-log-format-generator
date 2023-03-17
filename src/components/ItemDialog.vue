@@ -69,9 +69,7 @@ defineExpose({ show });
 
 <style lang="scss">
 .item-dialog {
-  & > article {
-    min-width: 400px;
-  }
+  position: absolute;
 
   h3 {
     display: flex;
