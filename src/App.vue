@@ -23,11 +23,16 @@ const items = ref<FormatItemFormatted[]>([]);
 const addItem = async (item: FormatItem) => {
   if (item.type == 'usertext' && item.value !== 'custom text') {
     items.value.push({ ...item, padding: 0 });
+    copyState.value = 0;
     return;
   }
 
   const formatted = await itemDialogComponent.value?.show(false, item);
-  if (formatted?.type === EditType.Submit && formatted.payload) items.value.push(formatted.payload);
+
+  if (formatted?.type === EditType.Submit && formatted.payload) {
+    copyState.value = 0;
+    items.value.push(formatted.payload);
+  }
 };
 
 const updateItem = async (index: number) => {
@@ -38,12 +43,14 @@ const updateItem = async (index: number) => {
 
   if (reformatted && reformatted.type === EditType.Delete) {
     items.value.splice(index, 1);
+    copyState.value = 0;
     return;
   }
 
   if (!reformatted || !reformatted.payload || reformatted.type === EditType.Cancle) return;
 
   items.value[index] = reformatted.payload;
+  copyState.value = 0;
 };
 
 const resultText = computed<string>(() => {
@@ -62,6 +69,18 @@ const resultText = computed<string>(() => {
     })
     .join('');
 });
+
+// copy format
+const copyState = ref<number>(0);
+
+const copyText = computed<string>(() => (copyState.value === 0 ? 'Copy' : copyState.value > 0 ? 'Copied' : 'Error'));
+
+const copyResult = () => {
+  navigator.clipboard
+    .writeText(resultText.value)
+    .then(() => (copyState.value = 1))
+    .catch(() => (copyState.value = -1));
+};
 </script>
 
 <template>
@@ -104,18 +123,14 @@ const resultText = computed<string>(() => {
     <h2>Result</h2>
     <div class="code">
       <pre><code>format="{{ resultText }}"</code></pre>
-      <button>Copy</button>
+      <button @click="copyResult">{{ copyText }}</button>
     </div>
   </div>
   <div class="example-area">
     <h2>Examples</h2>
-    <code v-if="items.length">
-      <pre><template v-for="(line, i) in logs" :key="i"
-      ><template v-for="item in items">{{
+    <pre v-if="items.length"><code v-for="(line, i) in logs" :key="i"><template v-for="item in items">{{
           item.type === 'usertext' ? item.value : (line as any)[item.value]
-        }}</template><br></template
-      ></pre>
-    </code>
+        }}</template></code></pre>
   </div>
   <ItemDialog ref="itemDialogComponent" />
 </template>
@@ -162,13 +177,23 @@ const resultText = computed<string>(() => {
 }
 
 .example-area {
-  code {
-    display: block;
-  }
-
   pre {
-    line-height: 1.5;
-    margin: unset;
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacing);
+  }
+  code {
+    padding: 0 0.3rem;
+    display: block;
+    line-height: 2;
+
+    &:nth-child(even) {
+      --grad-color: 0 0 0;
+      background: linear-gradient(90deg, rgba(var(--grad-color) / 0.1), rgba(var(--grad-color) / 0) 80%);
+    }
+    [data-theme='dark'] &:nth-child(even) {
+      --grad-color: 255 255 255;
+    }
   }
 }
 </style>

@@ -7,7 +7,7 @@ import package.module
 if __name__ == "__main__":
     logging.config.fileConfig("log.conf")
 
-    logging.debug("Startup")
+    logging.info("application startup")
     package.module.function()
     package.module.Class().method()
 
