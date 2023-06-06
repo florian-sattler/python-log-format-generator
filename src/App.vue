@@ -123,7 +123,7 @@ const copyResult = () => {
     <h2>Result</h2>
     <div class="code">
       <pre><code>format="{{ resultText }}"</code></pre>
-      <button @click="copyResult">{{ copyText }}</button>
+      <button @click="copyResult" data-tooltip="Copy to clipboard">{{ copyText }}</button>
     </div>
   </div>
   <div class="example-area">

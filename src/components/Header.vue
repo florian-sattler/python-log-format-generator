@@ -15,10 +15,10 @@ const configStore = useConfig();
       </ul>
       <ul>
         <li>
-          <a href="#">Github <Github /></a>
+          <a href="#" role="button" class="secondary" data-tooltip="Source Code on Github"><Github /></a>
         </li>
         <li>
-          <a href="#" role="button" @click="configStore.toggleTheme()">
+          <a href="#" role="button" @click="configStore.toggleTheme()" data-tooltip="Toggle Theme">
             <LightBulbFill v-if="configStore.darkTheme" />
             <LightBulb v-else />
           </a>
