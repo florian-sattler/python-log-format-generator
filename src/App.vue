@@ -103,9 +103,9 @@ const copyResult = () => {
       </button>
     </p>
 
-    <p>Click on added items to update or delete them.</p>
+    <p v-if="items.length">Click on added items to update or delete them.</p>
 
-    <p class="prompt buttons">
+    <p class="prompt buttons" v-if="items.length">
       <button
         v-for="(item, i) in items"
         :key="item.value"
