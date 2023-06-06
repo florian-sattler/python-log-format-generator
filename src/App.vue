@@ -4,7 +4,7 @@ import Header from '@/components/Header.vue';
 import ItemDialog from '@/components/ItemDialog.vue';
 import { EditType, type FormatItem, type FormatItemFormatted } from '@/interfaces/internal';
 
-import attributes_raw from '@/assets/attributes.json';
+import { attributes as attributes_raw } from '@/attributes';
 import logs from '@/assets/logs.json';
 
 const attributes: FormatItem[] = [
