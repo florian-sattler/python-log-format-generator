@@ -5,6 +5,7 @@ import ItemDialog from '@/components/ItemDialog.vue';
 import { EditType, type TemplateItem, type FormattedItem } from '@/interfaces/internal';
 
 import { templateItems, textItems } from '@/items';
+import { presets } from '@/presets';
 import logs from '@/assets/logs.json';
 
 const itemDialogComponent = ref<InstanceType<typeof ItemDialog>>();
@@ -19,8 +20,8 @@ const addText = async (text: string, description: string) => {
     if (formatted?.type === EditType.Submit && formatted.payload) {
       item = formatted.payload;
     } else {
-    return;
-  }
+      return;
+    }
   }
 
   selectedItems.value.push(item);
@@ -29,7 +30,7 @@ const addText = async (text: string, description: string) => {
 
 const addItem = async (name: string, item: TemplateItem) => {
   selectedItems.value.push({ description: item.description, padding: 0, type: item.type, value: name });
-    copyState.value = 0;
+  copyState.value = 0;
 };
 
 const updateItem = async (index: number) => {
@@ -78,13 +79,35 @@ const copyResult = () => {
     .then(() => (copyState.value = 1))
     .catch(() => (copyState.value = -1));
 };
+
+const setPreset = (index: number) => {
+  let preset = presets[index];
+  if (!preset) {
+    return;
+  }
+
+  selectedItems.value = preset.items.map((i) => {
+    return { ...i };
+  });
+};
 </script>
 
 <template>
   <Header />
   <div class="config-area">
-    <h2>Configuration</h2>
-
+    <nav>
+      <h2>Configuration</h2>
+      <ul>
+        <li role="list" dir="rtl" data-tooltip="Select a preset" class="select-preset">
+          <a href="#" aria-haspopup="listbox">Presets</a>
+          <ul role="listbox">
+            <li v-for="(preset, i) in presets" :key="i" @click="setPreset(i)">
+              <a>{{ preset.title }}</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
     <p>Select from all available tokens or add custom text:</p>
 
     <p class="buttons">
@@ -149,6 +172,10 @@ const copyResult = () => {
 }
 
 .config-area {
+  .select-preset {
+    cursor: pointer;
+    border: unset;
+  }
   .buttons {
     display: flex;
     flex-wrap: wrap;
