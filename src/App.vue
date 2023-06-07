@@ -3,7 +3,7 @@ import { ref, computed } from 'vue';
 import Header from '@/components/Header.vue';
 import ItemDialog from '@/components/ItemDialog.vue';
 import { EditType, type TemplateItem, type FormattedItem } from '@/interfaces/internal';
-
+import { parseFormat } from '@/parsing';
 import { templateItems, textItems } from '@/items';
 import { presets } from '@/presets';
 import logs from '@/assets/logs.json';
@@ -86,10 +86,10 @@ const setPreset = (index: number) => {
     return;
   }
 
-  selectedItems.value = preset.items.map((i) => {
-    return { ...i };
-  });
+  selectedItems.value = parseFormat(preset.format);
 };
+
+console.log(parseFormat);
 </script>
 
 <template>

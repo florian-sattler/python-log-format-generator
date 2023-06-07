@@ -1,149 +1,87 @@
-import type { FormattedItem } from './interfaces/internal';
-
 export interface FormatPreset {
   title: string;
-  items: FormattedItem[];
+  format: string;
 }
 
 export const presets: FormatPreset[] = [
   {
     title: 'Empty',
-    items: [],
+    format: '',
+  },
+  {
+    title: '[Time] [Level] File::Line Message',
+    format: '[%(asctime)s] [%(levelname)s] %(filename)s::%(lineno)s %(message)s',
+  },
+  {
+    title: '[Level Time Name] Message',
+    format: '[%(levelname)s %(asctime)s %(name)s] %(message)s',
+  },
+  {
+    title: '[Level] - Time - Name - Message in Path:Line',
+    format: '[%(levelname)s] - %(asctime)s - %(name)s - : %(message)s in %(pathname)s:%(lineno)d',
+  },
+  {
+    title: '[Level] Message',
+    format: '[%(levelname)s]: %(message)s',
+  },
+  {
+    title: 'Time - Level - File:Function - Message',
+    format: '%(asctime)s - %(levelname)s - %(filename)s:%(funcName)s - %(message)s',
+  },
+  {
+    title: 'Time - Level - Message ',
+    format: '%(asctime)s - %(levelname)s - %(message)s',
+  },
+  {
+    title: 'Time - Message',
+    format: '%(asctime)s - %(message)s',
+  },
+  {
+    title: 'Time - Module - Message',
+    format: '%(asctime)s - %(module)s - %(message)s',
+  },
+  {
+    title: 'Time - Name - Level - Message',
+    format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+  },
+  {
+    title: 'Time - Name - Process - Thread - Level - Message',
+    format: '%(asctime)s - %(name)s - %(process)d - %(threadName)s - %(levelname)s - %(message)s',
+  },
+  {
+    title: 'Time [PID] Level Module.Function:Line Message',
+    format: '%(asctime)s [pid %(process)d] %(levelname)-8s %(module)s.%(funcName)s():%(lineno)d %(message)s',
+  },
+  {
+    title: 'Time Level Name Message',
+    format: '%(asctime)s %(levelname)s %(name)s %(message)s',
+  },
+  {
+    title: 'Time Level Thread Name Message',
+    format: '%(asctime)s %(levelname)s %(threadName)s %(name)s %(message)s',
+  },
+  {
+    title: 'Time Name[Process] Level Message',
+    format: '%(asctime)s %(name)s[%(process)d] \\033[1m%(levelname)s\\033[0m %(message)s',
+  },
+  {
+    title: 'Level Time File - Line --> Message',
+    format: '%(levelname)s - %(asctime)-15s - %(filename)s - line %(lineno)d --> %(message)s',
+  },
+  {
+    title: 'Level Time: Message',
+    format: '%(levelname)s %(asctime)-20s:\\t %(message)s',
   },
   {
     title: 'Python default',
-    items: [
-      {
-        description: "Text logging level for the message ('DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL').",
-        padding: 0,
-        type: 'string',
-        value: 'levelname',
-      },
-      {
-        description: 'Add any custom text.',
-        value: ':',
-        padding: 0,
-        type: 'usertext',
-      },
-      {
-        description: 'Name of the logger used to log the call.',
-        padding: 0,
-        type: 'string',
-        value: 'name',
-      },
-      {
-        description: 'Add any custom text.',
-        value: ':',
-        padding: 0,
-        type: 'usertext',
-      },
-      {
-        description: 'The logged message, computed as msg % args. This is set when Formatter.format() is invoked.',
-        padding: 0,
-        type: 'string',
-        value: 'message',
-      },
-    ],
+    format: '%(levelname)s:%(name)s:%(message)s',
   },
   {
-    title: 'Time - Level - Location - Message',
-    items: [
-      {
-        value: '[',
-        description: 'Open bracket.',
-        type: 'usertext',
-        padding: 0,
-      },
-      {
-        value: 'asctime',
-        description:
-          'Human-readable time when the LogRecord was created. By default this is of the form ‘2003-07-08 16:49:45,896’ (the numbers after the comma are millisecond portion of the time).',
-        type: 'string',
-        padding: 0,
-      },
-      {
-        value: '] [',
-        description: 'Custom Text.',
-        type: 'usertext',
-        padding: 0,
-      },
-      {
-        value: 'levelname',
-        description: "Text logging level for the message ('DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL').",
-        type: 'string',
-        padding: 0,
-      },
-      {
-        value: '] ',
-        description: 'Custom Text.',
-        type: 'usertext',
-        padding: 0,
-      },
-      {
-        value: 'filename',
-        description: 'Filename portion of pathname.',
-        type: 'string',
-        padding: 0,
-      },
-      {
-        value: '::',
-        description: 'Custom Text.',
-        type: 'usertext',
-        padding: 0,
-      },
-      {
-        value: 'levelno',
-        description: 'Numeric logging level for the message (DEBUG, INFO, WARNING, ERROR, CRITICAL).',
-        type: 'string',
-        padding: 0,
-      },
-      {
-        value: ' ',
-        description: 'Space.',
-        type: 'usertext',
-        padding: 0,
-      },
-      {
-        value: 'message',
-        type: 'string',
-        description: 'The logged message, computed as msg % args. This is set when Formatter.format() is invoked.',
-        padding: 0,
-      },
-    ],
+    title: 'Plain Message',
+    format: '%(message)s',
   },
   {
     title: 'Name - Level - Message',
-    items: [
-      {
-        value: 'name',
-        description: 'Name of the logger used to log the call.',
-        type: 'string',
-        padding: 0,
-      },
-      {
-        value: ' - ',
-        description: 'Custom Text.',
-        type: 'usertext',
-        padding: 0,
-      },
-      {
-        value: 'levelname',
-        description: "Text logging level for the message ('DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL').",
-        type: 'string',
-        padding: 0,
-      },
-      {
-        value: ' - ',
-        description: 'Custom Text.',
-        type: 'usertext',
-        padding: 0,
-      },
-      {
-        value: 'message',
-        type: 'string',
-        description: 'The logged message, computed as msg % args. This is set when Formatter.format() is invoked.',
-        padding: 0,
-      },
-    ],
+    format: '%(name)s - %(levelname)s - %(message)s',
   },
 ];
