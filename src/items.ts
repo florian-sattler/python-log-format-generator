@@ -1,6 +1,6 @@
-import type { FormatItem } from './interfaces/internal';
+import type { TemplateItem, TextItem } from './interfaces/internal';
 
-export const templateItems: { [name: string]: FormatItem } = {
+export const templateItems: { [name: string]: TemplateItem } = {
   asctime: {
     description:
       'Human-readable time when the LogRecord was created. By default this is of the form ‘2003-07-08 16:49:45,896’ (the numbers after the comma are millisecond portion of the time).',
@@ -73,10 +73,10 @@ export const templateItems: { [name: string]: FormatItem } = {
   },
 };
 
-export const textItems: { description: string; value: string }[] = [
-  { description: 'A space character', value: ' ' },
-  { description: 'A vertical pipe character', value: '|' },
-  { description: 'A open bracket character', value: '[' },
-  { description: 'A close bracket character', value: ']' },
-  { description: 'Add any custom text.', value: 'custom text' },
+export const textItems: TextItem[] = [
+  { description: 'A space character', text: ' ' },
+  { description: 'A vertical pipe character', text: '|' },
+  { description: 'A open bracket character', text: '[' },
+  { description: 'A close bracket character', text: ']' },
+  { description: 'Add any custom text.', text: 'custom text' },
 ];

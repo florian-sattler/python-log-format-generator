@@ -2,19 +2,19 @@
 import { ref, computed } from 'vue';
 import Header from '@/components/Header.vue';
 import ItemDialog from '@/components/ItemDialog.vue';
-import { EditType, type FormatItem, type FormatItemFormatted } from '@/interfaces/internal';
+import { EditType, type TemplateItem, type FormattedItem } from '@/interfaces/internal';
 
 import { templateItems, textItems } from '@/items';
 import logs from '@/assets/logs.json';
 
 const itemDialogComponent = ref<InstanceType<typeof ItemDialog>>();
 
-const selectedItems = ref<FormatItemFormatted[]>([]);
+const selectedItems = ref<FormattedItem[]>([]);
 
-const addText = async (value: string, description: string) => {
-  let item: FormatItemFormatted = { description: description, value: value, padding: 0, type: 'usertext' };
+const addText = async (text: string, description: string) => {
+  let item: FormattedItem = { description: description, value: text, padding: 0, type: 'usertext' };
 
-  if (value == 'custom text') {
+  if (text == 'custom text') {
     const formatted = await itemDialogComponent.value?.show(false, item);
     if (formatted?.type === EditType.Submit && formatted.payload) {
       item = formatted.payload;
@@ -27,7 +27,7 @@ const addText = async (value: string, description: string) => {
   copyState.value = 0;
 };
 
-const addItem = async (name: string, item: FormatItem) => {
+const addItem = async (name: string, item: TemplateItem) => {
   selectedItems.value.push({ description: item.description, padding: 0, type: item.type, value: name });
     copyState.value = 0;
 };
@@ -100,10 +100,10 @@ const copyResult = () => {
         v-for="(item, id) in textItems"
         :key="'t-' + id"
         :data-tooltip="item.description"
-        @click="addText(item.value, item.description)"
+        @click="addText(item.text, item.description)"
         class="usertext"
       >
-        "{{ item.value }}"
+        "{{ item.text }}"
       </button>
     </p>
 

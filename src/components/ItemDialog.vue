@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { type EditResult, EditType, type FormatItemFormatted } from '@/interfaces/internal';
+import { type EditResult, EditType, type FormattedItem } from '@/interfaces/internal';
 import { ref } from 'vue';
 import TrashFill from '@/icons/TrashFill.vue';
 
@@ -7,7 +7,7 @@ const open = ref<boolean>(false);
 const textinput = ref<HTMLElement | null>(null);
 const btnsubmit = ref<HTMLElement | null>(null);
 const itemExists = ref<boolean>(false);
-const item = ref<FormatItemFormatted>({ description: '', type: 'string', padding: 0, value: '' });
+const item = ref<FormattedItem>({ description: '', type: 'string', padding: 0, value: '' });
 const resolvePromise = ref<undefined | ((value: EditResult) => void)>(undefined);
 
 const keyHandler = (e: KeyboardEvent) => {
@@ -27,7 +27,7 @@ const closeModal = (result: EditType) => {
   }
 };
 
-const show = (exists: boolean, inputItem: FormatItemFormatted): Promise<EditResult> => {
+const show = (exists: boolean, inputItem: FormattedItem): Promise<EditResult> => {
   document.addEventListener('keydown', keyHandler);
 
   itemExists.value = exists;

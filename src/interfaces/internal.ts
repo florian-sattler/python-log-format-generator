@@ -1,16 +1,19 @@
 export type ItemType = 'string' | 'float' | 'integer' | 'usertext';
 
-export interface FormatItem {
+export interface TemplateItem {
   description: string;
   type: string;
 }
 
-export interface FormatInfo {
+export interface TextItem {
+  description: string;
+  text: string;
+}
+
+export interface FormattedItem extends TemplateItem {
   value: string;
   padding: number;
 }
-
-export interface FormatItemFormatted extends FormatItem, FormatInfo {}
 
 export enum EditType {
   Cancle = 1,
@@ -20,5 +23,5 @@ export enum EditType {
 
 export interface EditResult {
   type: EditType;
-  payload: FormatItemFormatted | null;
+  payload: FormattedItem | null;
 }
