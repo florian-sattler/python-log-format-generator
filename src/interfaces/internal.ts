@@ -1,12 +1,12 @@
 export type ItemType = 'string' | 'float' | 'integer' | 'usertext';
 
 export interface FormatItem {
-  value: string;
   description: string;
   type: string;
 }
 
 export interface FormatInfo {
+  value: string;
   padding: number;
 }
 

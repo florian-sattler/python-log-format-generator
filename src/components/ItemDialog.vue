@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { type EditResult, type FormatItem, EditType } from '@/interfaces/internal';
+import { type EditResult, EditType, type FormatItemFormatted } from '@/interfaces/internal';
 import { ref } from 'vue';
 import TrashFill from '@/icons/TrashFill.vue';
 
@@ -7,7 +7,7 @@ const open = ref<boolean>(false);
 const textinput = ref<HTMLElement | null>(null);
 const btnsubmit = ref<HTMLElement | null>(null);
 const itemExists = ref<boolean>(false);
-const item = ref<FormatItem>({ description: '', value: '', type: 'string' });
+const item = ref<FormatItemFormatted>({ description: '', type: 'string', padding: 0, value: '' });
 const resolvePromise = ref<undefined | ((value: EditResult) => void)>(undefined);
 
 const keyHandler = (e: KeyboardEvent) => {
@@ -23,11 +23,11 @@ const closeModal = (result: EditType) => {
   if (result !== EditType.Submit) {
     resolvePromise.value?.({ type: result, payload: null });
   } else {
-    resolvePromise.value?.({ type: result, payload: { ...item.value, padding: 0 } });
+    resolvePromise.value?.({ type: result, payload: { ...item.value } });
   }
 };
 
-const show = (exists: boolean, inputItem: FormatItem): Promise<EditResult> => {
+const show = (exists: boolean, inputItem: FormatItemFormatted): Promise<EditResult> => {
   document.addEventListener('keydown', keyHandler);
 
   itemExists.value = exists;
@@ -49,8 +49,9 @@ defineExpose({ show });
     <article>
       <a href="#" aria-label="Close" class="close" @click="closeModal(EditType.Cancle)"></a>
       <template v-if="item.type === 'usertext'">
-        <h3>Textfield <TrashFill v-if="itemExists" @click="closeModal(EditType.Delete)" /></h3>
+        <h3>Custom Text <TrashFill v-if="itemExists" @click="closeModal(EditType.Delete)" /></h3>
         <input type="text" v-model="item.value" ref="textinput" @keydown.enter="closeModal(EditType.Submit)" />
+        <p>Add any custom text.</p>
       </template>
       <template v-else>
         <h3>{{ item.value }} <TrashFill v-if="itemExists" @click="closeModal(EditType.Delete)" /></h3>

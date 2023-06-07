@@ -4,57 +4,54 @@ import Header from '@/components/Header.vue';
 import ItemDialog from '@/components/ItemDialog.vue';
 import { EditType, type FormatItem, type FormatItemFormatted } from '@/interfaces/internal';
 
-import { attributes as attributes_raw } from '@/attributes';
+import { templateItems, textItems } from '@/items';
 import logs from '@/assets/logs.json';
-
-const attributes: FormatItem[] = [
-  ...attributes_raw,
-  { value: 'custom text', description: 'Custom Text.', type: 'usertext' },
-  { value: ' ', description: 'Space.', type: 'usertext' },
-  { value: '|', description: 'Vertical pipe.', type: 'usertext' },
-  { value: '[', description: 'Open bracket.', type: 'usertext' },
-  { value: ']', description: 'Close bracket.', type: 'usertext' },
-];
 
 const itemDialogComponent = ref<InstanceType<typeof ItemDialog>>();
 
-const items = ref<FormatItemFormatted[]>([]);
+const selectedItems = ref<FormatItemFormatted[]>([]);
 
-const addItem = async (item: FormatItem) => {
-  if (item.type == 'usertext' && item.value !== 'custom text') {
-    items.value.push({ ...item, padding: 0 });
-    copyState.value = 0;
+const addText = async (value: string, description: string) => {
+  let item: FormatItemFormatted = { description: description, value: value, padding: 0, type: 'usertext' };
+
+  if (value == 'custom text') {
+    const formatted = await itemDialogComponent.value?.show(false, item);
+    if (formatted?.type === EditType.Submit && formatted.payload) {
+      item = formatted.payload;
+    } else {
     return;
   }
-
-  const formatted = await itemDialogComponent.value?.show(false, item);
-
-  if (formatted?.type === EditType.Submit && formatted.payload) {
-    copyState.value = 0;
-    items.value.push(formatted.payload);
   }
+
+  selectedItems.value.push(item);
+  copyState.value = 0;
+};
+
+const addItem = async (name: string, item: FormatItem) => {
+  selectedItems.value.push({ description: item.description, padding: 0, type: item.type, value: name });
+    copyState.value = 0;
 };
 
 const updateItem = async (index: number) => {
-  const item = items.value[index];
+  const item = selectedItems.value[index];
   if (!item) return;
 
   const reformatted = await itemDialogComponent.value?.show(true, item);
 
   if (reformatted && reformatted.type === EditType.Delete) {
-    items.value.splice(index, 1);
+    selectedItems.value.splice(index, 1);
     copyState.value = 0;
     return;
   }
 
   if (!reformatted || !reformatted.payload || reformatted.type === EditType.Cancle) return;
 
-  items.value[index] = reformatted.payload;
+  selectedItems.value[index] = reformatted.payload;
   copyState.value = 0;
 };
 
 const resultText = computed<string>(() => {
-  return items.value
+  return selectedItems.value
     .map((item) => {
       switch (item.type) {
         case 'string':
@@ -92,22 +89,29 @@ const copyResult = () => {
 
     <p class="buttons">
       <button
-        v-for="item in attributes"
-        :key="item.value"
+        v-for="(item, name) in templateItems"
+        :key="name"
         :data-tooltip="item.description"
-        @click="addItem(item)"
-        :class="item.type == 'usertext' ? 'outline' : ''"
+        @click="addItem(name as string, item)"
       >
-        <template v-if="item.type == 'usertext'">"{{ item.value }}"</template>
-        <template v-else>{{ item.value }}</template>
+        {{ name }}
+      </button>
+      <button
+        v-for="(item, id) in textItems"
+        :key="'t-' + id"
+        :data-tooltip="item.description"
+        @click="addText(item.value, item.description)"
+        class="usertext"
+      >
+        "{{ item.value }}"
       </button>
     </p>
 
-    <p v-if="items.length">Click on added items to update or delete them.</p>
+    <p v-if="selectedItems.length">Click on added items to update or delete them.</p>
 
-    <p class="prompt buttons" v-if="items.length">
+    <p class="prompt buttons" v-if="selectedItems.length">
       <button
-        v-for="(item, i) in items"
+        v-for="(item, i) in selectedItems"
         :key="item.value"
         :data-tooltip="item.description"
         @click="updateItem(i)"
@@ -128,7 +132,7 @@ const copyResult = () => {
   </div>
   <div class="example-area">
     <h2>Examples</h2>
-    <pre v-if="items.length"><code v-for="(line, i) in logs" :key="i"><template v-for="item in items">{{
+    <pre v-if="selectedItems.length"><code v-for="(line, i) in logs" :key="i"><template v-for="item in selectedItems">{{
           item.type === 'usertext' ? item.value : (line as any)[item.value]
         }}</template></code></pre>
   </div>

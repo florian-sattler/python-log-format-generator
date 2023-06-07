@@ -1,91 +1,82 @@
 import type { FormatItem } from './interfaces/internal';
 
-export const attributes: FormatItem[] = [
-  {
-    value: 'asctime',
+export const templateItems: { [name: string]: FormatItem } = {
+  asctime: {
     description:
       'Human-readable time when the LogRecord was created. By default this is of the form ‘2003-07-08 16:49:45,896’ (the numbers after the comma are millisecond portion of the time).',
     type: 'string',
   },
-  {
-    value: 'created',
+  created: {
     description: 'Time when the LogRecord was created (as returned by time.time()).',
     type: 'float',
   },
-  {
-    value: 'filename',
+  filename: {
     description: 'Filename portion of pathname.',
     type: 'string',
   },
-  {
-    value: 'funcName',
+  funcName: {
     description: 'Name of function containing the logging call.',
     type: 'string',
   },
-  {
-    value: 'levelname',
+  levelname: {
     description: "Text logging level for the message ('DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL').",
     type: 'string',
   },
-  {
-    value: 'levelno',
+  levelno: {
     description: 'Numeric logging level for the message (DEBUG, INFO, WARNING, ERROR, CRITICAL).',
     type: 'string',
   },
-  {
-    value: 'lineno',
+  lineno: {
     description: 'Source line number where the logging call was issued (if available).',
     type: 'integer',
   },
-  {
-    value: 'message',
+  message: {
     type: 'string',
     description: 'The logged message, computed as msg % args. This is set when Formatter.format() is invoked.',
   },
-  {
-    value: 'module',
+  module: {
     description: 'Module (name portion of filename).',
     type: 'string',
   },
-  {
-    value: 'msecs',
+  msecs: {
     description: 'Millisecond portion of the time when the LogRecord was created.',
     type: 'integer',
   },
-  {
-    value: 'name',
+  name: {
     description: 'Name of the logger used to log the call.',
     type: 'string',
   },
-  {
-    value: 'pathname',
+  pathname: {
     description: 'Full pathname of the source file where the logging call was issued (if available).',
     type: 'string',
   },
-  {
-    value: 'process',
+  process: {
     description: 'Process ID (if available).',
     type: 'integer',
   },
-  {
-    value: 'processName',
+  processName: {
     description: 'Process name (if available).',
     type: 'string',
   },
-  {
-    value: 'relativeCreated',
+  relativeCreated: {
     description:
       'Time in milliseconds when the LogRecord was created, relative to the time the logging module was loaded.',
     type: 'integer',
   },
-  {
-    value: 'thread',
+  thread: {
     description: 'Thread ID (if available).',
     type: 'integer',
   },
-  {
-    value: 'threadName',
+  threadName: {
     description: 'Thread name (if available).',
     type: 'string',
   },
+};
+
+export const textItems: { description: string; value: string }[] = [
+  { description: 'A space character', value: ' ' },
+  { description: 'A vertical pipe character', value: '|' },
+  { description: 'A open bracket character', value: '[' },
+  { description: 'A close bracket character', value: ']' },
+  { description: 'Add any custom text.', value: 'custom text' },
 ];
