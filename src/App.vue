@@ -88,8 +88,6 @@ const setPreset = (index: number) => {
 
   selectedItems.value = parseFormat(preset.format);
 };
-
-console.log(parseFormat);
 </script>
 
 <template>
