@@ -11,15 +11,29 @@ const configStore = useConfig();
   <header>
     <nav>
       <ul>
-        <li><img src="/logo.svg" alt="page logo" style="max-height: 2rem" /></li>
+        <li><img src="/logo.svg" alt="page logo" width="40" height="40" /></li>
         <li><strong>Python Log Format Generator</strong></li>
       </ul>
       <ul>
         <li>
-          <a href="#" role="button" class="secondary" data-tooltip="Source Code on Github"><Github /></a>
+          <a
+            href="https://github.com/florian-sattler/python-log-format-generator"
+            target="_blank"
+            role="button"
+            class="secondary"
+            data-tooltip="Source Code on Github"
+            aria-label="Source Code on Github"
+            ><Github
+          /></a>
         </li>
         <li>
-          <a href="#" role="button" @click="configStore.toggleTheme()" data-tooltip="Toggle Theme">
+          <a
+            href="#"
+            role="button"
+            @click="configStore.toggleTheme()"
+            data-tooltip="Toggle Theme"
+            aria-label="Toggel page theme"
+          >
             <LightBulbFill v-if="configStore.darkTheme" />
             <LightBulb v-else />
           </a>

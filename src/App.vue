@@ -96,7 +96,13 @@ const setPreset = (index: number) => {
     <nav>
       <h2>Configuration</h2>
       <ul>
-        <li role="list" dir="rtl" data-tooltip="Select a preset" class="select-preset">
+        <li
+          role="list"
+          dir="rtl"
+          data-tooltip="Select a preset or start from scratch."
+          class="select-preset"
+          aria-label="Select a preset or start from scratch."
+        >
           <a href="#" aria-haspopup="listbox">Presets</a>
           <ul role="listbox">
             <li v-for="(preset, i) in presets" :key="i" @click="setPreset(i)">
