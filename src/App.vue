@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue';
-import Header from '@/components/Header.vue';
+import Header from '@/components/PageHeader.vue';
 import ItemDialog from '@/components/ItemDialog.vue';
 import { EditType, type TemplateItem, type FormattedItem } from '@/interfaces/internal';
 import { parseFormat } from '@/parsing';

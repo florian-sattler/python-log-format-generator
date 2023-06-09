@@ -11,6 +11,7 @@ const configStore = useConfig();
   <header>
     <nav>
       <ul>
+        <li><img src="/logo.svg" alt="page logo" style="max-height: 2rem" /></li>
         <li><strong>Python Log Format Generator</strong></li>
       </ul>
       <ul>
