@@ -100,7 +100,7 @@ const setPreset = (index: number) => {
           <a href="#" aria-haspopup="listbox">Presets</a>
           <ul role="listbox">
             <li v-for="(preset, i) in presets" :key="i" @click="setPreset(i)">
-              <a>{{ preset.title }}</a>
+              <a href="#">{{ preset.title }}</a>
             </li>
           </ul>
         </li>
