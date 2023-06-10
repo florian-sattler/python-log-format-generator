@@ -1,6 +1,6 @@
 # Python Log Format Generator
 
-Python Log Format Generator is an open-source web application written in Vue.js that provides a convenient way to generate format strings for Python logging.
+Python Log Format Generator is an open-source web application written in Vue.js that provides a convenient way to generate format strings for [Python logging](https://docs.python.org/3/library/logging.html).
 With this tool, users can effortlessly create custom log formats by selecting from presets or starting from scratch.
 
 ## Features
@@ -27,7 +27,7 @@ To get started using the Python Log Format Generator, follow these steps:
 
 ## Feedback and Contributions
 
-We welcome feedback, bug reports, and contributions to improve the Python Log Format Generator. If you encounter any issues or have suggestions for enhancements, please open a new issue on the GitHub repository. Additionally, if you would like to contribute to the project, feel free to submit a pull request with your proposed changes.
+Feedback, bug reports, and contributions to improve the Python Log Format Generator are welcome. If you encounter any issues or have suggestions for enhancements, please open a new issue on the GitHub repository. Additionally, if you would like to contribute to the project, feel free to submit a pull request with your proposed changes.
 
 ## License
 
@@ -35,4 +35,4 @@ This project is licensed under the [MIT License](https://opensource.org/licenses
 
 ---
 
-We hope that the Python Log Format Generator proves to be a valuable tool for developers in creating customized log formats for their Python logging needs. Happy logging!
+I hope that the Python Log Format Generator proves to be a valuable tool for developers in creating customized log formats for their Python logging needs. Happy logging!

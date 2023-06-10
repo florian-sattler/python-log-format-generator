@@ -95,8 +95,8 @@ const setPreset = (index: number) => {
   <div>
     <p>
       Welcome to the Python Log Format Generator! This web application provides a user-friendly interface for generating
-      format strings for Python logging. To get started, simply select presets or start from scratch to create your
-      desired log format.
+      format strings for <a href="https://docs.python.org/3/library/logging.html">Python logging</a>. To get started,
+      simply select presets or start from scratch to create your desired log format.
     </p>
     <p>
       Once you're satisfied, copy the generated format string to the clipboard and integrate it into your Python
