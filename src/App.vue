@@ -92,6 +92,17 @@ const setPreset = (index: number) => {
 
 <template>
   <Header />
+  <div>
+    <p>
+      Welcome to the Python Log Format Generator! This web application provides a user-friendly interface for generating
+      format strings for Python logging. To get started, simply select presets or start from scratch to create your
+      desired log format.
+    </p>
+    <p>
+      Once you're satisfied, copy the generated format string to the clipboard and integrate it into your Python
+      projects seamlessly. Happy logging!
+    </p>
+  </div>
   <div class="config-area">
     <nav>
       <h2>Configuration</h2>
@@ -99,9 +110,9 @@ const setPreset = (index: number) => {
         <li
           role="list"
           dir="rtl"
-          data-tooltip="Select a preset or start from scratch."
+          data-tooltip="Select a preset or start from scratch"
           class="select-preset"
-          aria-label="Select a preset or start from scratch."
+          aria-label="Select a preset or start from scratch"
         >
           <a href="#" aria-haspopup="listbox">Presets</a>
           <ul role="listbox">
@@ -158,7 +169,7 @@ const setPreset = (index: number) => {
     </div>
   </div>
   <div class="example-area">
-    <h2>Examples</h2>
+    <h2>Example Logs</h2>
     <pre v-if="selectedItems.length"><code v-for="(line, i) in logs" :key="i"><template v-for="item in selectedItems">{{
           item.type === 'usertext' ? item.value : (line as any)[item.value]
         }}</template></code></pre>
