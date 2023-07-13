@@ -111,6 +111,7 @@ const setPreset = (index: number) => {
           role="list"
           dir="rtl"
           data-tooltip="Select a preset or start from scratch"
+          data-placement="left"
           class="select-preset"
           aria-label="Select a preset or start from scratch"
         >
@@ -178,6 +179,14 @@ const setPreset = (index: number) => {
 </template>
 
 <style lang="scss">
+// Disable tooltips on small devices.
+@media screen and (max-width: 576px) {
+  [data-tooltip]::before,
+  [data-tooltip]::after {
+    display: none !important;
+  }
+}
+
 .config-area,
 .output-area,
 .example-area {
@@ -204,7 +213,7 @@ const setPreset = (index: number) => {
 
     [data-tooltip]::before {
       white-space: unset;
-      max-width: 300px;
+      max-width: min(300px, 40vw);
       width: max-content;
     }
   }
