@@ -1,0 +1,36 @@
+{
+  "theme_color": "#aac110",
+  "background_color": "#f8f8f8",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/",
+  "name": "Python Log Format Gernerator",
+  "short_name": "Python Log Format Gernerator",
+  "description": "Generate format strings for Python logging. To get started, simply select presets or start from scratch to create your desired log format. Once you're satisfied, copy the generated format string to the clipboard and integrate it into your Python projects seamlessly. Happy logging!",
+  "icons": [
+    {
+      "src": "/manifest-icon-192.maskable.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/manifest-icon-192.maskable.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/manifest-icon-512.maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/manifest-icon-512.maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

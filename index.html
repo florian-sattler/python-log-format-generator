@@ -2,20 +2,30 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="/logo.svg" sizes="any" type="image/svg+xml">
-    <link rel="icon" href="/logo.ico" sizes="any" type="image/ico" />
-    <link rel="icon" href="/logo.png" sizes="any" type="image/png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Python Log Format Generator</title>
-    <meta name="title" content="Python Log Format Generator">
-    <meta name="description" content="A online generator python log formats. Be creative or choose from many predefined formats.">
-    <meta name="keywords" content="Python, Logging, Log Format, Format string, Generation, Editor, Too">
-    <meta name="robots" content="index, follow">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="language" content="English">
+    <meta name="title" content="Python Log Format Generator" />
+    <meta
+      name="description"
+      content="A online generator python log formats. Be creative or choose from many predefined formats."
+    />
+    <meta name="keywords" content="Python, Logging, Log Format, Format string, Generation, Editor, Too" />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="English" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#aac110" />
+    <link rel="icon" type="image/png" sizes="196x196" href="/favicon-196.png" />
+    <link rel="apple-touch-icon" href="/apple-icon-180.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
   </head>
   <body>
     <div id="app" class="container"></div>
     <script type="module" src="/src/main.ts"></script>
+    <script>
+      if (typeof navigator.serviceWorker !== 'undefined') {
+        navigator.serviceWorker.register('sw.js');
+      }
+    </script>
   </body>
 </html>
