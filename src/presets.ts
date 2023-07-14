@@ -70,7 +70,7 @@ export const presets: FormatPreset[] = [
   },
   {
     title: 'Level Time: Message',
-    format: '%(levelname)s %(asctime)-20s:\\t %(message)s',
+    format: '%(levelname)s %(asctime)-20s: %(message)s',
   },
   {
     title: 'Python default',
