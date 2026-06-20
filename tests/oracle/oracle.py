@@ -112,7 +112,7 @@ def gen_brace_field_cases(cases: list) -> None:
     # --- integers ---
     int_token = TOKEN["int"]
     int_values = [0, 5, 255, -7]
-    int_specs_no_type = ["", "6", "06", "<6", ">6", "^6", "*>6", "+", "+06", " 6", "#", "#06"]
+    int_specs_no_type = ["", "6", "06", "<6", ">6", "^6", "*>6", "+", "+06", " 6", "#", "#06", "=6", "=+6", "*=6"]
     for val, spec, typ in itertools.product(int_values, int_specs_no_type, ["d", "x", "X", "o", "b"]):
         case(cases, "{", "{%s:%s%s}" % (int_token, spec, typ), {int_token: val})
     for val, spec in itertools.product(int_values, [",d", "+,d", "06,d"]):
@@ -126,7 +126,7 @@ def gen_brace_field_cases(cases: list) -> None:
     float_values = [0.0, 3.14159, 855.0, 48.94661903381348, -2.5]
     float_specs = [
         "", "12", "012", "<12", ">12", "^12", "*>12", "+", "+012", " ", "#",
-        ".2", ".6", "12.2", "+012.3",
+        ".2", ".6", "12.2", "+012.3", "=12", "*=12",
     ]
     for val, spec, typ in itertools.product(float_values, float_specs, ["f", "e", "g", "%"]):
         case(cases, "{", "{%s:%s%s}" % (float_token, spec, typ), {float_token: val})
@@ -149,6 +149,8 @@ def gen_brace_error_cases(cases: list) -> None:
     case(cases, "{", "{lineno:s}", {"lineno": 5})  # string type on int
     case(cases, "{", "{lineno:.2d}", {"lineno": 5})  # precision on integer type
     case(cases, "{", "{lineno:.2}", {"lineno": 5})  # precision on no-type integer
+    case(cases, "{", "{name:=8}", {"name": "INFO"})  # '=' alignment on a string
+    case(cases, "{", "{name:*=8}", {"name": "INFO"})  # '=' with fill on a string
 
 
 # A few realistic end-to-end format strings, run against the shipped sample rows.
