@@ -10,6 +10,7 @@
 import { type FieldSpec, type FormattedItem, type Style, type ValueKind, FormatParseError } from './types';
 import { templateItems } from '@/items';
 import { parseFormatSpec } from './spec/formatspec';
+import { PERCENT_CONVS } from './spec/conversions';
 
 function lookup(name: string): { kind: ValueKind; description: string } {
   const t = templateItems[name];
@@ -25,8 +26,6 @@ function field(name: string, spec: FieldSpec): FormattedItem {
 function literal(text: string): FormattedItem {
   return { description: 'Add any custom text.', value: text, isText: true, kind: 'str', spec: {} };
 }
-
-const PERCENT_CONVS = 'diuoxXeEfFgGsrac';
 
 /** Parse a `%`-style format string. */
 function parsePercent(input: string): FormattedItem[] {
@@ -90,7 +89,7 @@ function parsePercent(input: string): FormattedItem[] {
     }
     // conversion
     const conv = input[j];
-    if (!conv || !PERCENT_CONVS.includes(conv)) {
+    if (!conv || !PERCENT_CONVS.has(conv)) {
       throw new FormatParseError(`Missing or invalid conversion for %(${name})`);
     }
     spec.conv = conv;

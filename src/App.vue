@@ -6,6 +6,7 @@ import { EditType, type TemplateItem, type FormattedItem, type Style } from '@/i
 import { parseFormat } from '@/engine/parse';
 import { serialize } from '@/engine/serialize';
 import { renderRecord } from '@/engine/render';
+import { sanitizeSpec } from '@/engine/sanitize';
 import { templateItems, textItems } from '@/items';
 import { presets } from '@/presets';
 import logs from '@/assets/logs.json';
@@ -62,6 +63,16 @@ const styles: { value: Style; label: string }[] = [
   { value: '{', label: '{}-format' },
   { value: '$', label: '$-template' },
 ];
+
+// When the user switches style, keep each field's formatting but drop the parts
+// the new style can't express (e.g. a binary conversion when moving to %), so the
+// output stays valid. Programmatic changes (preset loads) don't fire @change.
+const onStyleChange = () => {
+  for (const item of selectedItems.value) {
+    item.spec = sanitizeSpec(item.spec, style.value);
+  }
+  copyState.value = 0;
+};
 
 // The Python snippet to copy: a Formatter with the matching style (and datefmt).
 const formatterCode = computed<string>(() => {
@@ -140,7 +151,7 @@ const setPreset = (index: number) => {
     <div class="grid style-row">
       <label>
         Style
-        <select v-model="style">
+        <select v-model="style" @change="onStyleChange">
           <option v-for="s in styles" :key="s.value" :value="s.value">{{ s.label }}</option>
         </select>
       </label>
