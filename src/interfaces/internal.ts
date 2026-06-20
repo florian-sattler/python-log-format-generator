@@ -1,18 +1,17 @@
-export type ItemType = 'string' | 'float' | 'integer' | 'usertext';
+import type { ValueKind } from '@/engine/types';
 
+export type { FieldSpec, FormattedItem, Style, ValueKind, LogRecord } from '@/engine/types';
+
+/** A supported log-record token: its description and intrinsic value kind. */
 export interface TemplateItem {
   description: string;
-  type: string;
+  kind: ValueKind;
 }
 
+/** A quick-insert literal-text snippet shown in the UI. */
 export interface TextItem {
   description: string;
   text: string;
-}
-
-export interface FormattedItem extends TemplateItem {
-  value: string;
-  padding: number;
 }
 
 export enum EditType {
@@ -23,5 +22,5 @@ export enum EditType {
 
 export interface EditResult {
   type: EditType;
-  payload: FormattedItem | null;
+  payload: import('@/engine/types').FormattedItem | null;
 }
