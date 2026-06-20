@@ -53,8 +53,8 @@ function stripTrailingZeros(s: string): string {
 function fixExponent(s: string, upper: boolean): string {
   const m = s.match(/^(.*)[eE]([+-])(\d+)$/);
   if (!m) return s;
-  let [, mant, esign, edig] = m;
-  if (edig.length < 2) edig = '0'.repeat(2 - edig.length) + edig;
+  const [, mant, esign, digits] = m;
+  const edig = digits.length < 2 ? '0'.repeat(2 - digits.length) + digits : digits;
   return `${mant}${upper ? 'E' : 'e'}${esign}${edig}`;
 }
 

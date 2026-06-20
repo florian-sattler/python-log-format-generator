@@ -36,6 +36,8 @@ jobs:
         run: python3 tests/oracle/oracle.py
       - name: Fail if oracle fixtures are stale
         run: git diff --exit-code src/engine/__tests__/fixtures/oracle.json
+      - name: Lint
+        run: npm run lint
       - name: Type-check
         run: npm run type-check
       - name: Test (engine vs. Python oracle)
