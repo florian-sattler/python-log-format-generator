@@ -43,20 +43,23 @@ const convOptions = computed<string[]>(() => {
   return ['', 'f', 'e', 'g', 'E', 'G', '%'];
 });
 
-const alignOptions = computed(() =>
-  currentStyle.value === '{'
-    ? [
-        { v: '', l: 'default' },
-        { v: '<', l: 'left <' },
-        { v: '>', l: 'right >' },
-        { v: '^', l: 'center ^' },
-        { v: '=', l: 'pad-after-sign =' },
-      ]
-    : [
-        { v: '', l: 'default' },
-        { v: '<', l: 'left (-)' },
-      ],
-);
+const alignOptions = computed(() => {
+  if (currentStyle.value !== '{') {
+    return [
+      { v: '', l: 'default' },
+      { v: '<', l: 'left (-)' },
+    ];
+  }
+  const opts = [
+    { v: '', l: 'default' },
+    { v: '<', l: 'left <' },
+    { v: '>', l: 'right >' },
+    { v: '^', l: 'center ^' },
+  ];
+  // '=' (sign-aware padding) is only valid for numbers; Python rejects it for strings.
+  if (isNumeric.value) opts.push({ v: '=', l: 'pad-after-sign =' });
+  return opts;
+});
 
 // Precision is invalid on {}-style integer types; otherwise allowed.
 const showPrecision = computed(
