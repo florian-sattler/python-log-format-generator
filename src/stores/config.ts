@@ -8,7 +8,7 @@ const setTheme = (dark: boolean) => (document.documentElement.dataset['theme'] =
 
 export default defineStore('config', {
   state: (): ConfigState => ({
-    darkTheme: window.matchMedia('prefers-color-scheme: dark').matches,
+    darkTheme: window.matchMedia('(prefers-color-scheme: dark)').matches,
   }),
 
   actions: {
