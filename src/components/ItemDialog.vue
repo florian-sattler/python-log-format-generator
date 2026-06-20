@@ -2,7 +2,7 @@
 import { type EditResult, EditType, type FormattedItem, type Style } from '@/interfaces/internal';
 import { computed, reactive, ref } from 'vue';
 import { serialize } from '@/engine/serialize';
-import TrashFill from '@/icons/TrashFill.vue';
+import IconTrashFill from '@/icons/IconTrashFill.vue';
 
 const open = ref<boolean>(false);
 const textinput = ref<HTMLElement | null>(null);
@@ -153,12 +153,12 @@ defineExpose({ show });
     <article>
       <a href="#" aria-label="Close" class="close" @click="closeModal(EditType.Cancle)"></a>
       <template v-if="item.isText">
-        <h3>Custom Text <TrashFill v-if="itemExists" @click="closeModal(EditType.Delete)" /></h3>
+        <h3>Custom Text <IconTrashFill v-if="itemExists" @click="closeModal(EditType.Delete)" /></h3>
         <input type="text" v-model="item.value" ref="textinput" @keydown.enter="closeModal(EditType.Submit)" />
         <p>Add any custom text.</p>
       </template>
       <template v-else>
-        <h3>{{ item.value }} <TrashFill v-if="itemExists" @click="closeModal(EditType.Delete)" /></h3>
+        <h3>{{ item.value }} <IconTrashFill v-if="itemExists" @click="closeModal(EditType.Delete)" /></h3>
         <p><code>Type: {{ item.kind }}</code></p>
         <p>{{ item.description }}</p>
 

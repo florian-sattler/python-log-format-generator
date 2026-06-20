@@ -104,7 +104,7 @@ const copyResult = () => {
 };
 
 const setPreset = (index: number) => {
-  let preset = presets[index];
+  const preset = presets[index];
   if (!preset) {
     return;
   }

@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import Github from '@/icons/Github.vue';
-import LightBulb from '@/icons/LightBulb.vue';
-import LightBulbFill from '@/icons/LightBulbFill.vue';
+import IconGithub from '@/icons/IconGithub.vue';
+import IconLightBulb from '@/icons/IconLightBulb.vue';
+import IconLightBulbFill from '@/icons/IconLightBulbFill.vue';
 import useConfig from '@/stores/config';
 
 const configStore = useConfig();
@@ -23,7 +23,7 @@ const configStore = useConfig();
             class="secondary"
             data-tooltip="Source Code on Github"
             aria-label="Source Code on Github"
-            ><Github
+            ><IconGithub
           /></a>
         </li>
         <li>
@@ -34,8 +34,8 @@ const configStore = useConfig();
             data-tooltip="Toggle Theme"
             aria-label="Toggel page theme"
           >
-            <LightBulbFill v-if="configStore.darkTheme" />
-            <LightBulb v-else />
+            <IconLightBulbFill v-if="configStore.darkTheme" />
+            <IconLightBulb v-else />
           </a>
         </li>
       </ul>

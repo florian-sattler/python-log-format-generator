@@ -13,11 +13,11 @@ A single-page Vue 3 + TypeScript web app (built with Vite) that helps users buil
 - `npm run type-check` — `vue-tsc --noEmit` only
 - `npm run test` — run the Vitest suite (`vitest run`)
 - `npm run test:oracle` — regenerate the Python ground-truth fixtures, then run Vitest
-- `npm run lint` — ESLint with `--fix` over all source files
+- `npm run lint` — ESLint (flat config in `eslint.config.js`); `npm run lint:fix` to auto-fix
 - `npm run format` — Prettier over `src/`
 - `npm run preview` — serve the built `dist/`
 
-The `@` import alias maps to `src/` (configured in `vite.config.ts`, `vitest.config.ts` and the tsconfig files). CI (`.github/workflows/ci.yml`) regenerates the oracle fixtures on real Python 3.12, diffs them for drift, type-checks and runs the tests; `pages.yml` deploys.
+The `@` import alias maps to `src/` (configured in `vite.config.ts`, `vitest.config.ts` and the tsconfig files). CI (`.github/workflows/ci.yml`) regenerates the oracle fixtures on real Python 3.12, diffs them for drift, lints, type-checks and runs the tests; `pages.yml` deploys.
 
 ## Architecture
 
