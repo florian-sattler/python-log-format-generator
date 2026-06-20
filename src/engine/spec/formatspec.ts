@@ -10,7 +10,7 @@
  * with `pyError: 'ValueError'` so the oracle tests assert parity.
  */
 
-import { type FieldSpec, type ValueKind, FormatValueError } from '../types';
+import { type FieldSpec, type ValueKind, FormatParseError, FormatValueError } from '../types';
 import { floatReprBody, formatNumber } from './pyfloat';
 import { padNumber, padString } from './pad';
 import { pyRepr, pyStr } from './pyrepr';
@@ -68,7 +68,9 @@ export function parseFormatSpec(spec: string): FieldSpec {
     out.conv = spec[i++];
   }
   if (i !== spec.length) {
-    throw new FormatValueError(`Invalid format specifier '${spec}'`, 'ValueError');
+    // Discovered while parsing the format string, so it's a parse error
+    // (consistent with the rest of the parser), not a render-time value error.
+    throw new FormatParseError(`Invalid format specifier '${spec}'`);
   }
   return out;
 }

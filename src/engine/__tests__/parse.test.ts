@@ -70,6 +70,10 @@ describe('parse details ({ style)', () => {
     const items = parseFormat('{{literal}}', '{');
     expect(items).toEqual([expect.objectContaining({ isText: true, value: '{literal}' })]);
   });
+
+  it('reports a malformed format spec as a parse error', () => {
+    expect(() => parseFormat('{lineno:8zz}', '{')).toThrow(FormatParseError);
+  });
 });
 
 const TEMPLATE_FORMATS = ['', '$message', '${levelname}:${name}', 'cost is 100$$ for $message'];
