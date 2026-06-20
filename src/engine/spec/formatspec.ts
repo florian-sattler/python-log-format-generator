@@ -11,7 +11,7 @@
  */
 
 import { type FieldSpec, type ValueKind, FormatValueError } from '../types';
-import { formatNumber } from './pyfloat';
+import { floatReprBody, formatNumber } from './pyfloat';
 import { padNumber, padString } from './pad';
 import { pyRepr, pyStr } from './pyrepr';
 import { BRACE_INT_TYPES as INT_TYPES } from './conversions';
@@ -128,15 +128,30 @@ export function formatBrace(value: unknown, kind: ValueKind, spec: FieldSpec): s
 
   const conv = spec.conv;
 
-  // No presentation type: string -> string formatting; numbers -> str() then pad.
+  // No presentation type.
   if (conv === undefined || conv === 's') {
     if (conv === 's' && kind !== 'str') {
       throw new FormatValueError(`Unknown format code 's' for object of type '${kind}'`, 'ValueError');
     }
+    // String: string formatting (precision truncates, left-aligned by default).
     if (kind === 'str') return formatBraceString(pyStr(value, 'str'), spec);
-    // Numeric with no type: str() padded as a number (right-aligned by default).
-    const padded = padString(pyStr(value, kind), { ...spec }, '>');
-    return padded;
+
+    // Integer with no type behaves exactly like 'd' (precision is not allowed).
+    if (kind === 'int') {
+      if (spec.precision !== undefined) {
+        throw new FormatValueError('Precision not allowed in integer format specifier', 'ValueError');
+      }
+      return padNumber(formatNumber(Number(value), 'd', undefined, !!spec.alt, spec.sign), spec);
+    }
+
+    // Float with no type and no precision == repr(value) with numeric padding
+    // (sign / zero / grouping all apply). With an explicit precision CPython
+    // uses a distinct "general format"; we approximate it via 'g' (rare in log
+    // formats, and never reached from the UI, which always sets a float type).
+    if (spec.precision === undefined) {
+      return padNumber(floatReprBody(Number(value), spec.sign), spec);
+    }
+    return padNumber(formatNumber(Number(value), 'g', spec.precision, !!spec.alt, spec.sign), spec);
   }
 
   // Numeric presentation types.

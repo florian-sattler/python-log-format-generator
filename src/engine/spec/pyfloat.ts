@@ -13,6 +13,8 @@
  * to values where rounding is unambiguous (see tests/oracle/oracle.py).
  */
 
+import { reprFloat } from './pyrepr';
+
 /** Decomposed numeric body, ready for the pad layer to assemble. */
 export interface NumBody {
   /** '', '+', '-', or ' '. */
@@ -176,4 +178,17 @@ export function formatNumber(
   }
 
   throw new Error(`Unsupported numeric conversion '${conv}'`);
+}
+
+/**
+ * Body for a `{}`-style float with no presentation type and no precision: the
+ * value rendered as `repr(float)` (matching `str()`), with the sign resolved so
+ * the pad layer can apply width/zero/grouping. CPython's "general format" *with*
+ * an explicit precision is a distinct algorithm and is handled by the caller.
+ */
+export function floatReprBody(value: number, signFlag?: '+' | '-' | ' '): NumBody {
+  const sign = resolveSign(isNeg(value), signFlag);
+  const special = nonFinite(value, false);
+  if (special) return { sign, prefix: '', digits: special, intLen: 0 };
+  return body(sign, '', reprFloat(Math.abs(value)));
 }
