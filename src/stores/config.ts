@@ -19,7 +19,7 @@ export default defineStore('config', {
   },
 
   persist: {
-    afterRestore: (ctx) => {
+    afterHydrate: (ctx) => {
       setTheme(ctx.store.$state.darkTheme);
     },
   },
