@@ -32,7 +32,7 @@ const configStore = useConfig();
             role="button"
             @click="configStore.toggleTheme()"
             data-tooltip="Toggle Theme"
-            aria-label="Toggel page theme"
+            aria-label="Toggle page theme"
           >
             <IconLightBulbFill v-if="configStore.darkTheme" />
             <IconLightBulb v-else />

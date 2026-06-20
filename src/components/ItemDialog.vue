@@ -35,12 +35,12 @@ const convOptions = computed<string[]>(() => {
   if (currentStyle.value === '%') {
     if (k === 'str') return ['s', 'r', 'a'];
     if (k === 'int') return ['d', 'x', 'X', 'o'];
-    return ['f', 'e', 'g', 'E', 'G'];
+    return ['f', 'F', 'e', 'g', 'E', 'G'];
   }
   // '{' style ('' = default formatting)
   if (k === 'str') return ['', 's'];
   if (k === 'int') return ['', 'd', 'x', 'X', 'o', 'b'];
-  return ['', 'f', 'e', 'g', 'E', 'G', '%'];
+  return ['', 'f', 'F', 'e', 'g', 'E', 'G', '%'];
 });
 
 const alignOptions = computed(() => {
