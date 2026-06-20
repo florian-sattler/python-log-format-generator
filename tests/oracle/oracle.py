@@ -20,7 +20,6 @@ import itertools
 import json
 import logging
 import os
-import platform
 import sys
 import time
 from pathlib import Path
@@ -221,7 +220,7 @@ def main() -> None:
         c["id"] = i
 
     payload = {
-        "python": platform.python_version(),
+        "python": f"{sys.version_info.major}.{sys.version_info.minor}",
         "tz": "UTC",
         "cases": cases,
     }
