@@ -11,6 +11,12 @@ import { type FieldSpec, type ValueKind, FormatValueError } from '../types';
 import { formatNumber } from './pyfloat';
 import { padNumber, padString } from './pad';
 import { pyRepr, pyStr } from './pyrepr';
+import {
+  PERCENT_FLOAT as FLOAT_CONVS,
+  PERCENT_INT_COERCE as INT_COERCE_CONVS,
+  PERCENT_INT_ONLY as INT_ONLY_CONVS,
+  PERCENT_STRING as STRING_CONVS,
+} from './conversions';
 
 /** The conversion Python's `%` style needs by default for a value kind. */
 export function defaultPercentConv(kind: ValueKind): string {
@@ -18,11 +24,6 @@ export function defaultPercentConv(kind: ValueKind): string {
   if (kind === 'float') return 'f';
   return 's';
 }
-
-const STRING_CONVS = new Set(['s', 'r', 'a']);
-const FLOAT_CONVS = new Set(['e', 'E', 'f', 'F', 'g', 'G']);
-const INT_ONLY_CONVS = new Set(['o', 'x', 'X']);
-const INT_COERCE_CONVS = new Set(['d', 'i', 'u']);
 
 /** Render one value through a `%`-style spec. */
 export function formatPercent(value: unknown, kind: ValueKind, spec: FieldSpec): string {

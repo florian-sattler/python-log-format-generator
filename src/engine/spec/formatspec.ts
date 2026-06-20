@@ -14,10 +14,9 @@ import { type FieldSpec, type ValueKind, FormatValueError } from '../types';
 import { formatNumber } from './pyfloat';
 import { padNumber, padString } from './pad';
 import { pyRepr, pyStr } from './pyrepr';
+import { BRACE_INT_TYPES as INT_TYPES } from './conversions';
 
 const ALIGNS = '<>=^';
-const INT_TYPES = new Set(['b', 'c', 'd', 'o', 'x', 'X']);
-const FLOAT_TYPES = new Set(['e', 'E', 'f', 'F', 'g', 'G', '%']);
 
 /** Parse a `{}` format-spec string (the part after the colon) into a {@link FieldSpec}. */
 export function parseFormatSpec(spec: string): FieldSpec {
