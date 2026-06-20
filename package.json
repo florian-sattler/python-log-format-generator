@@ -9,13 +9,16 @@
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:oracle": "python3 tests/oracle/oracle.py && vitest run",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format": "prettier --write src/"
   },
   "dependencies": {
     "@picocss/pico": "^1.5.13",
-    "pinia-plugin-persistedstate": "^4.7.1",
     "pinia": "^3.0.4",
+    "pinia-plugin-persistedstate": "^4.7.1",
     "vue": "^3.5.38"
   },
   "devDependencies": {
@@ -28,6 +31,7 @@
     "sass": "^1.101.0",
     "typescript": "~6.0.3",
     "vite": "^8.0.16",
+    "vitest": "^4.1.9",
     "vue-tsc": "^3.3.5"
   }
 }

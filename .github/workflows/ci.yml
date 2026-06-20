@@ -1,0 +1,42 @@
+# Type-checks, regenerates the Python oracle fixtures and runs the test suite.
+name: CI
+
+on:
+  push:
+    branches: ['main']
+  pull_request:
+  workflow_dispatch:
+
+# Pin the timezone so asctime/datefmt output is deterministic and matches the
+# engine (which computes dates in UTC).
+env:
+  TZ: UTC
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm ci
+      - name: Regenerate oracle fixtures (real Python 3.12)
+        run: python3 tests/oracle/oracle.py
+      - name: Fail if oracle fixtures are stale
+        run: git diff --exit-code src/engine/__tests__/fixtures/oracle.json
+      - name: Type-check
+        run: npm run type-check
+      - name: Test (engine vs. Python oracle)
+        run: npm run test

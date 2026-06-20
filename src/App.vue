@@ -2,8 +2,10 @@
 import { ref, computed } from 'vue';
 import Header from '@/components/PageHeader.vue';
 import ItemDialog from '@/components/ItemDialog.vue';
-import { EditType, type TemplateItem, type FormattedItem } from '@/interfaces/internal';
-import { parseFormat } from '@/parsing';
+import { EditType, type TemplateItem, type FormattedItem, type Style } from '@/interfaces/internal';
+import { parseFormat } from '@/engine/parse';
+import { serialize } from '@/engine/serialize';
+import { renderRecord } from '@/engine/render';
 import { templateItems, textItems } from '@/items';
 import { presets } from '@/presets';
 import logs from '@/assets/logs.json';
@@ -11,12 +13,14 @@ import logs from '@/assets/logs.json';
 const itemDialogComponent = ref<InstanceType<typeof ItemDialog>>();
 
 const selectedItems = ref<FormattedItem[]>([]);
+const style = ref<Style>('%');
+const datefmt = ref<string>('');
 
 const addText = async (text: string, description: string) => {
-  let item: FormattedItem = { description: description, value: text, padding: 0, type: 'usertext' };
+  let item: FormattedItem = { description: description, value: text, isText: true, kind: 'str', spec: {} };
 
   if (text == 'custom text') {
-    const formatted = await itemDialogComponent.value?.show(false, item);
+    const formatted = await itemDialogComponent.value?.show(false, item, style.value);
     if (formatted?.type === EditType.Submit && formatted.payload) {
       item = formatted.payload;
     } else {
@@ -29,7 +33,7 @@ const addText = async (text: string, description: string) => {
 };
 
 const addItem = async (name: string, item: TemplateItem) => {
-  selectedItems.value.push({ description: item.description, padding: 0, type: item.type, value: name });
+  selectedItems.value.push({ description: item.description, value: name, isText: false, kind: item.kind, spec: {} });
   copyState.value = 0;
 };
 
@@ -37,7 +41,7 @@ const updateItem = async (index: number) => {
   const item = selectedItems.value[index];
   if (!item) return;
 
-  const reformatted = await itemDialogComponent.value?.show(true, item);
+  const reformatted = await itemDialogComponent.value?.show(true, item, style.value);
 
   if (reformatted && reformatted.type === EditType.Delete) {
     selectedItems.value.splice(index, 1);
@@ -51,22 +55,30 @@ const updateItem = async (index: number) => {
   copyState.value = 0;
 };
 
-const resultText = computed<string>(() => {
-  return selectedItems.value
-    .map((item) => {
-      switch (item.type) {
-        case 'string':
-          return `%(${item.value})s`;
-        case 'float':
-          return `%(${item.value})f`;
-        case 'integer':
-          return `%(${item.value})d`;
-        default:
-          return item.value;
-      }
-    })
-    .join('');
+const resultText = computed<string>(() => serialize(selectedItems.value, style.value));
+
+const styles: { value: Style; label: string }[] = [
+  { value: '%', label: '%-style' },
+  { value: '{', label: '{}-format' },
+  { value: '$', label: '$-template' },
+];
+
+// The Python snippet to copy: a Formatter with the matching style (and datefmt).
+const formatterCode = computed<string>(() => {
+  const args = [`fmt=${JSON.stringify(resultText.value)}`];
+  if (datefmt.value) args.push(`datefmt=${JSON.stringify(datefmt.value)}`);
+  if (style.value !== '%') args.push(`style=${JSON.stringify(style.value)}`);
+  return `logging.Formatter(${args.join(', ')})`;
 });
+
+// Render one sample record, surfacing any Python-equivalent error inline.
+const renderLine = (record: Record<string, unknown>): string => {
+  try {
+    return renderRecord(selectedItems.value, record, style.value, datefmt.value || undefined);
+  } catch (e) {
+    return `⚠ ${e instanceof Error ? e.message : String(e)}`;
+  }
+};
 
 // copy format
 const copyState = ref<number>(0);
@@ -86,7 +98,8 @@ const setPreset = (index: number) => {
     return;
   }
 
-  selectedItems.value = parseFormat(preset.format);
+  style.value = preset.style;
+  selectedItems.value = parseFormat(preset.format, preset.style);
 };
 </script>
 
@@ -124,6 +137,19 @@ const setPreset = (index: number) => {
         </li>
       </ul>
     </nav>
+    <div class="grid style-row">
+      <label>
+        Style
+        <select v-model="style">
+          <option v-for="s in styles" :key="s.value" :value="s.value">{{ s.label }}</option>
+        </select>
+      </label>
+      <label>
+        datefmt (for asctime, optional)
+        <input type="text" v-model="datefmt" placeholder="e.g. %Y-%m-%d %H:%M:%S" />
+      </label>
+    </div>
+
     <p>Select from all available tokens or add custom text:</p>
 
     <p class="buttons">
@@ -155,9 +181,9 @@ const setPreset = (index: number) => {
         :data-tooltip="item.description"
         @click="updateItem(i)"
         class="contrast"
-        :class="item.type == 'usertext' ? 'outline' : ''"
+        :class="item.isText ? 'outline' : ''"
       >
-        <template v-if="item.type == 'usertext'">"{{ item.value }}"</template>
+        <template v-if="item.isText">"{{ item.value }}"</template>
         <template v-else>{{ item.value }}</template>
       </button>
     </p>
@@ -168,12 +194,11 @@ const setPreset = (index: number) => {
       <pre><code>format="{{ resultText }}"</code></pre>
       <button @click="copyResult" data-tooltip="Copy to clipboard">{{ copyText }}</button>
     </div>
+    <pre><code>{{ formatterCode }}</code></pre>
   </div>
   <div class="example-area">
     <h2>Example Logs</h2>
-    <pre v-if="selectedItems.length"><code v-for="(line, i) in logs" :key="i"><template v-for="item in selectedItems">{{
-          item.type === 'usertext' ? item.value : (line as any)[item.value]
-        }}</template></code></pre>
+    <pre v-if="selectedItems.length"><code v-for="(line, i) in logs" :key="i">{{ renderLine(line) }}</code></pre>
   </div>
   <ItemDialog ref="itemDialogComponent" />
 </template>
@@ -199,6 +224,12 @@ const setPreset = (index: number) => {
   .select-preset {
     cursor: pointer;
     border: unset;
+  }
+  .style-row {
+    margin-bottom: var(--spacing);
+    label {
+      font-size: 0.9em;
+    }
   }
   .buttons {
     display: flex;
