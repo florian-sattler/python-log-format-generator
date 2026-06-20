@@ -7,7 +7,7 @@
  * sample value, so width/precision specs and `datefmt` behave like Python.
  */
 
-import type { FormattedItem, LogRecord, Style } from './types';
+import { type FormattedItem, type LogRecord, type Style, FormatValueError } from './types';
 import { formatPercent } from './spec/printf';
 import { formatBrace } from './spec/formatspec';
 import { pyStr } from './spec/pyrepr';
@@ -18,6 +18,11 @@ function fieldValue(item: FormattedItem, record: LogRecord, datefmt?: string): u
     const created = Number(record.created ?? 0);
     const msecs = Number(record.msecs ?? 0);
     return formatTime(created, msecs, datefmt);
+  }
+  // A referenced field absent from the record is a KeyError in all three styles
+  // (`fmt % record.__dict__`, `fmt.format(**d)`, `Template(fmt).substitute(d)`).
+  if (!(item.value in record)) {
+    throw new FormatValueError(`KeyError: '${item.value}'`, 'KeyError');
   }
   return record[item.value];
 }
