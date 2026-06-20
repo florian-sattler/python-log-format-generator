@@ -15241,12 +15241,174 @@
     },
     {
       "style": "{",
+      "fmt": "{lineno:6}",
+      "record": {
+        "lineno": 0
+      },
+      "expected": "     0",
+      "id": 1693
+    },
+    {
+      "style": "{",
+      "fmt": "{lineno:06}",
+      "record": {
+        "lineno": 0
+      },
+      "expected": "000000",
+      "id": 1694
+    },
+    {
+      "style": "{",
+      "fmt": "{lineno:<6}",
+      "record": {
+        "lineno": 0
+      },
+      "expected": "0     ",
+      "id": 1695
+    },
+    {
+      "style": "{",
+      "fmt": "{lineno:^6}",
+      "record": {
+        "lineno": 0
+      },
+      "expected": "  0   ",
+      "id": 1696
+    },
+    {
+      "style": "{",
+      "fmt": "{lineno:+}",
+      "record": {
+        "lineno": 0
+      },
+      "expected": "+0",
+      "id": 1697
+    },
+    {
+      "style": "{",
+      "fmt": "{lineno:+06}",
+      "record": {
+        "lineno": 0
+      },
+      "expected": "+00000",
+      "id": 1698
+    },
+    {
+      "style": "{",
+      "fmt": "{lineno: 6}",
+      "record": {
+        "lineno": 0
+      },
+      "expected": "     0",
+      "id": 1699
+    },
+    {
+      "style": "{",
+      "fmt": "{lineno:,}",
+      "record": {
+        "lineno": 0
+      },
+      "expected": "0",
+      "id": 1700
+    },
+    {
+      "style": "{",
+      "fmt": "{lineno:+,}",
+      "record": {
+        "lineno": 0
+      },
+      "expected": "+0",
+      "id": 1701
+    },
+    {
+      "style": "{",
       "fmt": "{lineno}",
       "record": {
         "lineno": 5
       },
       "expected": "5",
-      "id": 1693
+      "id": 1702
+    },
+    {
+      "style": "{",
+      "fmt": "{lineno:6}",
+      "record": {
+        "lineno": 5
+      },
+      "expected": "     5",
+      "id": 1703
+    },
+    {
+      "style": "{",
+      "fmt": "{lineno:06}",
+      "record": {
+        "lineno": 5
+      },
+      "expected": "000005",
+      "id": 1704
+    },
+    {
+      "style": "{",
+      "fmt": "{lineno:<6}",
+      "record": {
+        "lineno": 5
+      },
+      "expected": "5     ",
+      "id": 1705
+    },
+    {
+      "style": "{",
+      "fmt": "{lineno:^6}",
+      "record": {
+        "lineno": 5
+      },
+      "expected": "  5   ",
+      "id": 1706
+    },
+    {
+      "style": "{",
+      "fmt": "{lineno:+}",
+      "record": {
+        "lineno": 5
+      },
+      "expected": "+5",
+      "id": 1707
+    },
+    {
+      "style": "{",
+      "fmt": "{lineno:+06}",
+      "record": {
+        "lineno": 5
+      },
+      "expected": "+00005",
+      "id": 1708
+    },
+    {
+      "style": "{",
+      "fmt": "{lineno: 6}",
+      "record": {
+        "lineno": 5
+      },
+      "expected": "     5",
+      "id": 1709
+    },
+    {
+      "style": "{",
+      "fmt": "{lineno:,}",
+      "record": {
+        "lineno": 5
+      },
+      "expected": "5",
+      "id": 1710
+    },
+    {
+      "style": "{",
+      "fmt": "{lineno:+,}",
+      "record": {
+        "lineno": 5
+      },
+      "expected": "+5",
+      "id": 1711
     },
     {
       "style": "{",
@@ -15255,7 +15417,88 @@
         "lineno": 255
       },
       "expected": "255",
-      "id": 1694
+      "id": 1712
+    },
+    {
+      "style": "{",
+      "fmt": "{lineno:6}",
+      "record": {
+        "lineno": 255
+      },
+      "expected": "   255",
+      "id": 1713
+    },
+    {
+      "style": "{",
+      "fmt": "{lineno:06}",
+      "record": {
+        "lineno": 255
+      },
+      "expected": "000255",
+      "id": 1714
+    },
+    {
+      "style": "{",
+      "fmt": "{lineno:<6}",
+      "record": {
+        "lineno": 255
+      },
+      "expected": "255   ",
+      "id": 1715
+    },
+    {
+      "style": "{",
+      "fmt": "{lineno:^6}",
+      "record": {
+        "lineno": 255
+      },
+      "expected": " 255  ",
+      "id": 1716
+    },
+    {
+      "style": "{",
+      "fmt": "{lineno:+}",
+      "record": {
+        "lineno": 255
+      },
+      "expected": "+255",
+      "id": 1717
+    },
+    {
+      "style": "{",
+      "fmt": "{lineno:+06}",
+      "record": {
+        "lineno": 255
+      },
+      "expected": "+00255",
+      "id": 1718
+    },
+    {
+      "style": "{",
+      "fmt": "{lineno: 6}",
+      "record": {
+        "lineno": 255
+      },
+      "expected": "   255",
+      "id": 1719
+    },
+    {
+      "style": "{",
+      "fmt": "{lineno:,}",
+      "record": {
+        "lineno": 255
+      },
+      "expected": "255",
+      "id": 1720
+    },
+    {
+      "style": "{",
+      "fmt": "{lineno:+,}",
+      "record": {
+        "lineno": 255
+      },
+      "expected": "+255",
+      "id": 1721
     },
     {
       "style": "{",
@@ -15264,7 +15507,88 @@
         "lineno": -7
       },
       "expected": "-7",
-      "id": 1695
+      "id": 1722
+    },
+    {
+      "style": "{",
+      "fmt": "{lineno:6}",
+      "record": {
+        "lineno": -7
+      },
+      "expected": "    -7",
+      "id": 1723
+    },
+    {
+      "style": "{",
+      "fmt": "{lineno:06}",
+      "record": {
+        "lineno": -7
+      },
+      "expected": "-00007",
+      "id": 1724
+    },
+    {
+      "style": "{",
+      "fmt": "{lineno:<6}",
+      "record": {
+        "lineno": -7
+      },
+      "expected": "-7    ",
+      "id": 1725
+    },
+    {
+      "style": "{",
+      "fmt": "{lineno:^6}",
+      "record": {
+        "lineno": -7
+      },
+      "expected": "  -7  ",
+      "id": 1726
+    },
+    {
+      "style": "{",
+      "fmt": "{lineno:+}",
+      "record": {
+        "lineno": -7
+      },
+      "expected": "-7",
+      "id": 1727
+    },
+    {
+      "style": "{",
+      "fmt": "{lineno:+06}",
+      "record": {
+        "lineno": -7
+      },
+      "expected": "-00007",
+      "id": 1728
+    },
+    {
+      "style": "{",
+      "fmt": "{lineno: 6}",
+      "record": {
+        "lineno": -7
+      },
+      "expected": "    -7",
+      "id": 1729
+    },
+    {
+      "style": "{",
+      "fmt": "{lineno:,}",
+      "record": {
+        "lineno": -7
+      },
+      "expected": "-7",
+      "id": 1730
+    },
+    {
+      "style": "{",
+      "fmt": "{lineno:+,}",
+      "record": {
+        "lineno": -7
+      },
+      "expected": "-7",
+      "id": 1731
     },
     {
       "style": "{",
@@ -15273,7 +15597,7 @@
         "created": 0.0
       },
       "expected": "0.000000",
-      "id": 1696
+      "id": 1732
     },
     {
       "style": "{",
@@ -15282,7 +15606,7 @@
         "created": 0.0
       },
       "expected": "0.000000e+00",
-      "id": 1697
+      "id": 1733
     },
     {
       "style": "{",
@@ -15291,7 +15615,7 @@
         "created": 0.0
       },
       "expected": "0",
-      "id": 1698
+      "id": 1734
     },
     {
       "style": "{",
@@ -15300,7 +15624,7 @@
         "created": 0.0
       },
       "expected": "0.000000%",
-      "id": 1699
+      "id": 1735
     },
     {
       "style": "{",
@@ -15309,335 +15633,11 @@
         "created": 0.0
       },
       "expected": "    0.000000",
-      "id": 1700
-    },
-    {
-      "style": "{",
-      "fmt": "{created:12e}",
-      "record": {
-        "created": 0.0
-      },
-      "expected": "0.000000e+00",
-      "id": 1701
-    },
-    {
-      "style": "{",
-      "fmt": "{created:12g}",
-      "record": {
-        "created": 0.0
-      },
-      "expected": "           0",
-      "id": 1702
-    },
-    {
-      "style": "{",
-      "fmt": "{created:12%}",
-      "record": {
-        "created": 0.0
-      },
-      "expected": "   0.000000%",
-      "id": 1703
-    },
-    {
-      "style": "{",
-      "fmt": "{created:012f}",
-      "record": {
-        "created": 0.0
-      },
-      "expected": "00000.000000",
-      "id": 1704
-    },
-    {
-      "style": "{",
-      "fmt": "{created:012e}",
-      "record": {
-        "created": 0.0
-      },
-      "expected": "0.000000e+00",
-      "id": 1705
-    },
-    {
-      "style": "{",
-      "fmt": "{created:012g}",
-      "record": {
-        "created": 0.0
-      },
-      "expected": "000000000000",
-      "id": 1706
-    },
-    {
-      "style": "{",
-      "fmt": "{created:012%}",
-      "record": {
-        "created": 0.0
-      },
-      "expected": "0000.000000%",
-      "id": 1707
-    },
-    {
-      "style": "{",
-      "fmt": "{created:<12f}",
-      "record": {
-        "created": 0.0
-      },
-      "expected": "0.000000    ",
-      "id": 1708
-    },
-    {
-      "style": "{",
-      "fmt": "{created:<12e}",
-      "record": {
-        "created": 0.0
-      },
-      "expected": "0.000000e+00",
-      "id": 1709
-    },
-    {
-      "style": "{",
-      "fmt": "{created:<12g}",
-      "record": {
-        "created": 0.0
-      },
-      "expected": "0           ",
-      "id": 1710
-    },
-    {
-      "style": "{",
-      "fmt": "{created:<12%}",
-      "record": {
-        "created": 0.0
-      },
-      "expected": "0.000000%   ",
-      "id": 1711
-    },
-    {
-      "style": "{",
-      "fmt": "{created:>12f}",
-      "record": {
-        "created": 0.0
-      },
-      "expected": "    0.000000",
-      "id": 1712
-    },
-    {
-      "style": "{",
-      "fmt": "{created:>12e}",
-      "record": {
-        "created": 0.0
-      },
-      "expected": "0.000000e+00",
-      "id": 1713
-    },
-    {
-      "style": "{",
-      "fmt": "{created:>12g}",
-      "record": {
-        "created": 0.0
-      },
-      "expected": "           0",
-      "id": 1714
-    },
-    {
-      "style": "{",
-      "fmt": "{created:>12%}",
-      "record": {
-        "created": 0.0
-      },
-      "expected": "   0.000000%",
-      "id": 1715
-    },
-    {
-      "style": "{",
-      "fmt": "{created:^12f}",
-      "record": {
-        "created": 0.0
-      },
-      "expected": "  0.000000  ",
-      "id": 1716
-    },
-    {
-      "style": "{",
-      "fmt": "{created:^12e}",
-      "record": {
-        "created": 0.0
-      },
-      "expected": "0.000000e+00",
-      "id": 1717
-    },
-    {
-      "style": "{",
-      "fmt": "{created:^12g}",
-      "record": {
-        "created": 0.0
-      },
-      "expected": "     0      ",
-      "id": 1718
-    },
-    {
-      "style": "{",
-      "fmt": "{created:^12%}",
-      "record": {
-        "created": 0.0
-      },
-      "expected": " 0.000000%  ",
-      "id": 1719
-    },
-    {
-      "style": "{",
-      "fmt": "{created:*>12f}",
-      "record": {
-        "created": 0.0
-      },
-      "expected": "****0.000000",
-      "id": 1720
-    },
-    {
-      "style": "{",
-      "fmt": "{created:*>12e}",
-      "record": {
-        "created": 0.0
-      },
-      "expected": "0.000000e+00",
-      "id": 1721
-    },
-    {
-      "style": "{",
-      "fmt": "{created:*>12g}",
-      "record": {
-        "created": 0.0
-      },
-      "expected": "***********0",
-      "id": 1722
-    },
-    {
-      "style": "{",
-      "fmt": "{created:*>12%}",
-      "record": {
-        "created": 0.0
-      },
-      "expected": "***0.000000%",
-      "id": 1723
-    },
-    {
-      "style": "{",
-      "fmt": "{created:+f}",
-      "record": {
-        "created": 0.0
-      },
-      "expected": "+0.000000",
-      "id": 1724
-    },
-    {
-      "style": "{",
-      "fmt": "{created:+e}",
-      "record": {
-        "created": 0.0
-      },
-      "expected": "+0.000000e+00",
-      "id": 1725
-    },
-    {
-      "style": "{",
-      "fmt": "{created:+g}",
-      "record": {
-        "created": 0.0
-      },
-      "expected": "+0",
-      "id": 1726
-    },
-    {
-      "style": "{",
-      "fmt": "{created:+%}",
-      "record": {
-        "created": 0.0
-      },
-      "expected": "+0.000000%",
-      "id": 1727
-    },
-    {
-      "style": "{",
-      "fmt": "{created:+012f}",
-      "record": {
-        "created": 0.0
-      },
-      "expected": "+0000.000000",
-      "id": 1728
-    },
-    {
-      "style": "{",
-      "fmt": "{created:+012e}",
-      "record": {
-        "created": 0.0
-      },
-      "expected": "+0.000000e+00",
-      "id": 1729
-    },
-    {
-      "style": "{",
-      "fmt": "{created:+012g}",
-      "record": {
-        "created": 0.0
-      },
-      "expected": "+00000000000",
-      "id": 1730
-    },
-    {
-      "style": "{",
-      "fmt": "{created:+012%}",
-      "record": {
-        "created": 0.0
-      },
-      "expected": "+000.000000%",
-      "id": 1731
-    },
-    {
-      "style": "{",
-      "fmt": "{created: f}",
-      "record": {
-        "created": 0.0
-      },
-      "expected": " 0.000000",
-      "id": 1732
-    },
-    {
-      "style": "{",
-      "fmt": "{created: e}",
-      "record": {
-        "created": 0.0
-      },
-      "expected": " 0.000000e+00",
-      "id": 1733
-    },
-    {
-      "style": "{",
-      "fmt": "{created: g}",
-      "record": {
-        "created": 0.0
-      },
-      "expected": " 0",
-      "id": 1734
-    },
-    {
-      "style": "{",
-      "fmt": "{created: %}",
-      "record": {
-        "created": 0.0
-      },
-      "expected": " 0.000000%",
-      "id": 1735
-    },
-    {
-      "style": "{",
-      "fmt": "{created:#f}",
-      "record": {
-        "created": 0.0
-      },
-      "expected": "0.000000",
       "id": 1736
     },
     {
       "style": "{",
-      "fmt": "{created:#e}",
+      "fmt": "{created:12e}",
       "record": {
         "created": 0.0
       },
@@ -15646,70 +15646,70 @@
     },
     {
       "style": "{",
-      "fmt": "{created:#g}",
+      "fmt": "{created:12g}",
       "record": {
         "created": 0.0
       },
-      "expected": "0.00000",
+      "expected": "           0",
       "id": 1738
     },
     {
       "style": "{",
-      "fmt": "{created:#%}",
+      "fmt": "{created:12%}",
       "record": {
         "created": 0.0
       },
-      "expected": "0.000000%",
+      "expected": "   0.000000%",
       "id": 1739
     },
     {
       "style": "{",
-      "fmt": "{created:.2f}",
+      "fmt": "{created:012f}",
       "record": {
         "created": 0.0
       },
-      "expected": "0.00",
+      "expected": "00000.000000",
       "id": 1740
     },
     {
       "style": "{",
-      "fmt": "{created:.2e}",
+      "fmt": "{created:012e}",
       "record": {
         "created": 0.0
       },
-      "expected": "0.00e+00",
+      "expected": "0.000000e+00",
       "id": 1741
     },
     {
       "style": "{",
-      "fmt": "{created:.2g}",
+      "fmt": "{created:012g}",
       "record": {
         "created": 0.0
       },
-      "expected": "0",
+      "expected": "000000000000",
       "id": 1742
     },
     {
       "style": "{",
-      "fmt": "{created:.2%}",
+      "fmt": "{created:012%}",
       "record": {
         "created": 0.0
       },
-      "expected": "0.00%",
+      "expected": "0000.000000%",
       "id": 1743
     },
     {
       "style": "{",
-      "fmt": "{created:.6f}",
+      "fmt": "{created:<12f}",
       "record": {
         "created": 0.0
       },
-      "expected": "0.000000",
+      "expected": "0.000000    ",
       "id": 1744
     },
     {
       "style": "{",
-      "fmt": "{created:.6e}",
+      "fmt": "{created:<12e}",
       "record": {
         "created": 0.0
       },
@@ -15718,43 +15718,43 @@
     },
     {
       "style": "{",
-      "fmt": "{created:.6g}",
+      "fmt": "{created:<12g}",
       "record": {
         "created": 0.0
       },
-      "expected": "0",
+      "expected": "0           ",
       "id": 1746
     },
     {
       "style": "{",
-      "fmt": "{created:.6%}",
+      "fmt": "{created:<12%}",
       "record": {
         "created": 0.0
       },
-      "expected": "0.000000%",
+      "expected": "0.000000%   ",
       "id": 1747
     },
     {
       "style": "{",
-      "fmt": "{created:12.2f}",
+      "fmt": "{created:>12f}",
       "record": {
         "created": 0.0
       },
-      "expected": "        0.00",
+      "expected": "    0.000000",
       "id": 1748
     },
     {
       "style": "{",
-      "fmt": "{created:12.2e}",
+      "fmt": "{created:>12e}",
       "record": {
         "created": 0.0
       },
-      "expected": "    0.00e+00",
+      "expected": "0.000000e+00",
       "id": 1749
     },
     {
       "style": "{",
-      "fmt": "{created:12.2g}",
+      "fmt": "{created:>12g}",
       "record": {
         "created": 0.0
       },
@@ -15763,12 +15763,336 @@
     },
     {
       "style": "{",
+      "fmt": "{created:>12%}",
+      "record": {
+        "created": 0.0
+      },
+      "expected": "   0.000000%",
+      "id": 1751
+    },
+    {
+      "style": "{",
+      "fmt": "{created:^12f}",
+      "record": {
+        "created": 0.0
+      },
+      "expected": "  0.000000  ",
+      "id": 1752
+    },
+    {
+      "style": "{",
+      "fmt": "{created:^12e}",
+      "record": {
+        "created": 0.0
+      },
+      "expected": "0.000000e+00",
+      "id": 1753
+    },
+    {
+      "style": "{",
+      "fmt": "{created:^12g}",
+      "record": {
+        "created": 0.0
+      },
+      "expected": "     0      ",
+      "id": 1754
+    },
+    {
+      "style": "{",
+      "fmt": "{created:^12%}",
+      "record": {
+        "created": 0.0
+      },
+      "expected": " 0.000000%  ",
+      "id": 1755
+    },
+    {
+      "style": "{",
+      "fmt": "{created:*>12f}",
+      "record": {
+        "created": 0.0
+      },
+      "expected": "****0.000000",
+      "id": 1756
+    },
+    {
+      "style": "{",
+      "fmt": "{created:*>12e}",
+      "record": {
+        "created": 0.0
+      },
+      "expected": "0.000000e+00",
+      "id": 1757
+    },
+    {
+      "style": "{",
+      "fmt": "{created:*>12g}",
+      "record": {
+        "created": 0.0
+      },
+      "expected": "***********0",
+      "id": 1758
+    },
+    {
+      "style": "{",
+      "fmt": "{created:*>12%}",
+      "record": {
+        "created": 0.0
+      },
+      "expected": "***0.000000%",
+      "id": 1759
+    },
+    {
+      "style": "{",
+      "fmt": "{created:+f}",
+      "record": {
+        "created": 0.0
+      },
+      "expected": "+0.000000",
+      "id": 1760
+    },
+    {
+      "style": "{",
+      "fmt": "{created:+e}",
+      "record": {
+        "created": 0.0
+      },
+      "expected": "+0.000000e+00",
+      "id": 1761
+    },
+    {
+      "style": "{",
+      "fmt": "{created:+g}",
+      "record": {
+        "created": 0.0
+      },
+      "expected": "+0",
+      "id": 1762
+    },
+    {
+      "style": "{",
+      "fmt": "{created:+%}",
+      "record": {
+        "created": 0.0
+      },
+      "expected": "+0.000000%",
+      "id": 1763
+    },
+    {
+      "style": "{",
+      "fmt": "{created:+012f}",
+      "record": {
+        "created": 0.0
+      },
+      "expected": "+0000.000000",
+      "id": 1764
+    },
+    {
+      "style": "{",
+      "fmt": "{created:+012e}",
+      "record": {
+        "created": 0.0
+      },
+      "expected": "+0.000000e+00",
+      "id": 1765
+    },
+    {
+      "style": "{",
+      "fmt": "{created:+012g}",
+      "record": {
+        "created": 0.0
+      },
+      "expected": "+00000000000",
+      "id": 1766
+    },
+    {
+      "style": "{",
+      "fmt": "{created:+012%}",
+      "record": {
+        "created": 0.0
+      },
+      "expected": "+000.000000%",
+      "id": 1767
+    },
+    {
+      "style": "{",
+      "fmt": "{created: f}",
+      "record": {
+        "created": 0.0
+      },
+      "expected": " 0.000000",
+      "id": 1768
+    },
+    {
+      "style": "{",
+      "fmt": "{created: e}",
+      "record": {
+        "created": 0.0
+      },
+      "expected": " 0.000000e+00",
+      "id": 1769
+    },
+    {
+      "style": "{",
+      "fmt": "{created: g}",
+      "record": {
+        "created": 0.0
+      },
+      "expected": " 0",
+      "id": 1770
+    },
+    {
+      "style": "{",
+      "fmt": "{created: %}",
+      "record": {
+        "created": 0.0
+      },
+      "expected": " 0.000000%",
+      "id": 1771
+    },
+    {
+      "style": "{",
+      "fmt": "{created:#f}",
+      "record": {
+        "created": 0.0
+      },
+      "expected": "0.000000",
+      "id": 1772
+    },
+    {
+      "style": "{",
+      "fmt": "{created:#e}",
+      "record": {
+        "created": 0.0
+      },
+      "expected": "0.000000e+00",
+      "id": 1773
+    },
+    {
+      "style": "{",
+      "fmt": "{created:#g}",
+      "record": {
+        "created": 0.0
+      },
+      "expected": "0.00000",
+      "id": 1774
+    },
+    {
+      "style": "{",
+      "fmt": "{created:#%}",
+      "record": {
+        "created": 0.0
+      },
+      "expected": "0.000000%",
+      "id": 1775
+    },
+    {
+      "style": "{",
+      "fmt": "{created:.2f}",
+      "record": {
+        "created": 0.0
+      },
+      "expected": "0.00",
+      "id": 1776
+    },
+    {
+      "style": "{",
+      "fmt": "{created:.2e}",
+      "record": {
+        "created": 0.0
+      },
+      "expected": "0.00e+00",
+      "id": 1777
+    },
+    {
+      "style": "{",
+      "fmt": "{created:.2g}",
+      "record": {
+        "created": 0.0
+      },
+      "expected": "0",
+      "id": 1778
+    },
+    {
+      "style": "{",
+      "fmt": "{created:.2%}",
+      "record": {
+        "created": 0.0
+      },
+      "expected": "0.00%",
+      "id": 1779
+    },
+    {
+      "style": "{",
+      "fmt": "{created:.6f}",
+      "record": {
+        "created": 0.0
+      },
+      "expected": "0.000000",
+      "id": 1780
+    },
+    {
+      "style": "{",
+      "fmt": "{created:.6e}",
+      "record": {
+        "created": 0.0
+      },
+      "expected": "0.000000e+00",
+      "id": 1781
+    },
+    {
+      "style": "{",
+      "fmt": "{created:.6g}",
+      "record": {
+        "created": 0.0
+      },
+      "expected": "0",
+      "id": 1782
+    },
+    {
+      "style": "{",
+      "fmt": "{created:.6%}",
+      "record": {
+        "created": 0.0
+      },
+      "expected": "0.000000%",
+      "id": 1783
+    },
+    {
+      "style": "{",
+      "fmt": "{created:12.2f}",
+      "record": {
+        "created": 0.0
+      },
+      "expected": "        0.00",
+      "id": 1784
+    },
+    {
+      "style": "{",
+      "fmt": "{created:12.2e}",
+      "record": {
+        "created": 0.0
+      },
+      "expected": "    0.00e+00",
+      "id": 1785
+    },
+    {
+      "style": "{",
+      "fmt": "{created:12.2g}",
+      "record": {
+        "created": 0.0
+      },
+      "expected": "           0",
+      "id": 1786
+    },
+    {
+      "style": "{",
       "fmt": "{created:12.2%}",
       "record": {
         "created": 0.0
       },
       "expected": "       0.00%",
-      "id": 1751
+      "id": 1787
     },
     {
       "style": "{",
@@ -15777,7 +16101,7 @@
         "created": 0.0
       },
       "expected": "+0000000.000",
-      "id": 1752
+      "id": 1788
     },
     {
       "style": "{",
@@ -15786,7 +16110,7 @@
         "created": 0.0
       },
       "expected": "+000.000e+00",
-      "id": 1753
+      "id": 1789
     },
     {
       "style": "{",
@@ -15795,7 +16119,7 @@
         "created": 0.0
       },
       "expected": "+00000000000",
-      "id": 1754
+      "id": 1790
     },
     {
       "style": "{",
@@ -15804,7 +16128,7 @@
         "created": 0.0
       },
       "expected": "+000000.000%",
-      "id": 1755
+      "id": 1791
     },
     {
       "style": "{",
@@ -15813,7 +16137,7 @@
         "created": 3.14159
       },
       "expected": "3.141590",
-      "id": 1756
+      "id": 1792
     },
     {
       "style": "{",
@@ -15822,7 +16146,7 @@
         "created": 3.14159
       },
       "expected": "3.141590e+00",
-      "id": 1757
+      "id": 1793
     },
     {
       "style": "{",
@@ -15831,7 +16155,7 @@
         "created": 3.14159
       },
       "expected": "3.14159",
-      "id": 1758
+      "id": 1794
     },
     {
       "style": "{",
@@ -15840,7 +16164,7 @@
         "created": 3.14159
       },
       "expected": "314.159000%",
-      "id": 1759
+      "id": 1795
     },
     {
       "style": "{",
@@ -15849,335 +16173,11 @@
         "created": 3.14159
       },
       "expected": "    3.141590",
-      "id": 1760
-    },
-    {
-      "style": "{",
-      "fmt": "{created:12e}",
-      "record": {
-        "created": 3.14159
-      },
-      "expected": "3.141590e+00",
-      "id": 1761
-    },
-    {
-      "style": "{",
-      "fmt": "{created:12g}",
-      "record": {
-        "created": 3.14159
-      },
-      "expected": "     3.14159",
-      "id": 1762
-    },
-    {
-      "style": "{",
-      "fmt": "{created:12%}",
-      "record": {
-        "created": 3.14159
-      },
-      "expected": " 314.159000%",
-      "id": 1763
-    },
-    {
-      "style": "{",
-      "fmt": "{created:012f}",
-      "record": {
-        "created": 3.14159
-      },
-      "expected": "00003.141590",
-      "id": 1764
-    },
-    {
-      "style": "{",
-      "fmt": "{created:012e}",
-      "record": {
-        "created": 3.14159
-      },
-      "expected": "3.141590e+00",
-      "id": 1765
-    },
-    {
-      "style": "{",
-      "fmt": "{created:012g}",
-      "record": {
-        "created": 3.14159
-      },
-      "expected": "000003.14159",
-      "id": 1766
-    },
-    {
-      "style": "{",
-      "fmt": "{created:012%}",
-      "record": {
-        "created": 3.14159
-      },
-      "expected": "0314.159000%",
-      "id": 1767
-    },
-    {
-      "style": "{",
-      "fmt": "{created:<12f}",
-      "record": {
-        "created": 3.14159
-      },
-      "expected": "3.141590    ",
-      "id": 1768
-    },
-    {
-      "style": "{",
-      "fmt": "{created:<12e}",
-      "record": {
-        "created": 3.14159
-      },
-      "expected": "3.141590e+00",
-      "id": 1769
-    },
-    {
-      "style": "{",
-      "fmt": "{created:<12g}",
-      "record": {
-        "created": 3.14159
-      },
-      "expected": "3.14159     ",
-      "id": 1770
-    },
-    {
-      "style": "{",
-      "fmt": "{created:<12%}",
-      "record": {
-        "created": 3.14159
-      },
-      "expected": "314.159000% ",
-      "id": 1771
-    },
-    {
-      "style": "{",
-      "fmt": "{created:>12f}",
-      "record": {
-        "created": 3.14159
-      },
-      "expected": "    3.141590",
-      "id": 1772
-    },
-    {
-      "style": "{",
-      "fmt": "{created:>12e}",
-      "record": {
-        "created": 3.14159
-      },
-      "expected": "3.141590e+00",
-      "id": 1773
-    },
-    {
-      "style": "{",
-      "fmt": "{created:>12g}",
-      "record": {
-        "created": 3.14159
-      },
-      "expected": "     3.14159",
-      "id": 1774
-    },
-    {
-      "style": "{",
-      "fmt": "{created:>12%}",
-      "record": {
-        "created": 3.14159
-      },
-      "expected": " 314.159000%",
-      "id": 1775
-    },
-    {
-      "style": "{",
-      "fmt": "{created:^12f}",
-      "record": {
-        "created": 3.14159
-      },
-      "expected": "  3.141590  ",
-      "id": 1776
-    },
-    {
-      "style": "{",
-      "fmt": "{created:^12e}",
-      "record": {
-        "created": 3.14159
-      },
-      "expected": "3.141590e+00",
-      "id": 1777
-    },
-    {
-      "style": "{",
-      "fmt": "{created:^12g}",
-      "record": {
-        "created": 3.14159
-      },
-      "expected": "  3.14159   ",
-      "id": 1778
-    },
-    {
-      "style": "{",
-      "fmt": "{created:^12%}",
-      "record": {
-        "created": 3.14159
-      },
-      "expected": "314.159000% ",
-      "id": 1779
-    },
-    {
-      "style": "{",
-      "fmt": "{created:*>12f}",
-      "record": {
-        "created": 3.14159
-      },
-      "expected": "****3.141590",
-      "id": 1780
-    },
-    {
-      "style": "{",
-      "fmt": "{created:*>12e}",
-      "record": {
-        "created": 3.14159
-      },
-      "expected": "3.141590e+00",
-      "id": 1781
-    },
-    {
-      "style": "{",
-      "fmt": "{created:*>12g}",
-      "record": {
-        "created": 3.14159
-      },
-      "expected": "*****3.14159",
-      "id": 1782
-    },
-    {
-      "style": "{",
-      "fmt": "{created:*>12%}",
-      "record": {
-        "created": 3.14159
-      },
-      "expected": "*314.159000%",
-      "id": 1783
-    },
-    {
-      "style": "{",
-      "fmt": "{created:+f}",
-      "record": {
-        "created": 3.14159
-      },
-      "expected": "+3.141590",
-      "id": 1784
-    },
-    {
-      "style": "{",
-      "fmt": "{created:+e}",
-      "record": {
-        "created": 3.14159
-      },
-      "expected": "+3.141590e+00",
-      "id": 1785
-    },
-    {
-      "style": "{",
-      "fmt": "{created:+g}",
-      "record": {
-        "created": 3.14159
-      },
-      "expected": "+3.14159",
-      "id": 1786
-    },
-    {
-      "style": "{",
-      "fmt": "{created:+%}",
-      "record": {
-        "created": 3.14159
-      },
-      "expected": "+314.159000%",
-      "id": 1787
-    },
-    {
-      "style": "{",
-      "fmt": "{created:+012f}",
-      "record": {
-        "created": 3.14159
-      },
-      "expected": "+0003.141590",
-      "id": 1788
-    },
-    {
-      "style": "{",
-      "fmt": "{created:+012e}",
-      "record": {
-        "created": 3.14159
-      },
-      "expected": "+3.141590e+00",
-      "id": 1789
-    },
-    {
-      "style": "{",
-      "fmt": "{created:+012g}",
-      "record": {
-        "created": 3.14159
-      },
-      "expected": "+00003.14159",
-      "id": 1790
-    },
-    {
-      "style": "{",
-      "fmt": "{created:+012%}",
-      "record": {
-        "created": 3.14159
-      },
-      "expected": "+314.159000%",
-      "id": 1791
-    },
-    {
-      "style": "{",
-      "fmt": "{created: f}",
-      "record": {
-        "created": 3.14159
-      },
-      "expected": " 3.141590",
-      "id": 1792
-    },
-    {
-      "style": "{",
-      "fmt": "{created: e}",
-      "record": {
-        "created": 3.14159
-      },
-      "expected": " 3.141590e+00",
-      "id": 1793
-    },
-    {
-      "style": "{",
-      "fmt": "{created: g}",
-      "record": {
-        "created": 3.14159
-      },
-      "expected": " 3.14159",
-      "id": 1794
-    },
-    {
-      "style": "{",
-      "fmt": "{created: %}",
-      "record": {
-        "created": 3.14159
-      },
-      "expected": " 314.159000%",
-      "id": 1795
-    },
-    {
-      "style": "{",
-      "fmt": "{created:#f}",
-      "record": {
-        "created": 3.14159
-      },
-      "expected": "3.141590",
       "id": 1796
     },
     {
       "style": "{",
-      "fmt": "{created:#e}",
+      "fmt": "{created:12e}",
       "record": {
         "created": 3.14159
       },
@@ -16186,70 +16186,70 @@
     },
     {
       "style": "{",
-      "fmt": "{created:#g}",
+      "fmt": "{created:12g}",
       "record": {
         "created": 3.14159
       },
-      "expected": "3.14159",
+      "expected": "     3.14159",
       "id": 1798
     },
     {
       "style": "{",
-      "fmt": "{created:#%}",
+      "fmt": "{created:12%}",
       "record": {
         "created": 3.14159
       },
-      "expected": "314.159000%",
+      "expected": " 314.159000%",
       "id": 1799
     },
     {
       "style": "{",
-      "fmt": "{created:.2f}",
+      "fmt": "{created:012f}",
       "record": {
         "created": 3.14159
       },
-      "expected": "3.14",
+      "expected": "00003.141590",
       "id": 1800
     },
     {
       "style": "{",
-      "fmt": "{created:.2e}",
+      "fmt": "{created:012e}",
       "record": {
         "created": 3.14159
       },
-      "expected": "3.14e+00",
+      "expected": "3.141590e+00",
       "id": 1801
     },
     {
       "style": "{",
-      "fmt": "{created:.2g}",
+      "fmt": "{created:012g}",
       "record": {
         "created": 3.14159
       },
-      "expected": "3.1",
+      "expected": "000003.14159",
       "id": 1802
     },
     {
       "style": "{",
-      "fmt": "{created:.2%}",
+      "fmt": "{created:012%}",
       "record": {
         "created": 3.14159
       },
-      "expected": "314.16%",
+      "expected": "0314.159000%",
       "id": 1803
     },
     {
       "style": "{",
-      "fmt": "{created:.6f}",
+      "fmt": "{created:<12f}",
       "record": {
         "created": 3.14159
       },
-      "expected": "3.141590",
+      "expected": "3.141590    ",
       "id": 1804
     },
     {
       "style": "{",
-      "fmt": "{created:.6e}",
+      "fmt": "{created:<12e}",
       "record": {
         "created": 3.14159
       },
@@ -16258,12 +16258,336 @@
     },
     {
       "style": "{",
+      "fmt": "{created:<12g}",
+      "record": {
+        "created": 3.14159
+      },
+      "expected": "3.14159     ",
+      "id": 1806
+    },
+    {
+      "style": "{",
+      "fmt": "{created:<12%}",
+      "record": {
+        "created": 3.14159
+      },
+      "expected": "314.159000% ",
+      "id": 1807
+    },
+    {
+      "style": "{",
+      "fmt": "{created:>12f}",
+      "record": {
+        "created": 3.14159
+      },
+      "expected": "    3.141590",
+      "id": 1808
+    },
+    {
+      "style": "{",
+      "fmt": "{created:>12e}",
+      "record": {
+        "created": 3.14159
+      },
+      "expected": "3.141590e+00",
+      "id": 1809
+    },
+    {
+      "style": "{",
+      "fmt": "{created:>12g}",
+      "record": {
+        "created": 3.14159
+      },
+      "expected": "     3.14159",
+      "id": 1810
+    },
+    {
+      "style": "{",
+      "fmt": "{created:>12%}",
+      "record": {
+        "created": 3.14159
+      },
+      "expected": " 314.159000%",
+      "id": 1811
+    },
+    {
+      "style": "{",
+      "fmt": "{created:^12f}",
+      "record": {
+        "created": 3.14159
+      },
+      "expected": "  3.141590  ",
+      "id": 1812
+    },
+    {
+      "style": "{",
+      "fmt": "{created:^12e}",
+      "record": {
+        "created": 3.14159
+      },
+      "expected": "3.141590e+00",
+      "id": 1813
+    },
+    {
+      "style": "{",
+      "fmt": "{created:^12g}",
+      "record": {
+        "created": 3.14159
+      },
+      "expected": "  3.14159   ",
+      "id": 1814
+    },
+    {
+      "style": "{",
+      "fmt": "{created:^12%}",
+      "record": {
+        "created": 3.14159
+      },
+      "expected": "314.159000% ",
+      "id": 1815
+    },
+    {
+      "style": "{",
+      "fmt": "{created:*>12f}",
+      "record": {
+        "created": 3.14159
+      },
+      "expected": "****3.141590",
+      "id": 1816
+    },
+    {
+      "style": "{",
+      "fmt": "{created:*>12e}",
+      "record": {
+        "created": 3.14159
+      },
+      "expected": "3.141590e+00",
+      "id": 1817
+    },
+    {
+      "style": "{",
+      "fmt": "{created:*>12g}",
+      "record": {
+        "created": 3.14159
+      },
+      "expected": "*****3.14159",
+      "id": 1818
+    },
+    {
+      "style": "{",
+      "fmt": "{created:*>12%}",
+      "record": {
+        "created": 3.14159
+      },
+      "expected": "*314.159000%",
+      "id": 1819
+    },
+    {
+      "style": "{",
+      "fmt": "{created:+f}",
+      "record": {
+        "created": 3.14159
+      },
+      "expected": "+3.141590",
+      "id": 1820
+    },
+    {
+      "style": "{",
+      "fmt": "{created:+e}",
+      "record": {
+        "created": 3.14159
+      },
+      "expected": "+3.141590e+00",
+      "id": 1821
+    },
+    {
+      "style": "{",
+      "fmt": "{created:+g}",
+      "record": {
+        "created": 3.14159
+      },
+      "expected": "+3.14159",
+      "id": 1822
+    },
+    {
+      "style": "{",
+      "fmt": "{created:+%}",
+      "record": {
+        "created": 3.14159
+      },
+      "expected": "+314.159000%",
+      "id": 1823
+    },
+    {
+      "style": "{",
+      "fmt": "{created:+012f}",
+      "record": {
+        "created": 3.14159
+      },
+      "expected": "+0003.141590",
+      "id": 1824
+    },
+    {
+      "style": "{",
+      "fmt": "{created:+012e}",
+      "record": {
+        "created": 3.14159
+      },
+      "expected": "+3.141590e+00",
+      "id": 1825
+    },
+    {
+      "style": "{",
+      "fmt": "{created:+012g}",
+      "record": {
+        "created": 3.14159
+      },
+      "expected": "+00003.14159",
+      "id": 1826
+    },
+    {
+      "style": "{",
+      "fmt": "{created:+012%}",
+      "record": {
+        "created": 3.14159
+      },
+      "expected": "+314.159000%",
+      "id": 1827
+    },
+    {
+      "style": "{",
+      "fmt": "{created: f}",
+      "record": {
+        "created": 3.14159
+      },
+      "expected": " 3.141590",
+      "id": 1828
+    },
+    {
+      "style": "{",
+      "fmt": "{created: e}",
+      "record": {
+        "created": 3.14159
+      },
+      "expected": " 3.141590e+00",
+      "id": 1829
+    },
+    {
+      "style": "{",
+      "fmt": "{created: g}",
+      "record": {
+        "created": 3.14159
+      },
+      "expected": " 3.14159",
+      "id": 1830
+    },
+    {
+      "style": "{",
+      "fmt": "{created: %}",
+      "record": {
+        "created": 3.14159
+      },
+      "expected": " 314.159000%",
+      "id": 1831
+    },
+    {
+      "style": "{",
+      "fmt": "{created:#f}",
+      "record": {
+        "created": 3.14159
+      },
+      "expected": "3.141590",
+      "id": 1832
+    },
+    {
+      "style": "{",
+      "fmt": "{created:#e}",
+      "record": {
+        "created": 3.14159
+      },
+      "expected": "3.141590e+00",
+      "id": 1833
+    },
+    {
+      "style": "{",
+      "fmt": "{created:#g}",
+      "record": {
+        "created": 3.14159
+      },
+      "expected": "3.14159",
+      "id": 1834
+    },
+    {
+      "style": "{",
+      "fmt": "{created:#%}",
+      "record": {
+        "created": 3.14159
+      },
+      "expected": "314.159000%",
+      "id": 1835
+    },
+    {
+      "style": "{",
+      "fmt": "{created:.2f}",
+      "record": {
+        "created": 3.14159
+      },
+      "expected": "3.14",
+      "id": 1836
+    },
+    {
+      "style": "{",
+      "fmt": "{created:.2e}",
+      "record": {
+        "created": 3.14159
+      },
+      "expected": "3.14e+00",
+      "id": 1837
+    },
+    {
+      "style": "{",
+      "fmt": "{created:.2g}",
+      "record": {
+        "created": 3.14159
+      },
+      "expected": "3.1",
+      "id": 1838
+    },
+    {
+      "style": "{",
+      "fmt": "{created:.2%}",
+      "record": {
+        "created": 3.14159
+      },
+      "expected": "314.16%",
+      "id": 1839
+    },
+    {
+      "style": "{",
+      "fmt": "{created:.6f}",
+      "record": {
+        "created": 3.14159
+      },
+      "expected": "3.141590",
+      "id": 1840
+    },
+    {
+      "style": "{",
+      "fmt": "{created:.6e}",
+      "record": {
+        "created": 3.14159
+      },
+      "expected": "3.141590e+00",
+      "id": 1841
+    },
+    {
+      "style": "{",
       "fmt": "{created:.6g}",
       "record": {
         "created": 3.14159
       },
       "expected": "3.14159",
-      "id": 1806
+      "id": 1842
     },
     {
       "style": "{",
@@ -16272,7 +16596,7 @@
         "created": 3.14159
       },
       "expected": "314.159000%",
-      "id": 1807
+      "id": 1843
     },
     {
       "style": "{",
@@ -16281,7 +16605,7 @@
         "created": 3.14159
       },
       "expected": "        3.14",
-      "id": 1808
+      "id": 1844
     },
     {
       "style": "{",
@@ -16290,7 +16614,7 @@
         "created": 3.14159
       },
       "expected": "    3.14e+00",
-      "id": 1809
+      "id": 1845
     },
     {
       "style": "{",
@@ -16299,7 +16623,7 @@
         "created": 3.14159
       },
       "expected": "         3.1",
-      "id": 1810
+      "id": 1846
     },
     {
       "style": "{",
@@ -16308,7 +16632,7 @@
         "created": 3.14159
       },
       "expected": "     314.16%",
-      "id": 1811
+      "id": 1847
     },
     {
       "style": "{",
@@ -16317,7 +16641,7 @@
         "created": 3.14159
       },
       "expected": "+0000003.142",
-      "id": 1812
+      "id": 1848
     },
     {
       "style": "{",
@@ -16326,7 +16650,7 @@
         "created": 3.14159
       },
       "expected": "+003.142e+00",
-      "id": 1813
+      "id": 1849
     },
     {
       "style": "{",
@@ -16335,7 +16659,7 @@
         "created": 3.14159
       },
       "expected": "+00000003.14",
-      "id": 1814
+      "id": 1850
     },
     {
       "style": "{",
@@ -16344,7 +16668,7 @@
         "created": 3.14159
       },
       "expected": "+000314.159%",
-      "id": 1815
+      "id": 1851
     },
     {
       "style": "{",
@@ -16353,7 +16677,7 @@
         "created": 855.0
       },
       "expected": "855.000000",
-      "id": 1816
+      "id": 1852
     },
     {
       "style": "{",
@@ -16362,7 +16686,7 @@
         "created": 855.0
       },
       "expected": "8.550000e+02",
-      "id": 1817
+      "id": 1853
     },
     {
       "style": "{",
@@ -16371,7 +16695,7 @@
         "created": 855.0
       },
       "expected": "855",
-      "id": 1818
+      "id": 1854
     },
     {
       "style": "{",
@@ -16380,7 +16704,7 @@
         "created": 855.0
       },
       "expected": "85500.000000%",
-      "id": 1819
+      "id": 1855
     },
     {
       "style": "{",
@@ -16389,335 +16713,11 @@
         "created": 855.0
       },
       "expected": "  855.000000",
-      "id": 1820
-    },
-    {
-      "style": "{",
-      "fmt": "{created:12e}",
-      "record": {
-        "created": 855.0
-      },
-      "expected": "8.550000e+02",
-      "id": 1821
-    },
-    {
-      "style": "{",
-      "fmt": "{created:12g}",
-      "record": {
-        "created": 855.0
-      },
-      "expected": "         855",
-      "id": 1822
-    },
-    {
-      "style": "{",
-      "fmt": "{created:12%}",
-      "record": {
-        "created": 855.0
-      },
-      "expected": "85500.000000%",
-      "id": 1823
-    },
-    {
-      "style": "{",
-      "fmt": "{created:012f}",
-      "record": {
-        "created": 855.0
-      },
-      "expected": "00855.000000",
-      "id": 1824
-    },
-    {
-      "style": "{",
-      "fmt": "{created:012e}",
-      "record": {
-        "created": 855.0
-      },
-      "expected": "8.550000e+02",
-      "id": 1825
-    },
-    {
-      "style": "{",
-      "fmt": "{created:012g}",
-      "record": {
-        "created": 855.0
-      },
-      "expected": "000000000855",
-      "id": 1826
-    },
-    {
-      "style": "{",
-      "fmt": "{created:012%}",
-      "record": {
-        "created": 855.0
-      },
-      "expected": "85500.000000%",
-      "id": 1827
-    },
-    {
-      "style": "{",
-      "fmt": "{created:<12f}",
-      "record": {
-        "created": 855.0
-      },
-      "expected": "855.000000  ",
-      "id": 1828
-    },
-    {
-      "style": "{",
-      "fmt": "{created:<12e}",
-      "record": {
-        "created": 855.0
-      },
-      "expected": "8.550000e+02",
-      "id": 1829
-    },
-    {
-      "style": "{",
-      "fmt": "{created:<12g}",
-      "record": {
-        "created": 855.0
-      },
-      "expected": "855         ",
-      "id": 1830
-    },
-    {
-      "style": "{",
-      "fmt": "{created:<12%}",
-      "record": {
-        "created": 855.0
-      },
-      "expected": "85500.000000%",
-      "id": 1831
-    },
-    {
-      "style": "{",
-      "fmt": "{created:>12f}",
-      "record": {
-        "created": 855.0
-      },
-      "expected": "  855.000000",
-      "id": 1832
-    },
-    {
-      "style": "{",
-      "fmt": "{created:>12e}",
-      "record": {
-        "created": 855.0
-      },
-      "expected": "8.550000e+02",
-      "id": 1833
-    },
-    {
-      "style": "{",
-      "fmt": "{created:>12g}",
-      "record": {
-        "created": 855.0
-      },
-      "expected": "         855",
-      "id": 1834
-    },
-    {
-      "style": "{",
-      "fmt": "{created:>12%}",
-      "record": {
-        "created": 855.0
-      },
-      "expected": "85500.000000%",
-      "id": 1835
-    },
-    {
-      "style": "{",
-      "fmt": "{created:^12f}",
-      "record": {
-        "created": 855.0
-      },
-      "expected": " 855.000000 ",
-      "id": 1836
-    },
-    {
-      "style": "{",
-      "fmt": "{created:^12e}",
-      "record": {
-        "created": 855.0
-      },
-      "expected": "8.550000e+02",
-      "id": 1837
-    },
-    {
-      "style": "{",
-      "fmt": "{created:^12g}",
-      "record": {
-        "created": 855.0
-      },
-      "expected": "    855     ",
-      "id": 1838
-    },
-    {
-      "style": "{",
-      "fmt": "{created:^12%}",
-      "record": {
-        "created": 855.0
-      },
-      "expected": "85500.000000%",
-      "id": 1839
-    },
-    {
-      "style": "{",
-      "fmt": "{created:*>12f}",
-      "record": {
-        "created": 855.0
-      },
-      "expected": "**855.000000",
-      "id": 1840
-    },
-    {
-      "style": "{",
-      "fmt": "{created:*>12e}",
-      "record": {
-        "created": 855.0
-      },
-      "expected": "8.550000e+02",
-      "id": 1841
-    },
-    {
-      "style": "{",
-      "fmt": "{created:*>12g}",
-      "record": {
-        "created": 855.0
-      },
-      "expected": "*********855",
-      "id": 1842
-    },
-    {
-      "style": "{",
-      "fmt": "{created:*>12%}",
-      "record": {
-        "created": 855.0
-      },
-      "expected": "85500.000000%",
-      "id": 1843
-    },
-    {
-      "style": "{",
-      "fmt": "{created:+f}",
-      "record": {
-        "created": 855.0
-      },
-      "expected": "+855.000000",
-      "id": 1844
-    },
-    {
-      "style": "{",
-      "fmt": "{created:+e}",
-      "record": {
-        "created": 855.0
-      },
-      "expected": "+8.550000e+02",
-      "id": 1845
-    },
-    {
-      "style": "{",
-      "fmt": "{created:+g}",
-      "record": {
-        "created": 855.0
-      },
-      "expected": "+855",
-      "id": 1846
-    },
-    {
-      "style": "{",
-      "fmt": "{created:+%}",
-      "record": {
-        "created": 855.0
-      },
-      "expected": "+85500.000000%",
-      "id": 1847
-    },
-    {
-      "style": "{",
-      "fmt": "{created:+012f}",
-      "record": {
-        "created": 855.0
-      },
-      "expected": "+0855.000000",
-      "id": 1848
-    },
-    {
-      "style": "{",
-      "fmt": "{created:+012e}",
-      "record": {
-        "created": 855.0
-      },
-      "expected": "+8.550000e+02",
-      "id": 1849
-    },
-    {
-      "style": "{",
-      "fmt": "{created:+012g}",
-      "record": {
-        "created": 855.0
-      },
-      "expected": "+00000000855",
-      "id": 1850
-    },
-    {
-      "style": "{",
-      "fmt": "{created:+012%}",
-      "record": {
-        "created": 855.0
-      },
-      "expected": "+85500.000000%",
-      "id": 1851
-    },
-    {
-      "style": "{",
-      "fmt": "{created: f}",
-      "record": {
-        "created": 855.0
-      },
-      "expected": " 855.000000",
-      "id": 1852
-    },
-    {
-      "style": "{",
-      "fmt": "{created: e}",
-      "record": {
-        "created": 855.0
-      },
-      "expected": " 8.550000e+02",
-      "id": 1853
-    },
-    {
-      "style": "{",
-      "fmt": "{created: g}",
-      "record": {
-        "created": 855.0
-      },
-      "expected": " 855",
-      "id": 1854
-    },
-    {
-      "style": "{",
-      "fmt": "{created: %}",
-      "record": {
-        "created": 855.0
-      },
-      "expected": " 85500.000000%",
-      "id": 1855
-    },
-    {
-      "style": "{",
-      "fmt": "{created:#f}",
-      "record": {
-        "created": 855.0
-      },
-      "expected": "855.000000",
       "id": 1856
     },
     {
       "style": "{",
-      "fmt": "{created:#e}",
+      "fmt": "{created:12e}",
       "record": {
         "created": 855.0
       },
@@ -16726,16 +16726,16 @@
     },
     {
       "style": "{",
-      "fmt": "{created:#g}",
+      "fmt": "{created:12g}",
       "record": {
         "created": 855.0
       },
-      "expected": "855.000",
+      "expected": "         855",
       "id": 1858
     },
     {
       "style": "{",
-      "fmt": "{created:#%}",
+      "fmt": "{created:12%}",
       "record": {
         "created": 855.0
       },
@@ -16744,52 +16744,52 @@
     },
     {
       "style": "{",
-      "fmt": "{created:.2f}",
+      "fmt": "{created:012f}",
       "record": {
         "created": 855.0
       },
-      "expected": "855.00",
+      "expected": "00855.000000",
       "id": 1860
     },
     {
       "style": "{",
-      "fmt": "{created:.2e}",
+      "fmt": "{created:012e}",
       "record": {
         "created": 855.0
       },
-      "expected": "8.55e+02",
+      "expected": "8.550000e+02",
       "id": 1861
     },
     {
       "style": "{",
-      "fmt": "{created:.2g}",
+      "fmt": "{created:012g}",
       "record": {
         "created": 855.0
       },
-      "expected": "8.6e+02",
+      "expected": "000000000855",
       "id": 1862
     },
     {
       "style": "{",
-      "fmt": "{created:.2%}",
+      "fmt": "{created:012%}",
       "record": {
         "created": 855.0
       },
-      "expected": "85500.00%",
+      "expected": "85500.000000%",
       "id": 1863
     },
     {
       "style": "{",
-      "fmt": "{created:.6f}",
+      "fmt": "{created:<12f}",
       "record": {
         "created": 855.0
       },
-      "expected": "855.000000",
+      "expected": "855.000000  ",
       "id": 1864
     },
     {
       "style": "{",
-      "fmt": "{created:.6e}",
+      "fmt": "{created:<12e}",
       "record": {
         "created": 855.0
       },
@@ -16798,16 +16798,16 @@
     },
     {
       "style": "{",
-      "fmt": "{created:.6g}",
+      "fmt": "{created:<12g}",
       "record": {
         "created": 855.0
       },
-      "expected": "855",
+      "expected": "855         ",
       "id": 1866
     },
     {
       "style": "{",
-      "fmt": "{created:.6%}",
+      "fmt": "{created:<12%}",
       "record": {
         "created": 855.0
       },
@@ -16816,12 +16816,336 @@
     },
     {
       "style": "{",
+      "fmt": "{created:>12f}",
+      "record": {
+        "created": 855.0
+      },
+      "expected": "  855.000000",
+      "id": 1868
+    },
+    {
+      "style": "{",
+      "fmt": "{created:>12e}",
+      "record": {
+        "created": 855.0
+      },
+      "expected": "8.550000e+02",
+      "id": 1869
+    },
+    {
+      "style": "{",
+      "fmt": "{created:>12g}",
+      "record": {
+        "created": 855.0
+      },
+      "expected": "         855",
+      "id": 1870
+    },
+    {
+      "style": "{",
+      "fmt": "{created:>12%}",
+      "record": {
+        "created": 855.0
+      },
+      "expected": "85500.000000%",
+      "id": 1871
+    },
+    {
+      "style": "{",
+      "fmt": "{created:^12f}",
+      "record": {
+        "created": 855.0
+      },
+      "expected": " 855.000000 ",
+      "id": 1872
+    },
+    {
+      "style": "{",
+      "fmt": "{created:^12e}",
+      "record": {
+        "created": 855.0
+      },
+      "expected": "8.550000e+02",
+      "id": 1873
+    },
+    {
+      "style": "{",
+      "fmt": "{created:^12g}",
+      "record": {
+        "created": 855.0
+      },
+      "expected": "    855     ",
+      "id": 1874
+    },
+    {
+      "style": "{",
+      "fmt": "{created:^12%}",
+      "record": {
+        "created": 855.0
+      },
+      "expected": "85500.000000%",
+      "id": 1875
+    },
+    {
+      "style": "{",
+      "fmt": "{created:*>12f}",
+      "record": {
+        "created": 855.0
+      },
+      "expected": "**855.000000",
+      "id": 1876
+    },
+    {
+      "style": "{",
+      "fmt": "{created:*>12e}",
+      "record": {
+        "created": 855.0
+      },
+      "expected": "8.550000e+02",
+      "id": 1877
+    },
+    {
+      "style": "{",
+      "fmt": "{created:*>12g}",
+      "record": {
+        "created": 855.0
+      },
+      "expected": "*********855",
+      "id": 1878
+    },
+    {
+      "style": "{",
+      "fmt": "{created:*>12%}",
+      "record": {
+        "created": 855.0
+      },
+      "expected": "85500.000000%",
+      "id": 1879
+    },
+    {
+      "style": "{",
+      "fmt": "{created:+f}",
+      "record": {
+        "created": 855.0
+      },
+      "expected": "+855.000000",
+      "id": 1880
+    },
+    {
+      "style": "{",
+      "fmt": "{created:+e}",
+      "record": {
+        "created": 855.0
+      },
+      "expected": "+8.550000e+02",
+      "id": 1881
+    },
+    {
+      "style": "{",
+      "fmt": "{created:+g}",
+      "record": {
+        "created": 855.0
+      },
+      "expected": "+855",
+      "id": 1882
+    },
+    {
+      "style": "{",
+      "fmt": "{created:+%}",
+      "record": {
+        "created": 855.0
+      },
+      "expected": "+85500.000000%",
+      "id": 1883
+    },
+    {
+      "style": "{",
+      "fmt": "{created:+012f}",
+      "record": {
+        "created": 855.0
+      },
+      "expected": "+0855.000000",
+      "id": 1884
+    },
+    {
+      "style": "{",
+      "fmt": "{created:+012e}",
+      "record": {
+        "created": 855.0
+      },
+      "expected": "+8.550000e+02",
+      "id": 1885
+    },
+    {
+      "style": "{",
+      "fmt": "{created:+012g}",
+      "record": {
+        "created": 855.0
+      },
+      "expected": "+00000000855",
+      "id": 1886
+    },
+    {
+      "style": "{",
+      "fmt": "{created:+012%}",
+      "record": {
+        "created": 855.0
+      },
+      "expected": "+85500.000000%",
+      "id": 1887
+    },
+    {
+      "style": "{",
+      "fmt": "{created: f}",
+      "record": {
+        "created": 855.0
+      },
+      "expected": " 855.000000",
+      "id": 1888
+    },
+    {
+      "style": "{",
+      "fmt": "{created: e}",
+      "record": {
+        "created": 855.0
+      },
+      "expected": " 8.550000e+02",
+      "id": 1889
+    },
+    {
+      "style": "{",
+      "fmt": "{created: g}",
+      "record": {
+        "created": 855.0
+      },
+      "expected": " 855",
+      "id": 1890
+    },
+    {
+      "style": "{",
+      "fmt": "{created: %}",
+      "record": {
+        "created": 855.0
+      },
+      "expected": " 85500.000000%",
+      "id": 1891
+    },
+    {
+      "style": "{",
+      "fmt": "{created:#f}",
+      "record": {
+        "created": 855.0
+      },
+      "expected": "855.000000",
+      "id": 1892
+    },
+    {
+      "style": "{",
+      "fmt": "{created:#e}",
+      "record": {
+        "created": 855.0
+      },
+      "expected": "8.550000e+02",
+      "id": 1893
+    },
+    {
+      "style": "{",
+      "fmt": "{created:#g}",
+      "record": {
+        "created": 855.0
+      },
+      "expected": "855.000",
+      "id": 1894
+    },
+    {
+      "style": "{",
+      "fmt": "{created:#%}",
+      "record": {
+        "created": 855.0
+      },
+      "expected": "85500.000000%",
+      "id": 1895
+    },
+    {
+      "style": "{",
+      "fmt": "{created:.2f}",
+      "record": {
+        "created": 855.0
+      },
+      "expected": "855.00",
+      "id": 1896
+    },
+    {
+      "style": "{",
+      "fmt": "{created:.2e}",
+      "record": {
+        "created": 855.0
+      },
+      "expected": "8.55e+02",
+      "id": 1897
+    },
+    {
+      "style": "{",
+      "fmt": "{created:.2g}",
+      "record": {
+        "created": 855.0
+      },
+      "expected": "8.6e+02",
+      "id": 1898
+    },
+    {
+      "style": "{",
+      "fmt": "{created:.2%}",
+      "record": {
+        "created": 855.0
+      },
+      "expected": "85500.00%",
+      "id": 1899
+    },
+    {
+      "style": "{",
+      "fmt": "{created:.6f}",
+      "record": {
+        "created": 855.0
+      },
+      "expected": "855.000000",
+      "id": 1900
+    },
+    {
+      "style": "{",
+      "fmt": "{created:.6e}",
+      "record": {
+        "created": 855.0
+      },
+      "expected": "8.550000e+02",
+      "id": 1901
+    },
+    {
+      "style": "{",
+      "fmt": "{created:.6g}",
+      "record": {
+        "created": 855.0
+      },
+      "expected": "855",
+      "id": 1902
+    },
+    {
+      "style": "{",
+      "fmt": "{created:.6%}",
+      "record": {
+        "created": 855.0
+      },
+      "expected": "85500.000000%",
+      "id": 1903
+    },
+    {
+      "style": "{",
       "fmt": "{created:12.2f}",
       "record": {
         "created": 855.0
       },
       "expected": "      855.00",
-      "id": 1868
+      "id": 1904
     },
     {
       "style": "{",
@@ -16830,7 +17154,7 @@
         "created": 855.0
       },
       "expected": "    8.55e+02",
-      "id": 1869
+      "id": 1905
     },
     {
       "style": "{",
@@ -16839,7 +17163,7 @@
         "created": 855.0
       },
       "expected": "     8.6e+02",
-      "id": 1870
+      "id": 1906
     },
     {
       "style": "{",
@@ -16848,7 +17172,7 @@
         "created": 855.0
       },
       "expected": "   85500.00%",
-      "id": 1871
+      "id": 1907
     },
     {
       "style": "{",
@@ -16857,7 +17181,7 @@
         "created": 855.0
       },
       "expected": "+0000855.000",
-      "id": 1872
+      "id": 1908
     },
     {
       "style": "{",
@@ -16866,7 +17190,7 @@
         "created": 855.0
       },
       "expected": "+008.550e+02",
-      "id": 1873
+      "id": 1909
     },
     {
       "style": "{",
@@ -16875,7 +17199,7 @@
         "created": 855.0
       },
       "expected": "+00000000855",
-      "id": 1874
+      "id": 1910
     },
     {
       "style": "{",
@@ -16884,7 +17208,7 @@
         "created": 855.0
       },
       "expected": "+085500.000%",
-      "id": 1875
+      "id": 1911
     },
     {
       "style": "{",
@@ -16893,7 +17217,7 @@
         "created": 48.94661903381348
       },
       "expected": "48.946619",
-      "id": 1876
+      "id": 1912
     },
     {
       "style": "{",
@@ -16902,7 +17226,7 @@
         "created": 48.94661903381348
       },
       "expected": "4.894662e+01",
-      "id": 1877
+      "id": 1913
     },
     {
       "style": "{",
@@ -16911,7 +17235,7 @@
         "created": 48.94661903381348
       },
       "expected": "48.9466",
-      "id": 1878
+      "id": 1914
     },
     {
       "style": "{",
@@ -16920,7 +17244,7 @@
         "created": 48.94661903381348
       },
       "expected": "4894.661903%",
-      "id": 1879
+      "id": 1915
     },
     {
       "style": "{",
@@ -16929,335 +17253,11 @@
         "created": 48.94661903381348
       },
       "expected": "   48.946619",
-      "id": 1880
-    },
-    {
-      "style": "{",
-      "fmt": "{created:12e}",
-      "record": {
-        "created": 48.94661903381348
-      },
-      "expected": "4.894662e+01",
-      "id": 1881
-    },
-    {
-      "style": "{",
-      "fmt": "{created:12g}",
-      "record": {
-        "created": 48.94661903381348
-      },
-      "expected": "     48.9466",
-      "id": 1882
-    },
-    {
-      "style": "{",
-      "fmt": "{created:12%}",
-      "record": {
-        "created": 48.94661903381348
-      },
-      "expected": "4894.661903%",
-      "id": 1883
-    },
-    {
-      "style": "{",
-      "fmt": "{created:012f}",
-      "record": {
-        "created": 48.94661903381348
-      },
-      "expected": "00048.946619",
-      "id": 1884
-    },
-    {
-      "style": "{",
-      "fmt": "{created:012e}",
-      "record": {
-        "created": 48.94661903381348
-      },
-      "expected": "4.894662e+01",
-      "id": 1885
-    },
-    {
-      "style": "{",
-      "fmt": "{created:012g}",
-      "record": {
-        "created": 48.94661903381348
-      },
-      "expected": "0000048.9466",
-      "id": 1886
-    },
-    {
-      "style": "{",
-      "fmt": "{created:012%}",
-      "record": {
-        "created": 48.94661903381348
-      },
-      "expected": "4894.661903%",
-      "id": 1887
-    },
-    {
-      "style": "{",
-      "fmt": "{created:<12f}",
-      "record": {
-        "created": 48.94661903381348
-      },
-      "expected": "48.946619   ",
-      "id": 1888
-    },
-    {
-      "style": "{",
-      "fmt": "{created:<12e}",
-      "record": {
-        "created": 48.94661903381348
-      },
-      "expected": "4.894662e+01",
-      "id": 1889
-    },
-    {
-      "style": "{",
-      "fmt": "{created:<12g}",
-      "record": {
-        "created": 48.94661903381348
-      },
-      "expected": "48.9466     ",
-      "id": 1890
-    },
-    {
-      "style": "{",
-      "fmt": "{created:<12%}",
-      "record": {
-        "created": 48.94661903381348
-      },
-      "expected": "4894.661903%",
-      "id": 1891
-    },
-    {
-      "style": "{",
-      "fmt": "{created:>12f}",
-      "record": {
-        "created": 48.94661903381348
-      },
-      "expected": "   48.946619",
-      "id": 1892
-    },
-    {
-      "style": "{",
-      "fmt": "{created:>12e}",
-      "record": {
-        "created": 48.94661903381348
-      },
-      "expected": "4.894662e+01",
-      "id": 1893
-    },
-    {
-      "style": "{",
-      "fmt": "{created:>12g}",
-      "record": {
-        "created": 48.94661903381348
-      },
-      "expected": "     48.9466",
-      "id": 1894
-    },
-    {
-      "style": "{",
-      "fmt": "{created:>12%}",
-      "record": {
-        "created": 48.94661903381348
-      },
-      "expected": "4894.661903%",
-      "id": 1895
-    },
-    {
-      "style": "{",
-      "fmt": "{created:^12f}",
-      "record": {
-        "created": 48.94661903381348
-      },
-      "expected": " 48.946619  ",
-      "id": 1896
-    },
-    {
-      "style": "{",
-      "fmt": "{created:^12e}",
-      "record": {
-        "created": 48.94661903381348
-      },
-      "expected": "4.894662e+01",
-      "id": 1897
-    },
-    {
-      "style": "{",
-      "fmt": "{created:^12g}",
-      "record": {
-        "created": 48.94661903381348
-      },
-      "expected": "  48.9466   ",
-      "id": 1898
-    },
-    {
-      "style": "{",
-      "fmt": "{created:^12%}",
-      "record": {
-        "created": 48.94661903381348
-      },
-      "expected": "4894.661903%",
-      "id": 1899
-    },
-    {
-      "style": "{",
-      "fmt": "{created:*>12f}",
-      "record": {
-        "created": 48.94661903381348
-      },
-      "expected": "***48.946619",
-      "id": 1900
-    },
-    {
-      "style": "{",
-      "fmt": "{created:*>12e}",
-      "record": {
-        "created": 48.94661903381348
-      },
-      "expected": "4.894662e+01",
-      "id": 1901
-    },
-    {
-      "style": "{",
-      "fmt": "{created:*>12g}",
-      "record": {
-        "created": 48.94661903381348
-      },
-      "expected": "*****48.9466",
-      "id": 1902
-    },
-    {
-      "style": "{",
-      "fmt": "{created:*>12%}",
-      "record": {
-        "created": 48.94661903381348
-      },
-      "expected": "4894.661903%",
-      "id": 1903
-    },
-    {
-      "style": "{",
-      "fmt": "{created:+f}",
-      "record": {
-        "created": 48.94661903381348
-      },
-      "expected": "+48.946619",
-      "id": 1904
-    },
-    {
-      "style": "{",
-      "fmt": "{created:+e}",
-      "record": {
-        "created": 48.94661903381348
-      },
-      "expected": "+4.894662e+01",
-      "id": 1905
-    },
-    {
-      "style": "{",
-      "fmt": "{created:+g}",
-      "record": {
-        "created": 48.94661903381348
-      },
-      "expected": "+48.9466",
-      "id": 1906
-    },
-    {
-      "style": "{",
-      "fmt": "{created:+%}",
-      "record": {
-        "created": 48.94661903381348
-      },
-      "expected": "+4894.661903%",
-      "id": 1907
-    },
-    {
-      "style": "{",
-      "fmt": "{created:+012f}",
-      "record": {
-        "created": 48.94661903381348
-      },
-      "expected": "+0048.946619",
-      "id": 1908
-    },
-    {
-      "style": "{",
-      "fmt": "{created:+012e}",
-      "record": {
-        "created": 48.94661903381348
-      },
-      "expected": "+4.894662e+01",
-      "id": 1909
-    },
-    {
-      "style": "{",
-      "fmt": "{created:+012g}",
-      "record": {
-        "created": 48.94661903381348
-      },
-      "expected": "+000048.9466",
-      "id": 1910
-    },
-    {
-      "style": "{",
-      "fmt": "{created:+012%}",
-      "record": {
-        "created": 48.94661903381348
-      },
-      "expected": "+4894.661903%",
-      "id": 1911
-    },
-    {
-      "style": "{",
-      "fmt": "{created: f}",
-      "record": {
-        "created": 48.94661903381348
-      },
-      "expected": " 48.946619",
-      "id": 1912
-    },
-    {
-      "style": "{",
-      "fmt": "{created: e}",
-      "record": {
-        "created": 48.94661903381348
-      },
-      "expected": " 4.894662e+01",
-      "id": 1913
-    },
-    {
-      "style": "{",
-      "fmt": "{created: g}",
-      "record": {
-        "created": 48.94661903381348
-      },
-      "expected": " 48.9466",
-      "id": 1914
-    },
-    {
-      "style": "{",
-      "fmt": "{created: %}",
-      "record": {
-        "created": 48.94661903381348
-      },
-      "expected": " 4894.661903%",
-      "id": 1915
-    },
-    {
-      "style": "{",
-      "fmt": "{created:#f}",
-      "record": {
-        "created": 48.94661903381348
-      },
-      "expected": "48.946619",
       "id": 1916
     },
     {
       "style": "{",
-      "fmt": "{created:#e}",
+      "fmt": "{created:12e}",
       "record": {
         "created": 48.94661903381348
       },
@@ -17266,16 +17266,16 @@
     },
     {
       "style": "{",
-      "fmt": "{created:#g}",
+      "fmt": "{created:12g}",
       "record": {
         "created": 48.94661903381348
       },
-      "expected": "48.9466",
+      "expected": "     48.9466",
       "id": 1918
     },
     {
       "style": "{",
-      "fmt": "{created:#%}",
+      "fmt": "{created:12%}",
       "record": {
         "created": 48.94661903381348
       },
@@ -17284,52 +17284,52 @@
     },
     {
       "style": "{",
-      "fmt": "{created:.2f}",
+      "fmt": "{created:012f}",
       "record": {
         "created": 48.94661903381348
       },
-      "expected": "48.95",
+      "expected": "00048.946619",
       "id": 1920
     },
     {
       "style": "{",
-      "fmt": "{created:.2e}",
+      "fmt": "{created:012e}",
       "record": {
         "created": 48.94661903381348
       },
-      "expected": "4.89e+01",
+      "expected": "4.894662e+01",
       "id": 1921
     },
     {
       "style": "{",
-      "fmt": "{created:.2g}",
+      "fmt": "{created:012g}",
       "record": {
         "created": 48.94661903381348
       },
-      "expected": "49",
+      "expected": "0000048.9466",
       "id": 1922
     },
     {
       "style": "{",
-      "fmt": "{created:.2%}",
+      "fmt": "{created:012%}",
       "record": {
         "created": 48.94661903381348
       },
-      "expected": "4894.66%",
+      "expected": "4894.661903%",
       "id": 1923
     },
     {
       "style": "{",
-      "fmt": "{created:.6f}",
+      "fmt": "{created:<12f}",
       "record": {
         "created": 48.94661903381348
       },
-      "expected": "48.946619",
+      "expected": "48.946619   ",
       "id": 1924
     },
     {
       "style": "{",
-      "fmt": "{created:.6e}",
+      "fmt": "{created:<12e}",
       "record": {
         "created": 48.94661903381348
       },
@@ -17338,16 +17338,16 @@
     },
     {
       "style": "{",
-      "fmt": "{created:.6g}",
+      "fmt": "{created:<12g}",
       "record": {
         "created": 48.94661903381348
       },
-      "expected": "48.9466",
+      "expected": "48.9466     ",
       "id": 1926
     },
     {
       "style": "{",
-      "fmt": "{created:.6%}",
+      "fmt": "{created:<12%}",
       "record": {
         "created": 48.94661903381348
       },
@@ -17356,12 +17356,336 @@
     },
     {
       "style": "{",
+      "fmt": "{created:>12f}",
+      "record": {
+        "created": 48.94661903381348
+      },
+      "expected": "   48.946619",
+      "id": 1928
+    },
+    {
+      "style": "{",
+      "fmt": "{created:>12e}",
+      "record": {
+        "created": 48.94661903381348
+      },
+      "expected": "4.894662e+01",
+      "id": 1929
+    },
+    {
+      "style": "{",
+      "fmt": "{created:>12g}",
+      "record": {
+        "created": 48.94661903381348
+      },
+      "expected": "     48.9466",
+      "id": 1930
+    },
+    {
+      "style": "{",
+      "fmt": "{created:>12%}",
+      "record": {
+        "created": 48.94661903381348
+      },
+      "expected": "4894.661903%",
+      "id": 1931
+    },
+    {
+      "style": "{",
+      "fmt": "{created:^12f}",
+      "record": {
+        "created": 48.94661903381348
+      },
+      "expected": " 48.946619  ",
+      "id": 1932
+    },
+    {
+      "style": "{",
+      "fmt": "{created:^12e}",
+      "record": {
+        "created": 48.94661903381348
+      },
+      "expected": "4.894662e+01",
+      "id": 1933
+    },
+    {
+      "style": "{",
+      "fmt": "{created:^12g}",
+      "record": {
+        "created": 48.94661903381348
+      },
+      "expected": "  48.9466   ",
+      "id": 1934
+    },
+    {
+      "style": "{",
+      "fmt": "{created:^12%}",
+      "record": {
+        "created": 48.94661903381348
+      },
+      "expected": "4894.661903%",
+      "id": 1935
+    },
+    {
+      "style": "{",
+      "fmt": "{created:*>12f}",
+      "record": {
+        "created": 48.94661903381348
+      },
+      "expected": "***48.946619",
+      "id": 1936
+    },
+    {
+      "style": "{",
+      "fmt": "{created:*>12e}",
+      "record": {
+        "created": 48.94661903381348
+      },
+      "expected": "4.894662e+01",
+      "id": 1937
+    },
+    {
+      "style": "{",
+      "fmt": "{created:*>12g}",
+      "record": {
+        "created": 48.94661903381348
+      },
+      "expected": "*****48.9466",
+      "id": 1938
+    },
+    {
+      "style": "{",
+      "fmt": "{created:*>12%}",
+      "record": {
+        "created": 48.94661903381348
+      },
+      "expected": "4894.661903%",
+      "id": 1939
+    },
+    {
+      "style": "{",
+      "fmt": "{created:+f}",
+      "record": {
+        "created": 48.94661903381348
+      },
+      "expected": "+48.946619",
+      "id": 1940
+    },
+    {
+      "style": "{",
+      "fmt": "{created:+e}",
+      "record": {
+        "created": 48.94661903381348
+      },
+      "expected": "+4.894662e+01",
+      "id": 1941
+    },
+    {
+      "style": "{",
+      "fmt": "{created:+g}",
+      "record": {
+        "created": 48.94661903381348
+      },
+      "expected": "+48.9466",
+      "id": 1942
+    },
+    {
+      "style": "{",
+      "fmt": "{created:+%}",
+      "record": {
+        "created": 48.94661903381348
+      },
+      "expected": "+4894.661903%",
+      "id": 1943
+    },
+    {
+      "style": "{",
+      "fmt": "{created:+012f}",
+      "record": {
+        "created": 48.94661903381348
+      },
+      "expected": "+0048.946619",
+      "id": 1944
+    },
+    {
+      "style": "{",
+      "fmt": "{created:+012e}",
+      "record": {
+        "created": 48.94661903381348
+      },
+      "expected": "+4.894662e+01",
+      "id": 1945
+    },
+    {
+      "style": "{",
+      "fmt": "{created:+012g}",
+      "record": {
+        "created": 48.94661903381348
+      },
+      "expected": "+000048.9466",
+      "id": 1946
+    },
+    {
+      "style": "{",
+      "fmt": "{created:+012%}",
+      "record": {
+        "created": 48.94661903381348
+      },
+      "expected": "+4894.661903%",
+      "id": 1947
+    },
+    {
+      "style": "{",
+      "fmt": "{created: f}",
+      "record": {
+        "created": 48.94661903381348
+      },
+      "expected": " 48.946619",
+      "id": 1948
+    },
+    {
+      "style": "{",
+      "fmt": "{created: e}",
+      "record": {
+        "created": 48.94661903381348
+      },
+      "expected": " 4.894662e+01",
+      "id": 1949
+    },
+    {
+      "style": "{",
+      "fmt": "{created: g}",
+      "record": {
+        "created": 48.94661903381348
+      },
+      "expected": " 48.9466",
+      "id": 1950
+    },
+    {
+      "style": "{",
+      "fmt": "{created: %}",
+      "record": {
+        "created": 48.94661903381348
+      },
+      "expected": " 4894.661903%",
+      "id": 1951
+    },
+    {
+      "style": "{",
+      "fmt": "{created:#f}",
+      "record": {
+        "created": 48.94661903381348
+      },
+      "expected": "48.946619",
+      "id": 1952
+    },
+    {
+      "style": "{",
+      "fmt": "{created:#e}",
+      "record": {
+        "created": 48.94661903381348
+      },
+      "expected": "4.894662e+01",
+      "id": 1953
+    },
+    {
+      "style": "{",
+      "fmt": "{created:#g}",
+      "record": {
+        "created": 48.94661903381348
+      },
+      "expected": "48.9466",
+      "id": 1954
+    },
+    {
+      "style": "{",
+      "fmt": "{created:#%}",
+      "record": {
+        "created": 48.94661903381348
+      },
+      "expected": "4894.661903%",
+      "id": 1955
+    },
+    {
+      "style": "{",
+      "fmt": "{created:.2f}",
+      "record": {
+        "created": 48.94661903381348
+      },
+      "expected": "48.95",
+      "id": 1956
+    },
+    {
+      "style": "{",
+      "fmt": "{created:.2e}",
+      "record": {
+        "created": 48.94661903381348
+      },
+      "expected": "4.89e+01",
+      "id": 1957
+    },
+    {
+      "style": "{",
+      "fmt": "{created:.2g}",
+      "record": {
+        "created": 48.94661903381348
+      },
+      "expected": "49",
+      "id": 1958
+    },
+    {
+      "style": "{",
+      "fmt": "{created:.2%}",
+      "record": {
+        "created": 48.94661903381348
+      },
+      "expected": "4894.66%",
+      "id": 1959
+    },
+    {
+      "style": "{",
+      "fmt": "{created:.6f}",
+      "record": {
+        "created": 48.94661903381348
+      },
+      "expected": "48.946619",
+      "id": 1960
+    },
+    {
+      "style": "{",
+      "fmt": "{created:.6e}",
+      "record": {
+        "created": 48.94661903381348
+      },
+      "expected": "4.894662e+01",
+      "id": 1961
+    },
+    {
+      "style": "{",
+      "fmt": "{created:.6g}",
+      "record": {
+        "created": 48.94661903381348
+      },
+      "expected": "48.9466",
+      "id": 1962
+    },
+    {
+      "style": "{",
+      "fmt": "{created:.6%}",
+      "record": {
+        "created": 48.94661903381348
+      },
+      "expected": "4894.661903%",
+      "id": 1963
+    },
+    {
+      "style": "{",
       "fmt": "{created:12.2f}",
       "record": {
         "created": 48.94661903381348
       },
       "expected": "       48.95",
-      "id": 1928
+      "id": 1964
     },
     {
       "style": "{",
@@ -17370,7 +17694,7 @@
         "created": 48.94661903381348
       },
       "expected": "    4.89e+01",
-      "id": 1929
+      "id": 1965
     },
     {
       "style": "{",
@@ -17379,7 +17703,7 @@
         "created": 48.94661903381348
       },
       "expected": "          49",
-      "id": 1930
+      "id": 1966
     },
     {
       "style": "{",
@@ -17388,7 +17712,7 @@
         "created": 48.94661903381348
       },
       "expected": "    4894.66%",
-      "id": 1931
+      "id": 1967
     },
     {
       "style": "{",
@@ -17397,7 +17721,7 @@
         "created": 48.94661903381348
       },
       "expected": "+0000048.947",
-      "id": 1932
+      "id": 1968
     },
     {
       "style": "{",
@@ -17406,7 +17730,7 @@
         "created": 48.94661903381348
       },
       "expected": "+004.895e+01",
-      "id": 1933
+      "id": 1969
     },
     {
       "style": "{",
@@ -17415,7 +17739,7 @@
         "created": 48.94661903381348
       },
       "expected": "+000000048.9",
-      "id": 1934
+      "id": 1970
     },
     {
       "style": "{",
@@ -17424,7 +17748,7 @@
         "created": 48.94661903381348
       },
       "expected": "+004894.662%",
-      "id": 1935
+      "id": 1971
     },
     {
       "style": "{",
@@ -17433,7 +17757,7 @@
         "created": -2.5
       },
       "expected": "-2.500000",
-      "id": 1936
+      "id": 1972
     },
     {
       "style": "{",
@@ -17442,7 +17766,7 @@
         "created": -2.5
       },
       "expected": "-2.500000e+00",
-      "id": 1937
+      "id": 1973
     },
     {
       "style": "{",
@@ -17451,7 +17775,7 @@
         "created": -2.5
       },
       "expected": "-2.5",
-      "id": 1938
+      "id": 1974
     },
     {
       "style": "{",
@@ -17460,7 +17784,7 @@
         "created": -2.5
       },
       "expected": "-250.000000%",
-      "id": 1939
+      "id": 1975
     },
     {
       "style": "{",
@@ -17469,7 +17793,7 @@
         "created": -2.5
       },
       "expected": "   -2.500000",
-      "id": 1940
+      "id": 1976
     },
     {
       "style": "{",
@@ -17478,7 +17802,7 @@
         "created": -2.5
       },
       "expected": "-2.500000e+00",
-      "id": 1941
+      "id": 1977
     },
     {
       "style": "{",
@@ -17487,7 +17811,7 @@
         "created": -2.5
       },
       "expected": "        -2.5",
-      "id": 1942
+      "id": 1978
     },
     {
       "style": "{",
@@ -17496,7 +17820,7 @@
         "created": -2.5
       },
       "expected": "-250.000000%",
-      "id": 1943
+      "id": 1979
     },
     {
       "style": "{",
@@ -17505,7 +17829,7 @@
         "created": -2.5
       },
       "expected": "-0002.500000",
-      "id": 1944
+      "id": 1980
     },
     {
       "style": "{",
@@ -17514,7 +17838,7 @@
         "created": -2.5
       },
       "expected": "-2.500000e+00",
-      "id": 1945
+      "id": 1981
     },
     {
       "style": "{",
@@ -17523,7 +17847,7 @@
         "created": -2.5
       },
       "expected": "-000000002.5",
-      "id": 1946
+      "id": 1982
     },
     {
       "style": "{",
@@ -17532,7 +17856,7 @@
         "created": -2.5
       },
       "expected": "-250.000000%",
-      "id": 1947
+      "id": 1983
     },
     {
       "style": "{",
@@ -17541,7 +17865,7 @@
         "created": -2.5
       },
       "expected": "-2.500000   ",
-      "id": 1948
+      "id": 1984
     },
     {
       "style": "{",
@@ -17550,7 +17874,7 @@
         "created": -2.5
       },
       "expected": "-2.500000e+00",
-      "id": 1949
+      "id": 1985
     },
     {
       "style": "{",
@@ -17559,7 +17883,7 @@
         "created": -2.5
       },
       "expected": "-2.5        ",
-      "id": 1950
+      "id": 1986
     },
     {
       "style": "{",
@@ -17568,7 +17892,7 @@
         "created": -2.5
       },
       "expected": "-250.000000%",
-      "id": 1951
+      "id": 1987
     },
     {
       "style": "{",
@@ -17577,7 +17901,7 @@
         "created": -2.5
       },
       "expected": "   -2.500000",
-      "id": 1952
+      "id": 1988
     },
     {
       "style": "{",
@@ -17586,7 +17910,7 @@
         "created": -2.5
       },
       "expected": "-2.500000e+00",
-      "id": 1953
+      "id": 1989
     },
     {
       "style": "{",
@@ -17595,7 +17919,7 @@
         "created": -2.5
       },
       "expected": "        -2.5",
-      "id": 1954
+      "id": 1990
     },
     {
       "style": "{",
@@ -17604,7 +17928,7 @@
         "created": -2.5
       },
       "expected": "-250.000000%",
-      "id": 1955
+      "id": 1991
     },
     {
       "style": "{",
@@ -17613,7 +17937,7 @@
         "created": -2.5
       },
       "expected": " -2.500000  ",
-      "id": 1956
+      "id": 1992
     },
     {
       "style": "{",
@@ -17622,7 +17946,7 @@
         "created": -2.5
       },
       "expected": "-2.500000e+00",
-      "id": 1957
+      "id": 1993
     },
     {
       "style": "{",
@@ -17631,7 +17955,7 @@
         "created": -2.5
       },
       "expected": "    -2.5    ",
-      "id": 1958
+      "id": 1994
     },
     {
       "style": "{",
@@ -17640,7 +17964,7 @@
         "created": -2.5
       },
       "expected": "-250.000000%",
-      "id": 1959
+      "id": 1995
     },
     {
       "style": "{",
@@ -17649,7 +17973,7 @@
         "created": -2.5
       },
       "expected": "***-2.500000",
-      "id": 1960
+      "id": 1996
     },
     {
       "style": "{",
@@ -17658,7 +17982,7 @@
         "created": -2.5
       },
       "expected": "-2.500000e+00",
-      "id": 1961
+      "id": 1997
     },
     {
       "style": "{",
@@ -17667,7 +17991,7 @@
         "created": -2.5
       },
       "expected": "********-2.5",
-      "id": 1962
+      "id": 1998
     },
     {
       "style": "{",
@@ -17676,7 +18000,7 @@
         "created": -2.5
       },
       "expected": "-250.000000%",
-      "id": 1963
+      "id": 1999
     },
     {
       "style": "{",
@@ -17685,7 +18009,7 @@
         "created": -2.5
       },
       "expected": "-2.500000",
-      "id": 1964
+      "id": 2000
     },
     {
       "style": "{",
@@ -17694,7 +18018,7 @@
         "created": -2.5
       },
       "expected": "-2.500000e+00",
-      "id": 1965
+      "id": 2001
     },
     {
       "style": "{",
@@ -17703,7 +18027,7 @@
         "created": -2.5
       },
       "expected": "-2.5",
-      "id": 1966
+      "id": 2002
     },
     {
       "style": "{",
@@ -17712,7 +18036,7 @@
         "created": -2.5
       },
       "expected": "-250.000000%",
-      "id": 1967
+      "id": 2003
     },
     {
       "style": "{",
@@ -17721,7 +18045,7 @@
         "created": -2.5
       },
       "expected": "-0002.500000",
-      "id": 1968
+      "id": 2004
     },
     {
       "style": "{",
@@ -17730,7 +18054,7 @@
         "created": -2.5
       },
       "expected": "-2.500000e+00",
-      "id": 1969
+      "id": 2005
     },
     {
       "style": "{",
@@ -17739,7 +18063,7 @@
         "created": -2.5
       },
       "expected": "-000000002.5",
-      "id": 1970
+      "id": 2006
     },
     {
       "style": "{",
@@ -17748,7 +18072,7 @@
         "created": -2.5
       },
       "expected": "-250.000000%",
-      "id": 1971
+      "id": 2007
     },
     {
       "style": "{",
@@ -17757,7 +18081,7 @@
         "created": -2.5
       },
       "expected": "-2.500000",
-      "id": 1972
+      "id": 2008
     },
     {
       "style": "{",
@@ -17766,7 +18090,7 @@
         "created": -2.5
       },
       "expected": "-2.500000e+00",
-      "id": 1973
+      "id": 2009
     },
     {
       "style": "{",
@@ -17775,7 +18099,7 @@
         "created": -2.5
       },
       "expected": "-2.5",
-      "id": 1974
+      "id": 2010
     },
     {
       "style": "{",
@@ -17784,7 +18108,7 @@
         "created": -2.5
       },
       "expected": "-250.000000%",
-      "id": 1975
+      "id": 2011
     },
     {
       "style": "{",
@@ -17793,7 +18117,7 @@
         "created": -2.5
       },
       "expected": "-2.500000",
-      "id": 1976
+      "id": 2012
     },
     {
       "style": "{",
@@ -17802,7 +18126,7 @@
         "created": -2.5
       },
       "expected": "-2.500000e+00",
-      "id": 1977
+      "id": 2013
     },
     {
       "style": "{",
@@ -17811,7 +18135,7 @@
         "created": -2.5
       },
       "expected": "-2.50000",
-      "id": 1978
+      "id": 2014
     },
     {
       "style": "{",
@@ -17820,7 +18144,7 @@
         "created": -2.5
       },
       "expected": "-250.000000%",
-      "id": 1979
+      "id": 2015
     },
     {
       "style": "{",
@@ -17829,7 +18153,7 @@
         "created": -2.5
       },
       "expected": "-2.50",
-      "id": 1980
+      "id": 2016
     },
     {
       "style": "{",
@@ -17838,7 +18162,7 @@
         "created": -2.5
       },
       "expected": "-2.50e+00",
-      "id": 1981
+      "id": 2017
     },
     {
       "style": "{",
@@ -17847,7 +18171,7 @@
         "created": -2.5
       },
       "expected": "-2.5",
-      "id": 1982
+      "id": 2018
     },
     {
       "style": "{",
@@ -17856,7 +18180,7 @@
         "created": -2.5
       },
       "expected": "-250.00%",
-      "id": 1983
+      "id": 2019
     },
     {
       "style": "{",
@@ -17865,7 +18189,7 @@
         "created": -2.5
       },
       "expected": "-2.500000",
-      "id": 1984
+      "id": 2020
     },
     {
       "style": "{",
@@ -17874,7 +18198,7 @@
         "created": -2.5
       },
       "expected": "-2.500000e+00",
-      "id": 1985
+      "id": 2021
     },
     {
       "style": "{",
@@ -17883,7 +18207,7 @@
         "created": -2.5
       },
       "expected": "-2.5",
-      "id": 1986
+      "id": 2022
     },
     {
       "style": "{",
@@ -17892,7 +18216,7 @@
         "created": -2.5
       },
       "expected": "-250.000000%",
-      "id": 1987
+      "id": 2023
     },
     {
       "style": "{",
@@ -17901,7 +18225,7 @@
         "created": -2.5
       },
       "expected": "       -2.50",
-      "id": 1988
+      "id": 2024
     },
     {
       "style": "{",
@@ -17910,7 +18234,7 @@
         "created": -2.5
       },
       "expected": "   -2.50e+00",
-      "id": 1989
+      "id": 2025
     },
     {
       "style": "{",
@@ -17919,7 +18243,7 @@
         "created": -2.5
       },
       "expected": "        -2.5",
-      "id": 1990
+      "id": 2026
     },
     {
       "style": "{",
@@ -17928,7 +18252,7 @@
         "created": -2.5
       },
       "expected": "    -250.00%",
-      "id": 1991
+      "id": 2027
     },
     {
       "style": "{",
@@ -17937,7 +18261,7 @@
         "created": -2.5
       },
       "expected": "-0000002.500",
-      "id": 1992
+      "id": 2028
     },
     {
       "style": "{",
@@ -17946,7 +18270,7 @@
         "created": -2.5
       },
       "expected": "-002.500e+00",
-      "id": 1993
+      "id": 2029
     },
     {
       "style": "{",
@@ -17955,7 +18279,7 @@
         "created": -2.5
       },
       "expected": "-000000002.5",
-      "id": 1994
+      "id": 2030
     },
     {
       "style": "{",
@@ -17964,7 +18288,7 @@
         "created": -2.5
       },
       "expected": "-000250.000%",
-      "id": 1995
+      "id": 2031
     },
     {
       "style": "{",
@@ -17973,7 +18297,7 @@
         "created": 0.0
       },
       "expected": "0.00",
-      "id": 1996
+      "id": 2032
     },
     {
       "style": "{",
@@ -17982,7 +18306,7 @@
         "created": 0.0
       },
       "expected": "+0.00",
-      "id": 1997
+      "id": 2033
     },
     {
       "style": "{",
@@ -17991,7 +18315,7 @@
         "created": 0.0
       },
       "expected": "0",
-      "id": 1998
+      "id": 2034
     },
     {
       "style": "{",
@@ -18000,7 +18324,7 @@
         "created": 3.14159
       },
       "expected": "3.14",
-      "id": 1999
+      "id": 2035
     },
     {
       "style": "{",
@@ -18009,7 +18333,7 @@
         "created": 3.14159
       },
       "expected": "+3.14",
-      "id": 2000
+      "id": 2036
     },
     {
       "style": "{",
@@ -18018,7 +18342,7 @@
         "created": 3.14159
       },
       "expected": "3.14159",
-      "id": 2001
+      "id": 2037
     },
     {
       "style": "{",
@@ -18027,7 +18351,7 @@
         "created": 855.0
       },
       "expected": "855.00",
-      "id": 2002
+      "id": 2038
     },
     {
       "style": "{",
@@ -18036,7 +18360,7 @@
         "created": 855.0
       },
       "expected": "+855.00",
-      "id": 2003
+      "id": 2039
     },
     {
       "style": "{",
@@ -18045,7 +18369,7 @@
         "created": 855.0
       },
       "expected": "855",
-      "id": 2004
+      "id": 2040
     },
     {
       "style": "{",
@@ -18054,7 +18378,7 @@
         "created": 48.94661903381348
       },
       "expected": "48.95",
-      "id": 2005
+      "id": 2041
     },
     {
       "style": "{",
@@ -18063,7 +18387,7 @@
         "created": 48.94661903381348
       },
       "expected": "+48.95",
-      "id": 2006
+      "id": 2042
     },
     {
       "style": "{",
@@ -18072,7 +18396,7 @@
         "created": 48.94661903381348
       },
       "expected": "48.9466",
-      "id": 2007
+      "id": 2043
     },
     {
       "style": "{",
@@ -18081,7 +18405,7 @@
         "created": -2.5
       },
       "expected": "-2.50",
-      "id": 2008
+      "id": 2044
     },
     {
       "style": "{",
@@ -18090,7 +18414,7 @@
         "created": -2.5
       },
       "expected": "-2.50",
-      "id": 2009
+      "id": 2045
     },
     {
       "style": "{",
@@ -18099,7 +18423,7 @@
         "created": -2.5
       },
       "expected": "-2.5",
-      "id": 2010
+      "id": 2046
     },
     {
       "style": "{",
@@ -18108,7 +18432,79 @@
         "created": 0.0
       },
       "expected": "0.0",
-      "id": 2011
+      "id": 2047
+    },
+    {
+      "style": "{",
+      "fmt": "{created:+}",
+      "record": {
+        "created": 0.0
+      },
+      "expected": "+0.0",
+      "id": 2048
+    },
+    {
+      "style": "{",
+      "fmt": "{created:08}",
+      "record": {
+        "created": 0.0
+      },
+      "expected": "000000.0",
+      "id": 2049
+    },
+    {
+      "style": "{",
+      "fmt": "{created:,}",
+      "record": {
+        "created": 0.0
+      },
+      "expected": "0.0",
+      "id": 2050
+    },
+    {
+      "style": "{",
+      "fmt": "{created:+012}",
+      "record": {
+        "created": 0.0
+      },
+      "expected": "+000000000.0",
+      "id": 2051
+    },
+    {
+      "style": "{",
+      "fmt": "{created:015,}",
+      "record": {
+        "created": 0.0
+      },
+      "expected": "0,000,000,000.0",
+      "id": 2052
+    },
+    {
+      "style": "{",
+      "fmt": "{created:<12}",
+      "record": {
+        "created": 0.0
+      },
+      "expected": "0.0         ",
+      "id": 2053
+    },
+    {
+      "style": "{",
+      "fmt": "{created:^12}",
+      "record": {
+        "created": 0.0
+      },
+      "expected": "    0.0     ",
+      "id": 2054
+    },
+    {
+      "style": "{",
+      "fmt": "{created:*>12}",
+      "record": {
+        "created": 0.0
+      },
+      "expected": "*********0.0",
+      "id": 2055
     },
     {
       "style": "{",
@@ -18117,7 +18513,79 @@
         "created": 3.14159
       },
       "expected": "3.14159",
-      "id": 2012
+      "id": 2056
+    },
+    {
+      "style": "{",
+      "fmt": "{created:+}",
+      "record": {
+        "created": 3.14159
+      },
+      "expected": "+3.14159",
+      "id": 2057
+    },
+    {
+      "style": "{",
+      "fmt": "{created:08}",
+      "record": {
+        "created": 3.14159
+      },
+      "expected": "03.14159",
+      "id": 2058
+    },
+    {
+      "style": "{",
+      "fmt": "{created:,}",
+      "record": {
+        "created": 3.14159
+      },
+      "expected": "3.14159",
+      "id": 2059
+    },
+    {
+      "style": "{",
+      "fmt": "{created:+012}",
+      "record": {
+        "created": 3.14159
+      },
+      "expected": "+00003.14159",
+      "id": 2060
+    },
+    {
+      "style": "{",
+      "fmt": "{created:015,}",
+      "record": {
+        "created": 3.14159
+      },
+      "expected": "0,000,003.14159",
+      "id": 2061
+    },
+    {
+      "style": "{",
+      "fmt": "{created:<12}",
+      "record": {
+        "created": 3.14159
+      },
+      "expected": "3.14159     ",
+      "id": 2062
+    },
+    {
+      "style": "{",
+      "fmt": "{created:^12}",
+      "record": {
+        "created": 3.14159
+      },
+      "expected": "  3.14159   ",
+      "id": 2063
+    },
+    {
+      "style": "{",
+      "fmt": "{created:*>12}",
+      "record": {
+        "created": 3.14159
+      },
+      "expected": "*****3.14159",
+      "id": 2064
     },
     {
       "style": "{",
@@ -18126,7 +18594,79 @@
         "created": 855.0
       },
       "expected": "855.0",
-      "id": 2013
+      "id": 2065
+    },
+    {
+      "style": "{",
+      "fmt": "{created:+}",
+      "record": {
+        "created": 855.0
+      },
+      "expected": "+855.0",
+      "id": 2066
+    },
+    {
+      "style": "{",
+      "fmt": "{created:08}",
+      "record": {
+        "created": 855.0
+      },
+      "expected": "000855.0",
+      "id": 2067
+    },
+    {
+      "style": "{",
+      "fmt": "{created:,}",
+      "record": {
+        "created": 855.0
+      },
+      "expected": "855.0",
+      "id": 2068
+    },
+    {
+      "style": "{",
+      "fmt": "{created:+012}",
+      "record": {
+        "created": 855.0
+      },
+      "expected": "+000000855.0",
+      "id": 2069
+    },
+    {
+      "style": "{",
+      "fmt": "{created:015,}",
+      "record": {
+        "created": 855.0
+      },
+      "expected": "0,000,000,855.0",
+      "id": 2070
+    },
+    {
+      "style": "{",
+      "fmt": "{created:<12}",
+      "record": {
+        "created": 855.0
+      },
+      "expected": "855.0       ",
+      "id": 2071
+    },
+    {
+      "style": "{",
+      "fmt": "{created:^12}",
+      "record": {
+        "created": 855.0
+      },
+      "expected": "   855.0    ",
+      "id": 2072
+    },
+    {
+      "style": "{",
+      "fmt": "{created:*>12}",
+      "record": {
+        "created": 855.0
+      },
+      "expected": "*******855.0",
+      "id": 2073
     },
     {
       "style": "{",
@@ -18135,7 +18675,79 @@
         "created": 48.94661903381348
       },
       "expected": "48.94661903381348",
-      "id": 2014
+      "id": 2074
+    },
+    {
+      "style": "{",
+      "fmt": "{created:+}",
+      "record": {
+        "created": 48.94661903381348
+      },
+      "expected": "+48.94661903381348",
+      "id": 2075
+    },
+    {
+      "style": "{",
+      "fmt": "{created:08}",
+      "record": {
+        "created": 48.94661903381348
+      },
+      "expected": "48.94661903381348",
+      "id": 2076
+    },
+    {
+      "style": "{",
+      "fmt": "{created:,}",
+      "record": {
+        "created": 48.94661903381348
+      },
+      "expected": "48.94661903381348",
+      "id": 2077
+    },
+    {
+      "style": "{",
+      "fmt": "{created:+012}",
+      "record": {
+        "created": 48.94661903381348
+      },
+      "expected": "+48.94661903381348",
+      "id": 2078
+    },
+    {
+      "style": "{",
+      "fmt": "{created:015,}",
+      "record": {
+        "created": 48.94661903381348
+      },
+      "expected": "48.94661903381348",
+      "id": 2079
+    },
+    {
+      "style": "{",
+      "fmt": "{created:<12}",
+      "record": {
+        "created": 48.94661903381348
+      },
+      "expected": "48.94661903381348",
+      "id": 2080
+    },
+    {
+      "style": "{",
+      "fmt": "{created:^12}",
+      "record": {
+        "created": 48.94661903381348
+      },
+      "expected": "48.94661903381348",
+      "id": 2081
+    },
+    {
+      "style": "{",
+      "fmt": "{created:*>12}",
+      "record": {
+        "created": 48.94661903381348
+      },
+      "expected": "48.94661903381348",
+      "id": 2082
     },
     {
       "style": "{",
@@ -18144,7 +18756,160 @@
         "created": -2.5
       },
       "expected": "-2.5",
-      "id": 2015
+      "id": 2083
+    },
+    {
+      "style": "{",
+      "fmt": "{created:+}",
+      "record": {
+        "created": -2.5
+      },
+      "expected": "-2.5",
+      "id": 2084
+    },
+    {
+      "style": "{",
+      "fmt": "{created:08}",
+      "record": {
+        "created": -2.5
+      },
+      "expected": "-00002.5",
+      "id": 2085
+    },
+    {
+      "style": "{",
+      "fmt": "{created:,}",
+      "record": {
+        "created": -2.5
+      },
+      "expected": "-2.5",
+      "id": 2086
+    },
+    {
+      "style": "{",
+      "fmt": "{created:+012}",
+      "record": {
+        "created": -2.5
+      },
+      "expected": "-000000002.5",
+      "id": 2087
+    },
+    {
+      "style": "{",
+      "fmt": "{created:015,}",
+      "record": {
+        "created": -2.5
+      },
+      "expected": "-0,000,000,002.5",
+      "id": 2088
+    },
+    {
+      "style": "{",
+      "fmt": "{created:<12}",
+      "record": {
+        "created": -2.5
+      },
+      "expected": "-2.5        ",
+      "id": 2089
+    },
+    {
+      "style": "{",
+      "fmt": "{created:^12}",
+      "record": {
+        "created": -2.5
+      },
+      "expected": "    -2.5    ",
+      "id": 2090
+    },
+    {
+      "style": "{",
+      "fmt": "{created:*>12}",
+      "record": {
+        "created": -2.5
+      },
+      "expected": "********-2.5",
+      "id": 2091
+    },
+    {
+      "style": "{",
+      "fmt": "{created}",
+      "record": {
+        "created": 1234567.0
+      },
+      "expected": "1234567.0",
+      "id": 2092
+    },
+    {
+      "style": "{",
+      "fmt": "{created:+}",
+      "record": {
+        "created": 1234567.0
+      },
+      "expected": "+1234567.0",
+      "id": 2093
+    },
+    {
+      "style": "{",
+      "fmt": "{created:08}",
+      "record": {
+        "created": 1234567.0
+      },
+      "expected": "1234567.0",
+      "id": 2094
+    },
+    {
+      "style": "{",
+      "fmt": "{created:,}",
+      "record": {
+        "created": 1234567.0
+      },
+      "expected": "1,234,567.0",
+      "id": 2095
+    },
+    {
+      "style": "{",
+      "fmt": "{created:+012}",
+      "record": {
+        "created": 1234567.0
+      },
+      "expected": "+001234567.0",
+      "id": 2096
+    },
+    {
+      "style": "{",
+      "fmt": "{created:015,}",
+      "record": {
+        "created": 1234567.0
+      },
+      "expected": "0,001,234,567.0",
+      "id": 2097
+    },
+    {
+      "style": "{",
+      "fmt": "{created:<12}",
+      "record": {
+        "created": 1234567.0
+      },
+      "expected": "1234567.0   ",
+      "id": 2098
+    },
+    {
+      "style": "{",
+      "fmt": "{created:^12}",
+      "record": {
+        "created": 1234567.0
+      },
+      "expected": " 1234567.0  ",
+      "id": 2099
+    },
+    {
+      "style": "{",
+      "fmt": "{created:*>12}",
+      "record": {
+        "created": 1234567.0
+      },
+      "expected": "***1234567.0",
+      "id": 2100
     },
     {
       "style": "{",
@@ -18153,7 +18918,7 @@
         "name": "INFO"
       },
       "error": "ValueError",
-      "id": 2016
+      "id": 2101
     },
     {
       "style": "{",
@@ -18162,7 +18927,7 @@
         "created": 1.5
       },
       "error": "ValueError",
-      "id": 2017
+      "id": 2102
     },
     {
       "style": "{",
@@ -18171,7 +18936,7 @@
         "lineno": 5
       },
       "error": "ValueError",
-      "id": 2018
+      "id": 2103
     },
     {
       "style": "{",
@@ -18180,7 +18945,16 @@
         "lineno": 5
       },
       "error": "ValueError",
-      "id": 2019
+      "id": 2104
+    },
+    {
+      "style": "{",
+      "fmt": "{lineno:.2}",
+      "record": {
+        "lineno": 5
+      },
+      "error": "ValueError",
+      "id": 2105
     },
     {
       "style": "$",
@@ -18189,7 +18963,7 @@
         "name": "INFO"
       },
       "expected": "INFO",
-      "id": 2020
+      "id": 2106
     },
     {
       "style": "$",
@@ -18198,7 +18972,7 @@
         "name": "INFO"
       },
       "expected": "INFO",
-      "id": 2021
+      "id": 2107
     },
     {
       "style": "$",
@@ -18207,7 +18981,7 @@
         "name": "INFO"
       },
       "expected": "prefix INFO suffix",
-      "id": 2022
+      "id": 2108
     },
     {
       "style": "$",
@@ -18216,7 +18990,7 @@
         "name": "it's"
       },
       "expected": "it's",
-      "id": 2023
+      "id": 2109
     },
     {
       "style": "$",
@@ -18225,7 +18999,7 @@
         "name": "it's"
       },
       "expected": "it's",
-      "id": 2024
+      "id": 2110
     },
     {
       "style": "$",
@@ -18234,7 +19008,7 @@
         "name": "it's"
       },
       "expected": "prefix it's suffix",
-      "id": 2025
+      "id": 2111
     },
     {
       "style": "$",
@@ -18243,7 +19017,7 @@
         "name": "longword"
       },
       "expected": "longword",
-      "id": 2026
+      "id": 2112
     },
     {
       "style": "$",
@@ -18252,7 +19026,7 @@
         "name": "longword"
       },
       "expected": "longword",
-      "id": 2027
+      "id": 2113
     },
     {
       "style": "$",
@@ -18261,7 +19035,7 @@
         "name": "longword"
       },
       "expected": "prefix longword suffix",
-      "id": 2028
+      "id": 2114
     },
     {
       "style": "$",
@@ -18270,7 +19044,7 @@
         "lineno": 0
       },
       "expected": "0",
-      "id": 2029
+      "id": 2115
     },
     {
       "style": "$",
@@ -18279,7 +19053,7 @@
         "lineno": 0
       },
       "expected": "0",
-      "id": 2030
+      "id": 2116
     },
     {
       "style": "$",
@@ -18288,7 +19062,7 @@
         "lineno": 0
       },
       "expected": "prefix 0 suffix",
-      "id": 2031
+      "id": 2117
     },
     {
       "style": "$",
@@ -18297,7 +19071,7 @@
         "lineno": 5
       },
       "expected": "5",
-      "id": 2032
+      "id": 2118
     },
     {
       "style": "$",
@@ -18306,7 +19080,7 @@
         "lineno": 5
       },
       "expected": "5",
-      "id": 2033
+      "id": 2119
     },
     {
       "style": "$",
@@ -18315,7 +19089,7 @@
         "lineno": 5
       },
       "expected": "prefix 5 suffix",
-      "id": 2034
+      "id": 2120
     },
     {
       "style": "$",
@@ -18324,7 +19098,7 @@
         "lineno": -7
       },
       "expected": "-7",
-      "id": 2035
+      "id": 2121
     },
     {
       "style": "$",
@@ -18333,7 +19107,7 @@
         "lineno": -7
       },
       "expected": "-7",
-      "id": 2036
+      "id": 2122
     },
     {
       "style": "$",
@@ -18342,7 +19116,7 @@
         "lineno": -7
       },
       "expected": "prefix -7 suffix",
-      "id": 2037
+      "id": 2123
     },
     {
       "style": "$",
@@ -18351,7 +19125,7 @@
         "created": 0.0
       },
       "expected": "0.0",
-      "id": 2038
+      "id": 2124
     },
     {
       "style": "$",
@@ -18360,7 +19134,7 @@
         "created": 0.0
       },
       "expected": "0.0",
-      "id": 2039
+      "id": 2125
     },
     {
       "style": "$",
@@ -18369,7 +19143,7 @@
         "created": 0.0
       },
       "expected": "prefix 0.0 suffix",
-      "id": 2040
+      "id": 2126
     },
     {
       "style": "$",
@@ -18378,7 +19152,7 @@
         "created": 855.0
       },
       "expected": "855.0",
-      "id": 2041
+      "id": 2127
     },
     {
       "style": "$",
@@ -18387,7 +19161,7 @@
         "created": 855.0
       },
       "expected": "855.0",
-      "id": 2042
+      "id": 2128
     },
     {
       "style": "$",
@@ -18396,7 +19170,7 @@
         "created": 855.0
       },
       "expected": "prefix 855.0 suffix",
-      "id": 2043
+      "id": 2129
     },
     {
       "style": "$",
@@ -18405,7 +19179,7 @@
         "created": 3.14159
       },
       "expected": "3.14159",
-      "id": 2044
+      "id": 2130
     },
     {
       "style": "$",
@@ -18414,7 +19188,7 @@
         "created": 3.14159
       },
       "expected": "3.14159",
-      "id": 2045
+      "id": 2131
     },
     {
       "style": "$",
@@ -18423,7 +19197,7 @@
         "created": 3.14159
       },
       "expected": "prefix 3.14159 suffix",
-      "id": 2046
+      "id": 2132
     },
     {
       "style": "$",
@@ -18432,7 +19206,7 @@
         "created": -2.5
       },
       "expected": "-2.5",
-      "id": 2047
+      "id": 2133
     },
     {
       "style": "$",
@@ -18441,7 +19215,7 @@
         "created": -2.5
       },
       "expected": "-2.5",
-      "id": 2048
+      "id": 2134
     },
     {
       "style": "$",
@@ -18450,7 +19224,7 @@
         "created": -2.5
       },
       "expected": "prefix -2.5 suffix",
-      "id": 2049
+      "id": 2135
     },
     {
       "style": "$",
@@ -18459,7 +19233,7 @@
         "name": "done"
       },
       "expected": "100$ done",
-      "id": 2050
+      "id": 2136
     },
     {
       "style": "%",
@@ -18488,7 +19262,7 @@
         "args": []
       },
       "expected": "[2023-03-17 21:03:52,855] [INFO] main.py::10 application startup",
-      "id": 2051
+      "id": 2137
     },
     {
       "style": "%",
@@ -18517,7 +19291,7 @@
         "args": []
       },
       "expected": "2023-03-17 21:03:52,855 [pid 450724] INFO     main.<module>():10 application startup",
-      "id": 2052
+      "id": 2138
     },
     {
       "style": "%",
@@ -18546,7 +19320,7 @@
         "args": []
       },
       "expected": "INFO - 2023-03-17 21:03:52,855 - main.py - line 10 --> application startup",
-      "id": 2053
+      "id": 2139
     },
     {
       "style": "%",
@@ -18575,7 +19349,7 @@
         "args": []
       },
       "expected": "INFO 2023-03-17 21:03:52,855: application startup",
-      "id": 2054
+      "id": 2140
     },
     {
       "style": "%",
@@ -18604,7 +19378,7 @@
         "args": []
       },
       "expected": "INFO:root:application startup",
-      "id": 2055
+      "id": 2141
     },
     {
       "style": "%",
@@ -18633,7 +19407,7 @@
         "args": []
       },
       "expected": "1679087032.86 00048.95 855 application startup",
-      "id": 2056
+      "id": 2142
     },
     {
       "style": "{",
@@ -18662,7 +19436,7 @@
         "args": []
       },
       "expected": "[2023-03-17 21:03:52,855] [INFO] main.py::10 application startup",
-      "id": 2057
+      "id": 2143
     },
     {
       "style": "{",
@@ -18691,7 +19465,7 @@
         "args": []
       },
       "expected": "2023-03-17 21:03:52,855 [pid 450724] INFO     main.<module>():10 application startup",
-      "id": 2058
+      "id": 2144
     },
     {
       "style": "{",
@@ -18720,7 +19494,7 @@
         "args": []
       },
       "expected": "INFO 2023-03-17 21:03:52,855: application startup",
-      "id": 2059
+      "id": 2145
     },
     {
       "style": "{",
@@ -18749,7 +19523,7 @@
         "args": []
       },
       "expected": "INFO:root:application startup",
-      "id": 2060
+      "id": 2146
     },
     {
       "style": "{",
@@ -18778,7 +19552,7 @@
         "args": []
       },
       "expected": "1679087032.86 00048.95 855 application startup",
-      "id": 2061
+      "id": 2147
     },
     {
       "style": "$",
@@ -18807,7 +19581,7 @@
         "args": []
       },
       "expected": "2023-03-17 21:03:52,855 INFO root application startup",
-      "id": 2062
+      "id": 2148
     },
     {
       "style": "$",
@@ -18836,7 +19610,7 @@
         "args": []
       },
       "expected": "INFO:root:application startup",
-      "id": 2063
+      "id": 2149
     },
     {
       "style": "$",
@@ -18865,7 +19639,7 @@
         "args": []
       },
       "expected": "2023-03-17 21:03:52,855 [450724] INFO main.<module>:10 application startup",
-      "id": 2064
+      "id": 2150
     },
     {
       "style": "%",
@@ -18895,7 +19669,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "[2023/03/17 21:03:52] [INFO] main.py::10 application startup",
-      "id": 2065
+      "id": 2151
     },
     {
       "style": "%",
@@ -18925,7 +19699,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "2023/03/17 21:03:52 [pid 450724] INFO     main.<module>():10 application startup",
-      "id": 2066
+      "id": 2152
     },
     {
       "style": "%",
@@ -18955,7 +19729,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "INFO - 2023/03/17 21:03:52 - main.py - line 10 --> application startup",
-      "id": 2067
+      "id": 2153
     },
     {
       "style": "%",
@@ -18985,7 +19759,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "INFO 2023/03/17 21:03:52 : application startup",
-      "id": 2068
+      "id": 2154
     },
     {
       "style": "%",
@@ -19015,7 +19789,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "INFO:root:application startup",
-      "id": 2069
+      "id": 2155
     },
     {
       "style": "%",
@@ -19045,7 +19819,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "1679087032.86 00048.95 855 application startup",
-      "id": 2070
+      "id": 2156
     },
     {
       "style": "{",
@@ -19075,7 +19849,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "[2023/03/17 21:03:52] [INFO] main.py::10 application startup",
-      "id": 2071
+      "id": 2157
     },
     {
       "style": "{",
@@ -19105,7 +19879,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "2023/03/17 21:03:52 [pid 450724] INFO     main.<module>():10 application startup",
-      "id": 2072
+      "id": 2158
     },
     {
       "style": "{",
@@ -19135,7 +19909,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "INFO 2023/03/17 21:03:52: application startup",
-      "id": 2073
+      "id": 2159
     },
     {
       "style": "{",
@@ -19165,7 +19939,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "INFO:root:application startup",
-      "id": 2074
+      "id": 2160
     },
     {
       "style": "{",
@@ -19195,7 +19969,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "1679087032.86 00048.95 855 application startup",
-      "id": 2075
+      "id": 2161
     },
     {
       "style": "$",
@@ -19225,7 +19999,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "2023/03/17 21:03:52 INFO root application startup",
-      "id": 2076
+      "id": 2162
     },
     {
       "style": "$",
@@ -19255,7 +20029,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "INFO:root:application startup",
-      "id": 2077
+      "id": 2163
     },
     {
       "style": "$",
@@ -19285,7 +20059,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "2023/03/17 21:03:52 [450724] INFO main.<module>:10 application startup",
-      "id": 2078
+      "id": 2164
     },
     {
       "style": "%",
@@ -19315,7 +20089,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "[21:03:52] [INFO] main.py::10 application startup",
-      "id": 2079
+      "id": 2165
     },
     {
       "style": "%",
@@ -19345,7 +20119,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "21:03:52 [pid 450724] INFO     main.<module>():10 application startup",
-      "id": 2080
+      "id": 2166
     },
     {
       "style": "%",
@@ -19375,7 +20149,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "INFO - 21:03:52        - main.py - line 10 --> application startup",
-      "id": 2081
+      "id": 2167
     },
     {
       "style": "%",
@@ -19405,7 +20179,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "INFO 21:03:52            : application startup",
-      "id": 2082
+      "id": 2168
     },
     {
       "style": "%",
@@ -19435,7 +20209,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "INFO:root:application startup",
-      "id": 2083
+      "id": 2169
     },
     {
       "style": "%",
@@ -19465,7 +20239,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "1679087032.86 00048.95 855 application startup",
-      "id": 2084
+      "id": 2170
     },
     {
       "style": "{",
@@ -19495,7 +20269,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "[21:03:52] [INFO] main.py::10 application startup",
-      "id": 2085
+      "id": 2171
     },
     {
       "style": "{",
@@ -19525,7 +20299,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "21:03:52 [pid 450724] INFO     main.<module>():10 application startup",
-      "id": 2086
+      "id": 2172
     },
     {
       "style": "{",
@@ -19555,7 +20329,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "INFO 21:03:52: application startup",
-      "id": 2087
+      "id": 2173
     },
     {
       "style": "{",
@@ -19585,7 +20359,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "INFO:root:application startup",
-      "id": 2088
+      "id": 2174
     },
     {
       "style": "{",
@@ -19615,7 +20389,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "1679087032.86 00048.95 855 application startup",
-      "id": 2089
+      "id": 2175
     },
     {
       "style": "$",
@@ -19645,7 +20419,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "21:03:52 INFO root application startup",
-      "id": 2090
+      "id": 2176
     },
     {
       "style": "$",
@@ -19675,7 +20449,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "INFO:root:application startup",
-      "id": 2091
+      "id": 2177
     },
     {
       "style": "$",
@@ -19705,7 +20479,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "21:03:52 [450724] INFO main.<module>:10 application startup",
-      "id": 2092
+      "id": 2178
     },
     {
       "style": "%",
@@ -19735,7 +20509,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "[Fri Mar 17] [INFO] main.py::10 application startup",
-      "id": 2093
+      "id": 2179
     },
     {
       "style": "%",
@@ -19765,7 +20539,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "Fri Mar 17 [pid 450724] INFO     main.<module>():10 application startup",
-      "id": 2094
+      "id": 2180
     },
     {
       "style": "%",
@@ -19795,7 +20569,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "INFO - Fri Mar 17      - main.py - line 10 --> application startup",
-      "id": 2095
+      "id": 2181
     },
     {
       "style": "%",
@@ -19825,7 +20599,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "INFO Fri Mar 17          : application startup",
-      "id": 2096
+      "id": 2182
     },
     {
       "style": "%",
@@ -19855,7 +20629,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "INFO:root:application startup",
-      "id": 2097
+      "id": 2183
     },
     {
       "style": "%",
@@ -19885,7 +20659,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "1679087032.86 00048.95 855 application startup",
-      "id": 2098
+      "id": 2184
     },
     {
       "style": "{",
@@ -19915,7 +20689,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "[Fri Mar 17] [INFO] main.py::10 application startup",
-      "id": 2099
+      "id": 2185
     },
     {
       "style": "{",
@@ -19945,7 +20719,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "Fri Mar 17 [pid 450724] INFO     main.<module>():10 application startup",
-      "id": 2100
+      "id": 2186
     },
     {
       "style": "{",
@@ -19975,7 +20749,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "INFO Fri Mar 17: application startup",
-      "id": 2101
+      "id": 2187
     },
     {
       "style": "{",
@@ -20005,7 +20779,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "INFO:root:application startup",
-      "id": 2102
+      "id": 2188
     },
     {
       "style": "{",
@@ -20035,7 +20809,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "1679087032.86 00048.95 855 application startup",
-      "id": 2103
+      "id": 2189
     },
     {
       "style": "$",
@@ -20065,7 +20839,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "Fri Mar 17 INFO root application startup",
-      "id": 2104
+      "id": 2190
     },
     {
       "style": "$",
@@ -20095,7 +20869,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "INFO:root:application startup",
-      "id": 2105
+      "id": 2191
     },
     {
       "style": "$",
@@ -20125,7 +20899,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "Fri Mar 17 [450724] INFO main.<module>:10 application startup",
-      "id": 2106
+      "id": 2192
     },
     {
       "style": "%",
@@ -20154,7 +20928,7 @@
         "args": []
       },
       "expected": "[2023-03-17 21:03:52,855] [INFO] module.py::16 entering a function",
-      "id": 2107
+      "id": 2193
     },
     {
       "style": "%",
@@ -20183,7 +20957,7 @@
         "args": []
       },
       "expected": "2023-03-17 21:03:52,855 [pid 450724] INFO     module.function():16 entering a function",
-      "id": 2108
+      "id": 2194
     },
     {
       "style": "%",
@@ -20212,7 +20986,7 @@
         "args": []
       },
       "expected": "INFO - 2023-03-17 21:03:52,855 - module.py - line 16 --> entering a function",
-      "id": 2109
+      "id": 2195
     },
     {
       "style": "%",
@@ -20241,7 +21015,7 @@
         "args": []
       },
       "expected": "INFO 2023-03-17 21:03:52,855: entering a function",
-      "id": 2110
+      "id": 2196
     },
     {
       "style": "%",
@@ -20270,7 +21044,7 @@
         "args": []
       },
       "expected": "INFO:modulelogger:entering a function",
-      "id": 2111
+      "id": 2197
     },
     {
       "style": "%",
@@ -20299,7 +21073,7 @@
         "args": []
       },
       "expected": "1679087032.86 00049.21 855 entering a function",
-      "id": 2112
+      "id": 2198
     },
     {
       "style": "{",
@@ -20328,7 +21102,7 @@
         "args": []
       },
       "expected": "[2023-03-17 21:03:52,855] [INFO] module.py::16 entering a function",
-      "id": 2113
+      "id": 2199
     },
     {
       "style": "{",
@@ -20357,7 +21131,7 @@
         "args": []
       },
       "expected": "2023-03-17 21:03:52,855 [pid 450724] INFO     module.function():16 entering a function",
-      "id": 2114
+      "id": 2200
     },
     {
       "style": "{",
@@ -20386,7 +21160,7 @@
         "args": []
       },
       "expected": "INFO 2023-03-17 21:03:52,855: entering a function",
-      "id": 2115
+      "id": 2201
     },
     {
       "style": "{",
@@ -20415,7 +21189,7 @@
         "args": []
       },
       "expected": "INFO:modulelogger:entering a function",
-      "id": 2116
+      "id": 2202
     },
     {
       "style": "{",
@@ -20444,7 +21218,7 @@
         "args": []
       },
       "expected": "1679087032.86 00049.21 855 entering a function",
-      "id": 2117
+      "id": 2203
     },
     {
       "style": "$",
@@ -20473,7 +21247,7 @@
         "args": []
       },
       "expected": "2023-03-17 21:03:52,855 INFO modulelogger entering a function",
-      "id": 2118
+      "id": 2204
     },
     {
       "style": "$",
@@ -20502,7 +21276,7 @@
         "args": []
       },
       "expected": "INFO:modulelogger:entering a function",
-      "id": 2119
+      "id": 2205
     },
     {
       "style": "$",
@@ -20531,7 +21305,7 @@
         "args": []
       },
       "expected": "2023-03-17 21:03:52,855 [450724] INFO module.function:16 entering a function",
-      "id": 2120
+      "id": 2206
     },
     {
       "style": "%",
@@ -20561,7 +21335,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "[2023/03/17 21:03:52] [INFO] module.py::16 entering a function",
-      "id": 2121
+      "id": 2207
     },
     {
       "style": "%",
@@ -20591,7 +21365,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "2023/03/17 21:03:52 [pid 450724] INFO     module.function():16 entering a function",
-      "id": 2122
+      "id": 2208
     },
     {
       "style": "%",
@@ -20621,7 +21395,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "INFO - 2023/03/17 21:03:52 - module.py - line 16 --> entering a function",
-      "id": 2123
+      "id": 2209
     },
     {
       "style": "%",
@@ -20651,7 +21425,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "INFO 2023/03/17 21:03:52 : entering a function",
-      "id": 2124
+      "id": 2210
     },
     {
       "style": "%",
@@ -20681,7 +21455,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "INFO:modulelogger:entering a function",
-      "id": 2125
+      "id": 2211
     },
     {
       "style": "%",
@@ -20711,7 +21485,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "1679087032.86 00049.21 855 entering a function",
-      "id": 2126
+      "id": 2212
     },
     {
       "style": "{",
@@ -20741,7 +21515,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "[2023/03/17 21:03:52] [INFO] module.py::16 entering a function",
-      "id": 2127
+      "id": 2213
     },
     {
       "style": "{",
@@ -20771,7 +21545,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "2023/03/17 21:03:52 [pid 450724] INFO     module.function():16 entering a function",
-      "id": 2128
+      "id": 2214
     },
     {
       "style": "{",
@@ -20801,7 +21575,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "INFO 2023/03/17 21:03:52: entering a function",
-      "id": 2129
+      "id": 2215
     },
     {
       "style": "{",
@@ -20831,7 +21605,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "INFO:modulelogger:entering a function",
-      "id": 2130
+      "id": 2216
     },
     {
       "style": "{",
@@ -20861,7 +21635,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "1679087032.86 00049.21 855 entering a function",
-      "id": 2131
+      "id": 2217
     },
     {
       "style": "$",
@@ -20891,7 +21665,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "2023/03/17 21:03:52 INFO modulelogger entering a function",
-      "id": 2132
+      "id": 2218
     },
     {
       "style": "$",
@@ -20921,7 +21695,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "INFO:modulelogger:entering a function",
-      "id": 2133
+      "id": 2219
     },
     {
       "style": "$",
@@ -20951,7 +21725,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "2023/03/17 21:03:52 [450724] INFO module.function:16 entering a function",
-      "id": 2134
+      "id": 2220
     },
     {
       "style": "%",
@@ -20981,7 +21755,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "[21:03:52] [INFO] module.py::16 entering a function",
-      "id": 2135
+      "id": 2221
     },
     {
       "style": "%",
@@ -21011,7 +21785,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "21:03:52 [pid 450724] INFO     module.function():16 entering a function",
-      "id": 2136
+      "id": 2222
     },
     {
       "style": "%",
@@ -21041,7 +21815,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "INFO - 21:03:52        - module.py - line 16 --> entering a function",
-      "id": 2137
+      "id": 2223
     },
     {
       "style": "%",
@@ -21071,7 +21845,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "INFO 21:03:52            : entering a function",
-      "id": 2138
+      "id": 2224
     },
     {
       "style": "%",
@@ -21101,7 +21875,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "INFO:modulelogger:entering a function",
-      "id": 2139
+      "id": 2225
     },
     {
       "style": "%",
@@ -21131,7 +21905,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "1679087032.86 00049.21 855 entering a function",
-      "id": 2140
+      "id": 2226
     },
     {
       "style": "{",
@@ -21161,7 +21935,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "[21:03:52] [INFO] module.py::16 entering a function",
-      "id": 2141
+      "id": 2227
     },
     {
       "style": "{",
@@ -21191,7 +21965,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "21:03:52 [pid 450724] INFO     module.function():16 entering a function",
-      "id": 2142
+      "id": 2228
     },
     {
       "style": "{",
@@ -21221,7 +21995,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "INFO 21:03:52: entering a function",
-      "id": 2143
+      "id": 2229
     },
     {
       "style": "{",
@@ -21251,7 +22025,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "INFO:modulelogger:entering a function",
-      "id": 2144
+      "id": 2230
     },
     {
       "style": "{",
@@ -21281,7 +22055,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "1679087032.86 00049.21 855 entering a function",
-      "id": 2145
+      "id": 2231
     },
     {
       "style": "$",
@@ -21311,7 +22085,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "21:03:52 INFO modulelogger entering a function",
-      "id": 2146
+      "id": 2232
     },
     {
       "style": "$",
@@ -21341,7 +22115,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "INFO:modulelogger:entering a function",
-      "id": 2147
+      "id": 2233
     },
     {
       "style": "$",
@@ -21371,7 +22145,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "21:03:52 [450724] INFO module.function:16 entering a function",
-      "id": 2148
+      "id": 2234
     },
     {
       "style": "%",
@@ -21401,7 +22175,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "[Fri Mar 17] [INFO] module.py::16 entering a function",
-      "id": 2149
+      "id": 2235
     },
     {
       "style": "%",
@@ -21431,7 +22205,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "Fri Mar 17 [pid 450724] INFO     module.function():16 entering a function",
-      "id": 2150
+      "id": 2236
     },
     {
       "style": "%",
@@ -21461,7 +22235,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "INFO - Fri Mar 17      - module.py - line 16 --> entering a function",
-      "id": 2151
+      "id": 2237
     },
     {
       "style": "%",
@@ -21491,7 +22265,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "INFO Fri Mar 17          : entering a function",
-      "id": 2152
+      "id": 2238
     },
     {
       "style": "%",
@@ -21521,7 +22295,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "INFO:modulelogger:entering a function",
-      "id": 2153
+      "id": 2239
     },
     {
       "style": "%",
@@ -21551,7 +22325,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "1679087032.86 00049.21 855 entering a function",
-      "id": 2154
+      "id": 2240
     },
     {
       "style": "{",
@@ -21581,7 +22355,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "[Fri Mar 17] [INFO] module.py::16 entering a function",
-      "id": 2155
+      "id": 2241
     },
     {
       "style": "{",
@@ -21611,7 +22385,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "Fri Mar 17 [pid 450724] INFO     module.function():16 entering a function",
-      "id": 2156
+      "id": 2242
     },
     {
       "style": "{",
@@ -21641,7 +22415,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "INFO Fri Mar 17: entering a function",
-      "id": 2157
+      "id": 2243
     },
     {
       "style": "{",
@@ -21671,7 +22445,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "INFO:modulelogger:entering a function",
-      "id": 2158
+      "id": 2244
     },
     {
       "style": "{",
@@ -21701,7 +22475,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "1679087032.86 00049.21 855 entering a function",
-      "id": 2159
+      "id": 2245
     },
     {
       "style": "$",
@@ -21731,7 +22505,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "Fri Mar 17 INFO modulelogger entering a function",
-      "id": 2160
+      "id": 2246
     },
     {
       "style": "$",
@@ -21761,7 +22535,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "INFO:modulelogger:entering a function",
-      "id": 2161
+      "id": 2247
     },
     {
       "style": "$",
@@ -21791,7 +22565,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "Fri Mar 17 [450724] INFO module.function:16 entering a function",
-      "id": 2162
+      "id": 2248
     },
     {
       "style": "%",
@@ -21820,7 +22594,7 @@
         "args": []
       },
       "expected": "[2023-03-17 21:03:54,355] [INFO] module.py::18 leaving a function",
-      "id": 2163
+      "id": 2249
     },
     {
       "style": "%",
@@ -21849,7 +22623,7 @@
         "args": []
       },
       "expected": "2023-03-17 21:03:54,355 [pid 450724] INFO     module.function():18 leaving a function",
-      "id": 2164
+      "id": 2250
     },
     {
       "style": "%",
@@ -21878,7 +22652,7 @@
         "args": []
       },
       "expected": "INFO - 2023-03-17 21:03:54,355 - module.py - line 18 --> leaving a function",
-      "id": 2165
+      "id": 2251
     },
     {
       "style": "%",
@@ -21907,7 +22681,7 @@
         "args": []
       },
       "expected": "INFO 2023-03-17 21:03:54,355: leaving a function",
-      "id": 2166
+      "id": 2252
     },
     {
       "style": "%",
@@ -21936,7 +22710,7 @@
         "args": []
       },
       "expected": "INFO:modulelogger:leaving a function",
-      "id": 2167
+      "id": 2253
     },
     {
       "style": "%",
@@ -21965,7 +22739,7 @@
         "args": []
       },
       "expected": "1679087034.36 01549.46 355 leaving a function",
-      "id": 2168
+      "id": 2254
     },
     {
       "style": "{",
@@ -21994,7 +22768,7 @@
         "args": []
       },
       "expected": "[2023-03-17 21:03:54,355] [INFO] module.py::18 leaving a function",
-      "id": 2169
+      "id": 2255
     },
     {
       "style": "{",
@@ -22023,7 +22797,7 @@
         "args": []
       },
       "expected": "2023-03-17 21:03:54,355 [pid 450724] INFO     module.function():18 leaving a function",
-      "id": 2170
+      "id": 2256
     },
     {
       "style": "{",
@@ -22052,7 +22826,7 @@
         "args": []
       },
       "expected": "INFO 2023-03-17 21:03:54,355: leaving a function",
-      "id": 2171
+      "id": 2257
     },
     {
       "style": "{",
@@ -22081,7 +22855,7 @@
         "args": []
       },
       "expected": "INFO:modulelogger:leaving a function",
-      "id": 2172
+      "id": 2258
     },
     {
       "style": "{",
@@ -22110,7 +22884,7 @@
         "args": []
       },
       "expected": "1679087034.36 01549.46 355 leaving a function",
-      "id": 2173
+      "id": 2259
     },
     {
       "style": "$",
@@ -22139,7 +22913,7 @@
         "args": []
       },
       "expected": "2023-03-17 21:03:54,355 INFO modulelogger leaving a function",
-      "id": 2174
+      "id": 2260
     },
     {
       "style": "$",
@@ -22168,7 +22942,7 @@
         "args": []
       },
       "expected": "INFO:modulelogger:leaving a function",
-      "id": 2175
+      "id": 2261
     },
     {
       "style": "$",
@@ -22197,7 +22971,7 @@
         "args": []
       },
       "expected": "2023-03-17 21:03:54,355 [450724] INFO module.function:18 leaving a function",
-      "id": 2176
+      "id": 2262
     },
     {
       "style": "%",
@@ -22227,7 +23001,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "[2023/03/17 21:03:54] [INFO] module.py::18 leaving a function",
-      "id": 2177
+      "id": 2263
     },
     {
       "style": "%",
@@ -22257,7 +23031,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "2023/03/17 21:03:54 [pid 450724] INFO     module.function():18 leaving a function",
-      "id": 2178
+      "id": 2264
     },
     {
       "style": "%",
@@ -22287,7 +23061,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "INFO - 2023/03/17 21:03:54 - module.py - line 18 --> leaving a function",
-      "id": 2179
+      "id": 2265
     },
     {
       "style": "%",
@@ -22317,7 +23091,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "INFO 2023/03/17 21:03:54 : leaving a function",
-      "id": 2180
+      "id": 2266
     },
     {
       "style": "%",
@@ -22347,7 +23121,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "INFO:modulelogger:leaving a function",
-      "id": 2181
+      "id": 2267
     },
     {
       "style": "%",
@@ -22377,7 +23151,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "1679087034.36 01549.46 355 leaving a function",
-      "id": 2182
+      "id": 2268
     },
     {
       "style": "{",
@@ -22407,7 +23181,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "[2023/03/17 21:03:54] [INFO] module.py::18 leaving a function",
-      "id": 2183
+      "id": 2269
     },
     {
       "style": "{",
@@ -22437,7 +23211,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "2023/03/17 21:03:54 [pid 450724] INFO     module.function():18 leaving a function",
-      "id": 2184
+      "id": 2270
     },
     {
       "style": "{",
@@ -22467,7 +23241,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "INFO 2023/03/17 21:03:54: leaving a function",
-      "id": 2185
+      "id": 2271
     },
     {
       "style": "{",
@@ -22497,7 +23271,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "INFO:modulelogger:leaving a function",
-      "id": 2186
+      "id": 2272
     },
     {
       "style": "{",
@@ -22527,7 +23301,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "1679087034.36 01549.46 355 leaving a function",
-      "id": 2187
+      "id": 2273
     },
     {
       "style": "$",
@@ -22557,7 +23331,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "2023/03/17 21:03:54 INFO modulelogger leaving a function",
-      "id": 2188
+      "id": 2274
     },
     {
       "style": "$",
@@ -22587,7 +23361,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "INFO:modulelogger:leaving a function",
-      "id": 2189
+      "id": 2275
     },
     {
       "style": "$",
@@ -22617,7 +23391,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "2023/03/17 21:03:54 [450724] INFO module.function:18 leaving a function",
-      "id": 2190
+      "id": 2276
     },
     {
       "style": "%",
@@ -22647,7 +23421,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "[21:03:54] [INFO] module.py::18 leaving a function",
-      "id": 2191
+      "id": 2277
     },
     {
       "style": "%",
@@ -22677,7 +23451,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "21:03:54 [pid 450724] INFO     module.function():18 leaving a function",
-      "id": 2192
+      "id": 2278
     },
     {
       "style": "%",
@@ -22707,7 +23481,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "INFO - 21:03:54        - module.py - line 18 --> leaving a function",
-      "id": 2193
+      "id": 2279
     },
     {
       "style": "%",
@@ -22737,7 +23511,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "INFO 21:03:54            : leaving a function",
-      "id": 2194
+      "id": 2280
     },
     {
       "style": "%",
@@ -22767,7 +23541,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "INFO:modulelogger:leaving a function",
-      "id": 2195
+      "id": 2281
     },
     {
       "style": "%",
@@ -22797,7 +23571,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "1679087034.36 01549.46 355 leaving a function",
-      "id": 2196
+      "id": 2282
     },
     {
       "style": "{",
@@ -22827,7 +23601,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "[21:03:54] [INFO] module.py::18 leaving a function",
-      "id": 2197
+      "id": 2283
     },
     {
       "style": "{",
@@ -22857,7 +23631,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "21:03:54 [pid 450724] INFO     module.function():18 leaving a function",
-      "id": 2198
+      "id": 2284
     },
     {
       "style": "{",
@@ -22887,7 +23661,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "INFO 21:03:54: leaving a function",
-      "id": 2199
+      "id": 2285
     },
     {
       "style": "{",
@@ -22917,7 +23691,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "INFO:modulelogger:leaving a function",
-      "id": 2200
+      "id": 2286
     },
     {
       "style": "{",
@@ -22947,7 +23721,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "1679087034.36 01549.46 355 leaving a function",
-      "id": 2201
+      "id": 2287
     },
     {
       "style": "$",
@@ -22977,7 +23751,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "21:03:54 INFO modulelogger leaving a function",
-      "id": 2202
+      "id": 2288
     },
     {
       "style": "$",
@@ -23007,7 +23781,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "INFO:modulelogger:leaving a function",
-      "id": 2203
+      "id": 2289
     },
     {
       "style": "$",
@@ -23037,7 +23811,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "21:03:54 [450724] INFO module.function:18 leaving a function",
-      "id": 2204
+      "id": 2290
     },
     {
       "style": "%",
@@ -23067,7 +23841,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "[Fri Mar 17] [INFO] module.py::18 leaving a function",
-      "id": 2205
+      "id": 2291
     },
     {
       "style": "%",
@@ -23097,7 +23871,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "Fri Mar 17 [pid 450724] INFO     module.function():18 leaving a function",
-      "id": 2206
+      "id": 2292
     },
     {
       "style": "%",
@@ -23127,7 +23901,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "INFO - Fri Mar 17      - module.py - line 18 --> leaving a function",
-      "id": 2207
+      "id": 2293
     },
     {
       "style": "%",
@@ -23157,7 +23931,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "INFO Fri Mar 17          : leaving a function",
-      "id": 2208
+      "id": 2294
     },
     {
       "style": "%",
@@ -23187,7 +23961,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "INFO:modulelogger:leaving a function",
-      "id": 2209
+      "id": 2295
     },
     {
       "style": "%",
@@ -23217,7 +23991,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "1679087034.36 01549.46 355 leaving a function",
-      "id": 2210
+      "id": 2296
     },
     {
       "style": "{",
@@ -23247,7 +24021,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "[Fri Mar 17] [INFO] module.py::18 leaving a function",
-      "id": 2211
+      "id": 2297
     },
     {
       "style": "{",
@@ -23277,7 +24051,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "Fri Mar 17 [pid 450724] INFO     module.function():18 leaving a function",
-      "id": 2212
+      "id": 2298
     },
     {
       "style": "{",
@@ -23307,7 +24081,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "INFO Fri Mar 17: leaving a function",
-      "id": 2213
+      "id": 2299
     },
     {
       "style": "{",
@@ -23337,7 +24111,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "INFO:modulelogger:leaving a function",
-      "id": 2214
+      "id": 2300
     },
     {
       "style": "{",
@@ -23367,7 +24141,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "1679087034.36 01549.46 355 leaving a function",
-      "id": 2215
+      "id": 2301
     },
     {
       "style": "$",
@@ -23397,7 +24171,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "Fri Mar 17 INFO modulelogger leaving a function",
-      "id": 2216
+      "id": 2302
     },
     {
       "style": "$",
@@ -23427,7 +24201,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "INFO:modulelogger:leaving a function",
-      "id": 2217
+      "id": 2303
     },
     {
       "style": "$",
@@ -23457,7 +24231,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "Fri Mar 17 [450724] INFO module.function:18 leaving a function",
-      "id": 2218
+      "id": 2304
     },
     {
       "style": "%",
@@ -23486,7 +24260,7 @@
         "args": []
       },
       "expected": "[2023-03-17 21:03:54,356] [DEBUG] module.py::8 initialized class",
-      "id": 2219
+      "id": 2305
     },
     {
       "style": "%",
@@ -23515,7 +24289,7 @@
         "args": []
       },
       "expected": "2023-03-17 21:03:54,356 [pid 450724] DEBUG    module.__init__():8 initialized class",
-      "id": 2220
+      "id": 2306
     },
     {
       "style": "%",
@@ -23544,7 +24318,7 @@
         "args": []
       },
       "expected": "DEBUG - 2023-03-17 21:03:54,356 - module.py - line 8 --> initialized class",
-      "id": 2221
+      "id": 2307
     },
     {
       "style": "%",
@@ -23573,7 +24347,7 @@
         "args": []
       },
       "expected": "DEBUG 2023-03-17 21:03:54,356: initialized class",
-      "id": 2222
+      "id": 2308
     },
     {
       "style": "%",
@@ -23602,7 +24376,7 @@
         "args": []
       },
       "expected": "DEBUG:root:initialized class",
-      "id": 2223
+      "id": 2309
     },
     {
       "style": "%",
@@ -23631,7 +24405,7 @@
         "args": []
       },
       "expected": "1679087034.36 01549.91 356 initialized class",
-      "id": 2224
+      "id": 2310
     },
     {
       "style": "{",
@@ -23660,7 +24434,7 @@
         "args": []
       },
       "expected": "[2023-03-17 21:03:54,356] [DEBUG] module.py::8 initialized class",
-      "id": 2225
+      "id": 2311
     },
     {
       "style": "{",
@@ -23689,7 +24463,7 @@
         "args": []
       },
       "expected": "2023-03-17 21:03:54,356 [pid 450724] DEBUG    module.__init__():8 initialized class",
-      "id": 2226
+      "id": 2312
     },
     {
       "style": "{",
@@ -23718,7 +24492,7 @@
         "args": []
       },
       "expected": "DEBUG 2023-03-17 21:03:54,356: initialized class",
-      "id": 2227
+      "id": 2313
     },
     {
       "style": "{",
@@ -23747,7 +24521,7 @@
         "args": []
       },
       "expected": "DEBUG:root:initialized class",
-      "id": 2228
+      "id": 2314
     },
     {
       "style": "{",
@@ -23776,7 +24550,7 @@
         "args": []
       },
       "expected": "1679087034.36 01549.91 356 initialized class",
-      "id": 2229
+      "id": 2315
     },
     {
       "style": "$",
@@ -23805,7 +24579,7 @@
         "args": []
       },
       "expected": "2023-03-17 21:03:54,356 DEBUG root initialized class",
-      "id": 2230
+      "id": 2316
     },
     {
       "style": "$",
@@ -23834,7 +24608,7 @@
         "args": []
       },
       "expected": "DEBUG:root:initialized class",
-      "id": 2231
+      "id": 2317
     },
     {
       "style": "$",
@@ -23863,7 +24637,7 @@
         "args": []
       },
       "expected": "2023-03-17 21:03:54,356 [450724] DEBUG module.__init__:8 initialized class",
-      "id": 2232
+      "id": 2318
     },
     {
       "style": "%",
@@ -23893,7 +24667,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "[2023/03/17 21:03:54] [DEBUG] module.py::8 initialized class",
-      "id": 2233
+      "id": 2319
     },
     {
       "style": "%",
@@ -23923,7 +24697,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "2023/03/17 21:03:54 [pid 450724] DEBUG    module.__init__():8 initialized class",
-      "id": 2234
+      "id": 2320
     },
     {
       "style": "%",
@@ -23953,7 +24727,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "DEBUG - 2023/03/17 21:03:54 - module.py - line 8 --> initialized class",
-      "id": 2235
+      "id": 2321
     },
     {
       "style": "%",
@@ -23983,7 +24757,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "DEBUG 2023/03/17 21:03:54 : initialized class",
-      "id": 2236
+      "id": 2322
     },
     {
       "style": "%",
@@ -24013,7 +24787,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "DEBUG:root:initialized class",
-      "id": 2237
+      "id": 2323
     },
     {
       "style": "%",
@@ -24043,7 +24817,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "1679087034.36 01549.91 356 initialized class",
-      "id": 2238
+      "id": 2324
     },
     {
       "style": "{",
@@ -24073,7 +24847,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "[2023/03/17 21:03:54] [DEBUG] module.py::8 initialized class",
-      "id": 2239
+      "id": 2325
     },
     {
       "style": "{",
@@ -24103,7 +24877,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "2023/03/17 21:03:54 [pid 450724] DEBUG    module.__init__():8 initialized class",
-      "id": 2240
+      "id": 2326
     },
     {
       "style": "{",
@@ -24133,7 +24907,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "DEBUG 2023/03/17 21:03:54: initialized class",
-      "id": 2241
+      "id": 2327
     },
     {
       "style": "{",
@@ -24163,7 +24937,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "DEBUG:root:initialized class",
-      "id": 2242
+      "id": 2328
     },
     {
       "style": "{",
@@ -24193,7 +24967,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "1679087034.36 01549.91 356 initialized class",
-      "id": 2243
+      "id": 2329
     },
     {
       "style": "$",
@@ -24223,7 +24997,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "2023/03/17 21:03:54 DEBUG root initialized class",
-      "id": 2244
+      "id": 2330
     },
     {
       "style": "$",
@@ -24253,7 +25027,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "DEBUG:root:initialized class",
-      "id": 2245
+      "id": 2331
     },
     {
       "style": "$",
@@ -24283,7 +25057,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "2023/03/17 21:03:54 [450724] DEBUG module.__init__:8 initialized class",
-      "id": 2246
+      "id": 2332
     },
     {
       "style": "%",
@@ -24313,7 +25087,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "[21:03:54] [DEBUG] module.py::8 initialized class",
-      "id": 2247
+      "id": 2333
     },
     {
       "style": "%",
@@ -24343,7 +25117,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "21:03:54 [pid 450724] DEBUG    module.__init__():8 initialized class",
-      "id": 2248
+      "id": 2334
     },
     {
       "style": "%",
@@ -24373,7 +25147,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "DEBUG - 21:03:54        - module.py - line 8 --> initialized class",
-      "id": 2249
+      "id": 2335
     },
     {
       "style": "%",
@@ -24403,7 +25177,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "DEBUG 21:03:54            : initialized class",
-      "id": 2250
+      "id": 2336
     },
     {
       "style": "%",
@@ -24433,7 +25207,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "DEBUG:root:initialized class",
-      "id": 2251
+      "id": 2337
     },
     {
       "style": "%",
@@ -24463,7 +25237,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "1679087034.36 01549.91 356 initialized class",
-      "id": 2252
+      "id": 2338
     },
     {
       "style": "{",
@@ -24493,7 +25267,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "[21:03:54] [DEBUG] module.py::8 initialized class",
-      "id": 2253
+      "id": 2339
     },
     {
       "style": "{",
@@ -24523,7 +25297,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "21:03:54 [pid 450724] DEBUG    module.__init__():8 initialized class",
-      "id": 2254
+      "id": 2340
     },
     {
       "style": "{",
@@ -24553,7 +25327,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "DEBUG 21:03:54: initialized class",
-      "id": 2255
+      "id": 2341
     },
     {
       "style": "{",
@@ -24583,7 +25357,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "DEBUG:root:initialized class",
-      "id": 2256
+      "id": 2342
     },
     {
       "style": "{",
@@ -24613,7 +25387,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "1679087034.36 01549.91 356 initialized class",
-      "id": 2257
+      "id": 2343
     },
     {
       "style": "$",
@@ -24643,7 +25417,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "21:03:54 DEBUG root initialized class",
-      "id": 2258
+      "id": 2344
     },
     {
       "style": "$",
@@ -24673,7 +25447,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "DEBUG:root:initialized class",
-      "id": 2259
+      "id": 2345
     },
     {
       "style": "$",
@@ -24703,7 +25477,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "21:03:54 [450724] DEBUG module.__init__:8 initialized class",
-      "id": 2260
+      "id": 2346
     },
     {
       "style": "%",
@@ -24733,7 +25507,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "[Fri Mar 17] [DEBUG] module.py::8 initialized class",
-      "id": 2261
+      "id": 2347
     },
     {
       "style": "%",
@@ -24763,7 +25537,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "Fri Mar 17 [pid 450724] DEBUG    module.__init__():8 initialized class",
-      "id": 2262
+      "id": 2348
     },
     {
       "style": "%",
@@ -24793,7 +25567,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "DEBUG - Fri Mar 17      - module.py - line 8 --> initialized class",
-      "id": 2263
+      "id": 2349
     },
     {
       "style": "%",
@@ -24823,7 +25597,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "DEBUG Fri Mar 17          : initialized class",
-      "id": 2264
+      "id": 2350
     },
     {
       "style": "%",
@@ -24853,7 +25627,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "DEBUG:root:initialized class",
-      "id": 2265
+      "id": 2351
     },
     {
       "style": "%",
@@ -24883,7 +25657,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "1679087034.36 01549.91 356 initialized class",
-      "id": 2266
+      "id": 2352
     },
     {
       "style": "{",
@@ -24913,7 +25687,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "[Fri Mar 17] [DEBUG] module.py::8 initialized class",
-      "id": 2267
+      "id": 2353
     },
     {
       "style": "{",
@@ -24943,7 +25717,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "Fri Mar 17 [pid 450724] DEBUG    module.__init__():8 initialized class",
-      "id": 2268
+      "id": 2354
     },
     {
       "style": "{",
@@ -24973,7 +25747,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "DEBUG Fri Mar 17: initialized class",
-      "id": 2269
+      "id": 2355
     },
     {
       "style": "{",
@@ -25003,7 +25777,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "DEBUG:root:initialized class",
-      "id": 2270
+      "id": 2356
     },
     {
       "style": "{",
@@ -25033,7 +25807,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "1679087034.36 01549.91 356 initialized class",
-      "id": 2271
+      "id": 2357
     },
     {
       "style": "$",
@@ -25063,7 +25837,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "Fri Mar 17 DEBUG root initialized class",
-      "id": 2272
+      "id": 2358
     },
     {
       "style": "$",
@@ -25093,7 +25867,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "DEBUG:root:initialized class",
-      "id": 2273
+      "id": 2359
     },
     {
       "style": "$",
@@ -25123,7 +25897,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "Fri Mar 17 [450724] DEBUG module.__init__:8 initialized class",
-      "id": 2274
+      "id": 2360
     },
     {
       "style": "%",
@@ -25152,7 +25926,7 @@
         "args": []
       },
       "expected": "[2023-03-17 21:03:54,356] [WARNING] module.py::11 something might not be right in this class",
-      "id": 2275
+      "id": 2361
     },
     {
       "style": "%",
@@ -25181,7 +25955,7 @@
         "args": []
       },
       "expected": "2023-03-17 21:03:54,356 [pid 450724] WARNING  module.method():11 something might not be right in this class",
-      "id": 2276
+      "id": 2362
     },
     {
       "style": "%",
@@ -25210,7 +25984,7 @@
         "args": []
       },
       "expected": "WARNING - 2023-03-17 21:03:54,356 - module.py - line 11 --> something might not be right in this class",
-      "id": 2277
+      "id": 2363
     },
     {
       "style": "%",
@@ -25239,7 +26013,7 @@
         "args": []
       },
       "expected": "WARNING 2023-03-17 21:03:54,356: something might not be right in this class",
-      "id": 2278
+      "id": 2364
     },
     {
       "style": "%",
@@ -25268,7 +26042,7 @@
         "args": []
       },
       "expected": "WARNING:classlogger:something might not be right in this class",
-      "id": 2279
+      "id": 2365
     },
     {
       "style": "%",
@@ -25297,7 +26071,7 @@
         "args": []
       },
       "expected": "1679087034.36 01550.19 356 something might not be right in this class",
-      "id": 2280
+      "id": 2366
     },
     {
       "style": "{",
@@ -25326,7 +26100,7 @@
         "args": []
       },
       "expected": "[2023-03-17 21:03:54,356] [WARNING] module.py::11 something might not be right in this class",
-      "id": 2281
+      "id": 2367
     },
     {
       "style": "{",
@@ -25355,7 +26129,7 @@
         "args": []
       },
       "expected": "2023-03-17 21:03:54,356 [pid 450724] WARNING  module.method():11 something might not be right in this class",
-      "id": 2282
+      "id": 2368
     },
     {
       "style": "{",
@@ -25384,7 +26158,7 @@
         "args": []
       },
       "expected": "WARNING 2023-03-17 21:03:54,356: something might not be right in this class",
-      "id": 2283
+      "id": 2369
     },
     {
       "style": "{",
@@ -25413,7 +26187,7 @@
         "args": []
       },
       "expected": "WARNING:classlogger:something might not be right in this class",
-      "id": 2284
+      "id": 2370
     },
     {
       "style": "{",
@@ -25442,7 +26216,7 @@
         "args": []
       },
       "expected": "1679087034.36 01550.19 356 something might not be right in this class",
-      "id": 2285
+      "id": 2371
     },
     {
       "style": "$",
@@ -25471,7 +26245,7 @@
         "args": []
       },
       "expected": "2023-03-17 21:03:54,356 WARNING classlogger something might not be right in this class",
-      "id": 2286
+      "id": 2372
     },
     {
       "style": "$",
@@ -25500,7 +26274,7 @@
         "args": []
       },
       "expected": "WARNING:classlogger:something might not be right in this class",
-      "id": 2287
+      "id": 2373
     },
     {
       "style": "$",
@@ -25529,7 +26303,7 @@
         "args": []
       },
       "expected": "2023-03-17 21:03:54,356 [450724] WARNING module.method:11 something might not be right in this class",
-      "id": 2288
+      "id": 2374
     },
     {
       "style": "%",
@@ -25559,7 +26333,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "[2023/03/17 21:03:54] [WARNING] module.py::11 something might not be right in this class",
-      "id": 2289
+      "id": 2375
     },
     {
       "style": "%",
@@ -25589,7 +26363,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "2023/03/17 21:03:54 [pid 450724] WARNING  module.method():11 something might not be right in this class",
-      "id": 2290
+      "id": 2376
     },
     {
       "style": "%",
@@ -25619,7 +26393,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "WARNING - 2023/03/17 21:03:54 - module.py - line 11 --> something might not be right in this class",
-      "id": 2291
+      "id": 2377
     },
     {
       "style": "%",
@@ -25649,7 +26423,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "WARNING 2023/03/17 21:03:54 : something might not be right in this class",
-      "id": 2292
+      "id": 2378
     },
     {
       "style": "%",
@@ -25679,7 +26453,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "WARNING:classlogger:something might not be right in this class",
-      "id": 2293
+      "id": 2379
     },
     {
       "style": "%",
@@ -25709,7 +26483,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "1679087034.36 01550.19 356 something might not be right in this class",
-      "id": 2294
+      "id": 2380
     },
     {
       "style": "{",
@@ -25739,7 +26513,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "[2023/03/17 21:03:54] [WARNING] module.py::11 something might not be right in this class",
-      "id": 2295
+      "id": 2381
     },
     {
       "style": "{",
@@ -25769,7 +26543,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "2023/03/17 21:03:54 [pid 450724] WARNING  module.method():11 something might not be right in this class",
-      "id": 2296
+      "id": 2382
     },
     {
       "style": "{",
@@ -25799,7 +26573,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "WARNING 2023/03/17 21:03:54: something might not be right in this class",
-      "id": 2297
+      "id": 2383
     },
     {
       "style": "{",
@@ -25829,7 +26603,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "WARNING:classlogger:something might not be right in this class",
-      "id": 2298
+      "id": 2384
     },
     {
       "style": "{",
@@ -25859,7 +26633,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "1679087034.36 01550.19 356 something might not be right in this class",
-      "id": 2299
+      "id": 2385
     },
     {
       "style": "$",
@@ -25889,7 +26663,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "2023/03/17 21:03:54 WARNING classlogger something might not be right in this class",
-      "id": 2300
+      "id": 2386
     },
     {
       "style": "$",
@@ -25919,7 +26693,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "WARNING:classlogger:something might not be right in this class",
-      "id": 2301
+      "id": 2387
     },
     {
       "style": "$",
@@ -25949,7 +26723,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "2023/03/17 21:03:54 [450724] WARNING module.method:11 something might not be right in this class",
-      "id": 2302
+      "id": 2388
     },
     {
       "style": "%",
@@ -25979,7 +26753,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "[21:03:54] [WARNING] module.py::11 something might not be right in this class",
-      "id": 2303
+      "id": 2389
     },
     {
       "style": "%",
@@ -26009,7 +26783,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "21:03:54 [pid 450724] WARNING  module.method():11 something might not be right in this class",
-      "id": 2304
+      "id": 2390
     },
     {
       "style": "%",
@@ -26039,7 +26813,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "WARNING - 21:03:54        - module.py - line 11 --> something might not be right in this class",
-      "id": 2305
+      "id": 2391
     },
     {
       "style": "%",
@@ -26069,7 +26843,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "WARNING 21:03:54            : something might not be right in this class",
-      "id": 2306
+      "id": 2392
     },
     {
       "style": "%",
@@ -26099,7 +26873,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "WARNING:classlogger:something might not be right in this class",
-      "id": 2307
+      "id": 2393
     },
     {
       "style": "%",
@@ -26129,7 +26903,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "1679087034.36 01550.19 356 something might not be right in this class",
-      "id": 2308
+      "id": 2394
     },
     {
       "style": "{",
@@ -26159,7 +26933,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "[21:03:54] [WARNING] module.py::11 something might not be right in this class",
-      "id": 2309
+      "id": 2395
     },
     {
       "style": "{",
@@ -26189,7 +26963,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "21:03:54 [pid 450724] WARNING  module.method():11 something might not be right in this class",
-      "id": 2310
+      "id": 2396
     },
     {
       "style": "{",
@@ -26219,7 +26993,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "WARNING 21:03:54: something might not be right in this class",
-      "id": 2311
+      "id": 2397
     },
     {
       "style": "{",
@@ -26249,7 +27023,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "WARNING:classlogger:something might not be right in this class",
-      "id": 2312
+      "id": 2398
     },
     {
       "style": "{",
@@ -26279,7 +27053,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "1679087034.36 01550.19 356 something might not be right in this class",
-      "id": 2313
+      "id": 2399
     },
     {
       "style": "$",
@@ -26309,7 +27083,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "21:03:54 WARNING classlogger something might not be right in this class",
-      "id": 2314
+      "id": 2400
     },
     {
       "style": "$",
@@ -26339,7 +27113,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "WARNING:classlogger:something might not be right in this class",
-      "id": 2315
+      "id": 2401
     },
     {
       "style": "$",
@@ -26369,7 +27143,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "21:03:54 [450724] WARNING module.method:11 something might not be right in this class",
-      "id": 2316
+      "id": 2402
     },
     {
       "style": "%",
@@ -26399,7 +27173,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "[Fri Mar 17] [WARNING] module.py::11 something might not be right in this class",
-      "id": 2317
+      "id": 2403
     },
     {
       "style": "%",
@@ -26429,7 +27203,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "Fri Mar 17 [pid 450724] WARNING  module.method():11 something might not be right in this class",
-      "id": 2318
+      "id": 2404
     },
     {
       "style": "%",
@@ -26459,7 +27233,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "WARNING - Fri Mar 17      - module.py - line 11 --> something might not be right in this class",
-      "id": 2319
+      "id": 2405
     },
     {
       "style": "%",
@@ -26489,7 +27263,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "WARNING Fri Mar 17          : something might not be right in this class",
-      "id": 2320
+      "id": 2406
     },
     {
       "style": "%",
@@ -26519,7 +27293,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "WARNING:classlogger:something might not be right in this class",
-      "id": 2321
+      "id": 2407
     },
     {
       "style": "%",
@@ -26549,7 +27323,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "1679087034.36 01550.19 356 something might not be right in this class",
-      "id": 2322
+      "id": 2408
     },
     {
       "style": "{",
@@ -26579,7 +27353,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "[Fri Mar 17] [WARNING] module.py::11 something might not be right in this class",
-      "id": 2323
+      "id": 2409
     },
     {
       "style": "{",
@@ -26609,7 +27383,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "Fri Mar 17 [pid 450724] WARNING  module.method():11 something might not be right in this class",
-      "id": 2324
+      "id": 2410
     },
     {
       "style": "{",
@@ -26639,7 +27413,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "WARNING Fri Mar 17: something might not be right in this class",
-      "id": 2325
+      "id": 2411
     },
     {
       "style": "{",
@@ -26669,7 +27443,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "WARNING:classlogger:something might not be right in this class",
-      "id": 2326
+      "id": 2412
     },
     {
       "style": "{",
@@ -26699,7 +27473,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "1679087034.36 01550.19 356 something might not be right in this class",
-      "id": 2327
+      "id": 2413
     },
     {
       "style": "$",
@@ -26729,7 +27503,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "Fri Mar 17 WARNING classlogger something might not be right in this class",
-      "id": 2328
+      "id": 2414
     },
     {
       "style": "$",
@@ -26759,7 +27533,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "WARNING:classlogger:something might not be right in this class",
-      "id": 2329
+      "id": 2415
     },
     {
       "style": "$",
@@ -26789,7 +27563,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "Fri Mar 17 [450724] WARNING module.method:11 something might not be right in this class",
-      "id": 2330
+      "id": 2416
     },
     {
       "style": "%",
@@ -26818,7 +27592,7 @@
         "args": []
       },
       "expected": "[2023-03-17 21:03:54,356] [CRITICAL] main.py::14 a fatal error occured",
-      "id": 2331
+      "id": 2417
     },
     {
       "style": "%",
@@ -26847,7 +27621,7 @@
         "args": []
       },
       "expected": "2023-03-17 21:03:54,356 [pid 450724] CRITICAL main.<module>():14 a fatal error occured",
-      "id": 2332
+      "id": 2418
     },
     {
       "style": "%",
@@ -26876,7 +27650,7 @@
         "args": []
       },
       "expected": "CRITICAL - 2023-03-17 21:03:54,356 - main.py - line 14 --> a fatal error occured",
-      "id": 2333
+      "id": 2419
     },
     {
       "style": "%",
@@ -26905,7 +27679,7 @@
         "args": []
       },
       "expected": "CRITICAL 2023-03-17 21:03:54,356: a fatal error occured",
-      "id": 2334
+      "id": 2420
     },
     {
       "style": "%",
@@ -26934,7 +27708,7 @@
         "args": []
       },
       "expected": "CRITICAL:root:a fatal error occured",
-      "id": 2335
+      "id": 2421
     },
     {
       "style": "%",
@@ -26963,7 +27737,7 @@
         "args": []
       },
       "expected": "1679087034.36 01550.56 356 a fatal error occured",
-      "id": 2336
+      "id": 2422
     },
     {
       "style": "{",
@@ -26992,7 +27766,7 @@
         "args": []
       },
       "expected": "[2023-03-17 21:03:54,356] [CRITICAL] main.py::14 a fatal error occured",
-      "id": 2337
+      "id": 2423
     },
     {
       "style": "{",
@@ -27021,7 +27795,7 @@
         "args": []
       },
       "expected": "2023-03-17 21:03:54,356 [pid 450724] CRITICAL main.<module>():14 a fatal error occured",
-      "id": 2338
+      "id": 2424
     },
     {
       "style": "{",
@@ -27050,7 +27824,7 @@
         "args": []
       },
       "expected": "CRITICAL 2023-03-17 21:03:54,356: a fatal error occured",
-      "id": 2339
+      "id": 2425
     },
     {
       "style": "{",
@@ -27079,7 +27853,7 @@
         "args": []
       },
       "expected": "CRITICAL:root:a fatal error occured",
-      "id": 2340
+      "id": 2426
     },
     {
       "style": "{",
@@ -27108,7 +27882,7 @@
         "args": []
       },
       "expected": "1679087034.36 01550.56 356 a fatal error occured",
-      "id": 2341
+      "id": 2427
     },
     {
       "style": "$",
@@ -27137,7 +27911,7 @@
         "args": []
       },
       "expected": "2023-03-17 21:03:54,356 CRITICAL root a fatal error occured",
-      "id": 2342
+      "id": 2428
     },
     {
       "style": "$",
@@ -27166,7 +27940,7 @@
         "args": []
       },
       "expected": "CRITICAL:root:a fatal error occured",
-      "id": 2343
+      "id": 2429
     },
     {
       "style": "$",
@@ -27195,7 +27969,7 @@
         "args": []
       },
       "expected": "2023-03-17 21:03:54,356 [450724] CRITICAL main.<module>:14 a fatal error occured",
-      "id": 2344
+      "id": 2430
     },
     {
       "style": "%",
@@ -27225,7 +27999,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "[2023/03/17 21:03:54] [CRITICAL] main.py::14 a fatal error occured",
-      "id": 2345
+      "id": 2431
     },
     {
       "style": "%",
@@ -27255,7 +28029,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "2023/03/17 21:03:54 [pid 450724] CRITICAL main.<module>():14 a fatal error occured",
-      "id": 2346
+      "id": 2432
     },
     {
       "style": "%",
@@ -27285,7 +28059,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "CRITICAL - 2023/03/17 21:03:54 - main.py - line 14 --> a fatal error occured",
-      "id": 2347
+      "id": 2433
     },
     {
       "style": "%",
@@ -27315,7 +28089,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "CRITICAL 2023/03/17 21:03:54 : a fatal error occured",
-      "id": 2348
+      "id": 2434
     },
     {
       "style": "%",
@@ -27345,7 +28119,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "CRITICAL:root:a fatal error occured",
-      "id": 2349
+      "id": 2435
     },
     {
       "style": "%",
@@ -27375,7 +28149,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "1679087034.36 01550.56 356 a fatal error occured",
-      "id": 2350
+      "id": 2436
     },
     {
       "style": "{",
@@ -27405,7 +28179,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "[2023/03/17 21:03:54] [CRITICAL] main.py::14 a fatal error occured",
-      "id": 2351
+      "id": 2437
     },
     {
       "style": "{",
@@ -27435,7 +28209,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "2023/03/17 21:03:54 [pid 450724] CRITICAL main.<module>():14 a fatal error occured",
-      "id": 2352
+      "id": 2438
     },
     {
       "style": "{",
@@ -27465,7 +28239,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "CRITICAL 2023/03/17 21:03:54: a fatal error occured",
-      "id": 2353
+      "id": 2439
     },
     {
       "style": "{",
@@ -27495,7 +28269,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "CRITICAL:root:a fatal error occured",
-      "id": 2354
+      "id": 2440
     },
     {
       "style": "{",
@@ -27525,7 +28299,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "1679087034.36 01550.56 356 a fatal error occured",
-      "id": 2355
+      "id": 2441
     },
     {
       "style": "$",
@@ -27555,7 +28329,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "2023/03/17 21:03:54 CRITICAL root a fatal error occured",
-      "id": 2356
+      "id": 2442
     },
     {
       "style": "$",
@@ -27585,7 +28359,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "CRITICAL:root:a fatal error occured",
-      "id": 2357
+      "id": 2443
     },
     {
       "style": "$",
@@ -27615,7 +28389,7 @@
       },
       "datefmt": "%Y/%m/%d %H:%M:%S",
       "expected": "2023/03/17 21:03:54 [450724] CRITICAL main.<module>:14 a fatal error occured",
-      "id": 2358
+      "id": 2444
     },
     {
       "style": "%",
@@ -27645,7 +28419,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "[21:03:54] [CRITICAL] main.py::14 a fatal error occured",
-      "id": 2359
+      "id": 2445
     },
     {
       "style": "%",
@@ -27675,7 +28449,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "21:03:54 [pid 450724] CRITICAL main.<module>():14 a fatal error occured",
-      "id": 2360
+      "id": 2446
     },
     {
       "style": "%",
@@ -27705,7 +28479,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "CRITICAL - 21:03:54        - main.py - line 14 --> a fatal error occured",
-      "id": 2361
+      "id": 2447
     },
     {
       "style": "%",
@@ -27735,7 +28509,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "CRITICAL 21:03:54            : a fatal error occured",
-      "id": 2362
+      "id": 2448
     },
     {
       "style": "%",
@@ -27765,7 +28539,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "CRITICAL:root:a fatal error occured",
-      "id": 2363
+      "id": 2449
     },
     {
       "style": "%",
@@ -27795,7 +28569,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "1679087034.36 01550.56 356 a fatal error occured",
-      "id": 2364
+      "id": 2450
     },
     {
       "style": "{",
@@ -27825,7 +28599,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "[21:03:54] [CRITICAL] main.py::14 a fatal error occured",
-      "id": 2365
+      "id": 2451
     },
     {
       "style": "{",
@@ -27855,7 +28629,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "21:03:54 [pid 450724] CRITICAL main.<module>():14 a fatal error occured",
-      "id": 2366
+      "id": 2452
     },
     {
       "style": "{",
@@ -27885,7 +28659,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "CRITICAL 21:03:54: a fatal error occured",
-      "id": 2367
+      "id": 2453
     },
     {
       "style": "{",
@@ -27915,7 +28689,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "CRITICAL:root:a fatal error occured",
-      "id": 2368
+      "id": 2454
     },
     {
       "style": "{",
@@ -27945,7 +28719,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "1679087034.36 01550.56 356 a fatal error occured",
-      "id": 2369
+      "id": 2455
     },
     {
       "style": "$",
@@ -27975,7 +28749,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "21:03:54 CRITICAL root a fatal error occured",
-      "id": 2370
+      "id": 2456
     },
     {
       "style": "$",
@@ -28005,7 +28779,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "CRITICAL:root:a fatal error occured",
-      "id": 2371
+      "id": 2457
     },
     {
       "style": "$",
@@ -28035,7 +28809,7 @@
       },
       "datefmt": "%H:%M:%S",
       "expected": "21:03:54 [450724] CRITICAL main.<module>:14 a fatal error occured",
-      "id": 2372
+      "id": 2458
     },
     {
       "style": "%",
@@ -28065,7 +28839,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "[Fri Mar 17] [CRITICAL] main.py::14 a fatal error occured",
-      "id": 2373
+      "id": 2459
     },
     {
       "style": "%",
@@ -28095,7 +28869,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "Fri Mar 17 [pid 450724] CRITICAL main.<module>():14 a fatal error occured",
-      "id": 2374
+      "id": 2460
     },
     {
       "style": "%",
@@ -28125,7 +28899,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "CRITICAL - Fri Mar 17      - main.py - line 14 --> a fatal error occured",
-      "id": 2375
+      "id": 2461
     },
     {
       "style": "%",
@@ -28155,7 +28929,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "CRITICAL Fri Mar 17          : a fatal error occured",
-      "id": 2376
+      "id": 2462
     },
     {
       "style": "%",
@@ -28185,7 +28959,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "CRITICAL:root:a fatal error occured",
-      "id": 2377
+      "id": 2463
     },
     {
       "style": "%",
@@ -28215,7 +28989,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "1679087034.36 01550.56 356 a fatal error occured",
-      "id": 2378
+      "id": 2464
     },
     {
       "style": "{",
@@ -28245,7 +29019,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "[Fri Mar 17] [CRITICAL] main.py::14 a fatal error occured",
-      "id": 2379
+      "id": 2465
     },
     {
       "style": "{",
@@ -28275,7 +29049,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "Fri Mar 17 [pid 450724] CRITICAL main.<module>():14 a fatal error occured",
-      "id": 2380
+      "id": 2466
     },
     {
       "style": "{",
@@ -28305,7 +29079,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "CRITICAL Fri Mar 17: a fatal error occured",
-      "id": 2381
+      "id": 2467
     },
     {
       "style": "{",
@@ -28335,7 +29109,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "CRITICAL:root:a fatal error occured",
-      "id": 2382
+      "id": 2468
     },
     {
       "style": "{",
@@ -28365,7 +29139,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "1679087034.36 01550.56 356 a fatal error occured",
-      "id": 2383
+      "id": 2469
     },
     {
       "style": "$",
@@ -28395,7 +29169,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "Fri Mar 17 CRITICAL root a fatal error occured",
-      "id": 2384
+      "id": 2470
     },
     {
       "style": "$",
@@ -28425,7 +29199,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "CRITICAL:root:a fatal error occured",
-      "id": 2385
+      "id": 2471
     },
     {
       "style": "$",
@@ -28455,7 +29229,7 @@
       },
       "datefmt": "%a %b %d",
       "expected": "Fri Mar 17 [450724] CRITICAL main.<module>:14 a fatal error occured",
-      "id": 2386
+      "id": 2472
     }
   ]
 }

@@ -117,9 +117,9 @@ def gen_brace_field_cases(cases: list) -> None:
         case(cases, "{", "{%s:%s%s}" % (int_token, spec, typ), {int_token: val})
     for val, spec in itertools.product(int_values, [",d", "+,d", "06,d"]):
         case(cases, "{", "{%s:%s}" % (int_token, spec), {int_token: val})
-    # Bare {name} (no spec).
-    for val in int_values:
-        case(cases, "{", "{%s}" % int_token, {int_token: val})
+    # No presentation type (behaves like 'd'): bare and with formatting.
+    for val, spec in itertools.product(int_values, ["", "6", "06", "<6", "^6", "+", "+06", " 6", ",", "+,"]):
+        case(cases, "{", "{%s:%s}" % (int_token, spec) if spec else "{%s}" % int_token, {int_token: val})
 
     # --- floats ---
     float_token = TOKEN["float"]
@@ -133,9 +133,14 @@ def gen_brace_field_cases(cases: list) -> None:
     # Grouping only with f / g (comma is rejected for e and %).
     for val, spec in itertools.product(float_values, [",.2f", "+,.2f", ",g"]):
         case(cases, "{", "{%s:%s}" % (float_token, spec), {float_token: val})
-    # Bare {name} (str(float)).
-    for val in float_values:
-        case(cases, "{", "{%s}" % float_token, {float_token: val})
+    # No presentation type and no precision == repr(value) with numeric padding;
+    # bare and with sign / zero / grouping / fill (precision omitted: that path is
+    # a distinct CPython general format, out of scope).
+    big = 1234567.0
+    for val, spec in itertools.product(
+        float_values + [big], ["", "+", "08", ",", "+012", "015,", "<12", "^12", "*>12"]
+    ):
+        case(cases, "{", "{%s:%s}" % (float_token, spec) if spec else "{%s}" % float_token, {float_token: val})
 
 
 def gen_brace_error_cases(cases: list) -> None:
@@ -143,6 +148,7 @@ def gen_brace_error_cases(cases: list) -> None:
     case(cases, "{", "{created:d}", {"created": 1.5})  # int type on float
     case(cases, "{", "{lineno:s}", {"lineno": 5})  # string type on int
     case(cases, "{", "{lineno:.2d}", {"lineno": 5})  # precision on integer type
+    case(cases, "{", "{lineno:.2}", {"lineno": 5})  # precision on no-type integer
 
 
 # A few realistic end-to-end format strings, run against the shipped sample rows.
